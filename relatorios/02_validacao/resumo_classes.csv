@@ -1,0 +1,3 @@
+classe_original,situacao,imagens
+fire_dataset/fire_images,valida,755
+fire_dataset/non_fire_images,valida,244

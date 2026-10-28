@@ -1,0 +1,15 @@
+{
+  "dataset_ref": "phylake1337/fire-dataset",
+  "url": "https://www.kaggle.com/datasets/phylake1337/fire-dataset",
+  "versao_kaggle": 1,
+  "data_download_utc": "2026-10-28T22:54:43+00:00",
+  "caminho_local": "C:\\Users\\maria\\.cache\\kagglehub\\datasets\\phylake1337\\fire-dataset\\versions\\1",
+  "total_arquivos": 999,
+  "tamanho_total_bytes": 408783015,
+  "python": "3.12.10",
+  "kagglehub": "1.0.3",
+  "licenca": "PREENCHER (ver página do dataset)",
+  "autor_citacao": "PREENCHER",
+  "descricao_oficial_classes": "PREENCHER (copiar da página; conferir depois com as imagens)",
+  "observacoes": ""
+}

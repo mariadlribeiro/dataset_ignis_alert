@@ -1,0 +1,7 @@
+# Imagens e caches NÃO vão para o git (rastreabilidade via manifesto SHA-256)
+data/
+*.zip
+__pycache__/
+.venv*/
+.ipynb_checkpoints/
+relatorios/02_validacao/folhas/
