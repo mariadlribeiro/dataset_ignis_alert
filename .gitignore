@@ -5,3 +5,4 @@ __pycache__/
 .venv*/
 .ipynb_checkpoints/
 relatorios/02_validacao/folhas/
+relatorios/03_duplicatas/folhas/

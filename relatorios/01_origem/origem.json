@@ -8,8 +8,8 @@
   "tamanho_total_bytes": 408783015,
   "python": "3.12.10",
   "kagglehub": "1.0.3",
-  "licenca": "PREENCHER (ver página do dataset)",
-  "autor_citacao": "PREENCHER",
-  "descricao_oficial_classes": "PREENCHER (copiar da página; conferir depois com as imagens)",
+  "licenca": "CC0: Public Domain",
+  "autor_citacao": "Ahmed Gamaleldin","Ahmed Atef","Heba Saker", "Ahmed Shaheen",
+  "descricao_oficial_classes": "fire_images","non_fire_images"
   "observacoes": ""
 }
