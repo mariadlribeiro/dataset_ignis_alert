@@ -1,0 +1,89 @@
+{
+  "modelo": "openai/clip-vit-base-patch16",
+  "dispositivo": "cpu",
+  "torch": "2.15.0+cpu",
+  "transformers": "5.22.0",
+  "limiares": {
+    "amb_conf_min": 0.45,
+    "amb_margem_min": 0.15,
+    "p_sim": 0.8,
+    "p_nao": 0.2,
+    "fumaca_revisar": 0.5
+  },
+  "auditoria": 0.1,
+  "semente": 42,
+  "python": "3.12.10",
+  "prompts": {
+    "ambientes": {
+      "floresta": [
+        "a photo of a forest with trees",
+        "a photo of woodland vegetation",
+        "a landscape of a forest seen from a distance"
+      ],
+      "cidade": [
+        "a photo of a city street",
+        "a photo of an urban neighborhood",
+        "a photo of a public space in a town"
+      ],
+      "casa": [
+        "a photo of a house",
+        "a photo of the inside of a home",
+        "a photo of a residential yard"
+      ],
+      "predios": [
+        "a photo of a tall commercial building",
+        "a photo of an industrial building or factory",
+        "a photo of a skyscraper"
+      ],
+      "flores_jardins": [
+        "a photo of flowers",
+        "a photo of a garden",
+        "a photo of ornamental plants"
+      ],
+      "outros": [
+        "a photo of an open field or grassland",
+        "a photo of a mountain or a lake",
+        "a photo of a vehicle or an object",
+        "a photo of a person"
+      ]
+    },
+    "fogo": [
+      [
+        "a photo with visible flames",
+        "a photo of a burning fire",
+        "a photo of a fire with orange flames"
+      ],
+      [
+        "a photo with no fire",
+        "a photo of a calm scene without flames",
+        "a photo of an ordinary landscape"
+      ]
+    ],
+    "fumaca": [
+      [
+        "a photo with visible smoke",
+        "a photo of a smoke plume",
+        "a photo of haze and smoke in the air"
+      ],
+      [
+        "a photo with clear air and no smoke",
+        "a photo of a clear sky",
+        "a photo of an ordinary landscape"
+      ]
+    ],
+    "cameras": {
+      "satelite": [
+        "a satellite image from space"
+      ],
+      "drone": [
+        "an aerial photo taken by a drone"
+      ],
+      "vigilancia": [
+        "a photo from a fixed surveillance camera"
+      ],
+      "celular_terrestre": [
+        "a photo taken by a person with a phone at ground level"
+      ]
+    }
+  }
+}

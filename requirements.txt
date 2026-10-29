@@ -1,2 +1,4 @@
 kagglehub
 pillow
+torch
+transformers
