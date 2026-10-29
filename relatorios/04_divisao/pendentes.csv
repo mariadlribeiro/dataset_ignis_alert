@@ -1,0 +1,9 @@
+caminho_relativo,classe_original,id_grupo,motivo,decisao
+fire_dataset\fire_images\fire.181.png,fire_dataset/fire_images,G00092,grupo com conflito de rotulo (classes originais diferentes),pendente
+fire_dataset\fire_images\fire.204.png,fire_dataset/fire_images,G00092,grupo com conflito de rotulo (classes originais diferentes),pendente
+fire_dataset\fire_images\fire.30.png,fire_dataset/fire_images,G00092,grupo com conflito de rotulo (classes originais diferentes),pendente
+fire_dataset\fire_images\fire.506.png,fire_dataset/fire_images,G00092,grupo com conflito de rotulo (classes originais diferentes),pendente
+fire_dataset\fire_images\fire.698.png,fire_dataset/fire_images,G00092,grupo com conflito de rotulo (classes originais diferentes),pendente
+fire_dataset\non_fire_images\non_fire.189.png,fire_dataset/non_fire_images,G00783,GIF animado (19 quadros),pendente
+fire_dataset\non_fire_images\non_fire.210.png,fire_dataset/non_fire_images,G00092,grupo com conflito de rotulo (classes originais diferentes),pendente
+fire_dataset\non_fire_images\non_fire.5.png,fire_dataset/non_fire_images,G00092,grupo com conflito de rotulo (classes originais diferentes),pendente

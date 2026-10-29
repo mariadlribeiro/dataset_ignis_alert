@@ -9,7 +9,7 @@
   "python": "3.12.10",
   "kagglehub": "1.0.3",
   "licenca": "CC0: Public Domain",
-  "autor_citacao": "Ahmed Gamaleldin","Ahmed Atef","Heba Saker", "Ahmed Shaheen",
-  "descricao_oficial_classes": "fire_images","non_fire_images"
+  "autor_citacao": "Ahmed Gamaleldin, Ahmed Atef, Heba Saker, Ahmed Shaheen",
+  "descricao_oficial_classes": "fire_images: imagens com fogo; non_fire_images: imagens sem fogo",
   "observacoes": ""
 }

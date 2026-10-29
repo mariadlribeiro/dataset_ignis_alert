@@ -1,3 +1,4 @@
+ # pylint: disable=invalid-name
 #!/usr/bin/env python3
 """
 Etapa 2 - Validação técnica e visual do dataset (SOMENTE LEITURA).
@@ -16,7 +17,7 @@ import argparse, csv, json, random
 from collections import Counter
 from pathlib import Path
 
-from PIL import Image, ImageDraw, UnidentifiedImageError
+from PIL import Image, ImageDraw, UnidentifiedImageError  # pylint: disable=import-error
 
 EXT_IMAGEM = {".jpg", ".jpeg", ".png", ".bmp", ".gif", ".tif", ".tiff", ".webp"}
 LADO_MIN = 64          # abaixo disso a imagem é marcada como "muito pequena"
@@ -42,7 +43,6 @@ def validar(p):
 
 
 def folha(imagens, destino, titulo):
-    from PIL import ImageFont
     w, h = COLS * MINIATURA, LINS * (MINIATURA + 16)
     img = Image.new("RGB", (w, h), "white")
     d = ImageDraw.Draw(img)

@@ -13,17 +13,22 @@ Nada é excluído: duplicatas só ganham o mesmo id_grupo.
 
 Uso:  python scripts/03_duplicatas.py [--limiar 4]
 """
-import argparse, csv, json
+import argparse
+import csv
+import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+try:
+    from PIL import Image, ImageDraw
+except ImportError as exc:
+    raise SystemExit("Dependência ausente: instale Pillow com 'python -m pip install Pillow'.") from exc
 
 MINIATURA, COLS, LINS = 200, 6, 5
 
 
 def dhash(img, n=8):
-    g = img.convert("L").resize((n + 1, n), Image.LANCZOS)
+    g = img.convert("L").resize((n + 1, n), Image.Resampling.LANCZOS)
     px = list(g.tobytes())
     bits = 0
     for l in range(n):
