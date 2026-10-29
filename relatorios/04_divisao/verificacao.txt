@@ -1,5 +1,5 @@
 grupos em mais de um split: 0 OK
 arquivos identicos (SHA-256) em mais de um split: 0 OK
-imagens divididas: 991 | pendentes/excluidas: 8 | total: 999
+imagens divididas: 989 | pendentes/excluidas: 10 | total: 999
 soma confere: True
-pares parecidos (Hamming <= 8) em splits diferentes: 21 (revisar se > 0)
+pares parecidos (Hamming <= 8) em splits diferentes: 12 (revisar se > 0)

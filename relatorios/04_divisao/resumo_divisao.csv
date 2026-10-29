@@ -1,7 +1,7 @@
 split,classe_original,imagens,proporcao_da_classe
-treino,fire_dataset/fire_images,524,0.699
-treino,fire_dataset/non_fire_images,168,0.697
+treino,fire_dataset/fire_images,523,0.698
+treino,fire_dataset/non_fire_images,168,0.7
 validacao,fire_dataset/fire_images,113,0.151
-validacao,fire_dataset/non_fire_images,37,0.154
+validacao,fire_dataset/non_fire_images,36,0.15
 teste,fire_dataset/fire_images,113,0.151
-teste,fire_dataset/non_fire_images,36,0.149
+teste,fire_dataset/non_fire_images,36,0.15
