@@ -51,7 +51,12 @@ MINIATURA, COLS, LINS = 200, 6, 5
 
 # ---------------------------------------------------------------- modelo
 def prever_clip(caminhos, nome_modelo, lote=16):
-    import torch
+    try:
+        import torch  # type: ignore[import-not-found]
+    except ImportError as exc:
+        raise RuntimeError(
+            "PyTorch não está instalado. Instale-o no ambiente Python usado para executar este script."
+        ) from exc
     from transformers import CLIPModel, CLIPProcessor
     disp = "cuda" if torch.cuda.is_available() else "cpu"
     modelo = CLIPModel.from_pretrained(nome_modelo).to(disp).eval()
