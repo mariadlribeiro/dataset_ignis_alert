@@ -5,7 +5,8 @@ Etapa 5b - Gera a PÁGINA DE REVISÃO (HTML local) a partir de revisao.csv + sug
 Abra o arquivo gerado (relatorios/05_sugestoes/revisao.html) no Chrome ou Edge.
   * mostra cada imagem grande, com a sugestão do modelo e atalhos de teclado;
   * linhas de AUDITORIA são cegas: a sugestão e a pasta original só aparecem depois que você
-    responde (assim a precisão do modelo é medida sem viés de ancoragem);
+    responde (assim a precisão do modelo é medida sem viés de ancoragem). A PRIMEIRA resposta
+    da auditoria fica gravada em *_cego e não muda se você corrigir depois de ver o modelo;
   * o progresso fica salvo no navegador; o botão "Exportar CSV" baixa revisao_preenchida.csv;
   * nada no dataset é alterado.
 
@@ -131,7 +132,7 @@ const AVISOS = {
  fogo_incerto:'O modelo não decidiu se há fogo.',
  ambiente_incerto:'O modelo não decidiu o ambiente.'
 };
-const KEY = 'ignis_revisao_v1';
+const KEY = 'ignis_revisao_v2';
 let st = {};
 try { st = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e) {}
 let alteracoes = 0, lista = [], pos = 0;
@@ -141,6 +142,7 @@ const reg = r => (st[r.caminho_relativo] = st[r.caminho_relativo] || {});
 const val = (r,c) => (reg(r)[c.id] ?? c.padrao ?? '');
 const feito = r => OBRIG.every(k => reg(r)[k]);
 const cego = r => r.motivos === 'auditoria';
+const oculta = r => cego(r) && !feito(r) && !reg(r).cego;
 const nRevisadas = () => DATA.filter(feito).length;
 function toast(t){ const e=$('toast'); e.textContent=t; e.className='on'; clearTimeout(toast.t); toast.t=setTimeout(()=>{e.className='';},1800); }
 
@@ -167,10 +169,12 @@ function bloco(r,c){
   return `<div class="box"><h4>${c.nome}</h4><div class="opts">${opc(r,c)}</div></div>`;
 }
 function concordancia(r){
-  const x = reg(r), t = [];
-  const par = (nome, mine, sug) => t.push(`${nome}: você <b>${mine}</b> · modelo <b>${sug}</b> ${mine===sug?'<span class="ok">✓ concorda</span>':'<span class="no">✗ discorda</span>'}`);
-  par('ambiente', x.ambiente, r.amb_sug); par('fogo', x.fogo, r.fogo_sug); par('fumaça', x.fumaca, r.fum_sug);
-  return t.join('<br>');
+  const x = reg(r), c = x.cego || {}, t = [];
+  const par = (nome, k, sug) => { const mine = c[k] || '—', agora = x[k] || '—';
+    t.push(`${nome}: você (cego) <b>${mine}</b> · modelo <b>${sug}</b> ${mine===sug?'<span class="ok">✓ concorda</span>':'<span class="no">✗ discorda</span>'}` +
+           (agora !== mine ? ` <span class="sm">· corrigido depois para <b>${agora}</b></span>` : '')); };
+  par('ambiente', 'ambiente', r.amb_sug); par('fogo', 'fogo', r.fogo_sug); par('fumaça', 'fumaca', r.fum_sug);
+  return t.join('<br>') + '<div class="sm">A precisão do modelo usa só a resposta cega; a correção vale para o rótulo final.</div>';
 }
 function mostrar(){
   montarFiltro();
@@ -180,7 +184,7 @@ function mostrar(){
   $('alt').innerHTML = alteracoes ? `<span class="pend">⚠ ${alteracoes} alterações sem exportar</span>` : '';
   const r = lista[pos];
   if (!r){ $('idx').textContent='Nenhuma imagem neste filtro.'; $('campos').innerHTML=''; $('mapa').innerHTML=''; return; }
-  const oculto = cego(r) && !feito(r);
+  const oculto = oculta(r);
   const img = $('foto');
   if (img.dataset.src !== r.url){ img.dataset.src = r.url; img.src = r.url; $('moldura').className = 'foto'; }
   img.onerror = () => { $('cap').textContent = '⚠ Não consegui abrir a imagem: ' + r.url; };
@@ -207,7 +211,9 @@ function mostrar(){
 function marcar(c, v){
   const r = lista[pos]; if (!r) return;
   const antes = feito(r), x = reg(r);
-  x[c] = (x[c] === v) ? '' : v; alteracoes++; salvar(); mostrar();
+  x[c] = (x[c] === v) ? '' : v;
+  if (cego(r) && !x.cego && feito(r)) x.cego = {ambiente:x.ambiente, fogo:x.fogo, fumaca:x.fumaca, quando:new Date().toISOString()};
+  alteracoes++; salvar(); mostrar();
   if (!antes && feito(r)){
     const n = nRevisadas();
     if (n % 25 === 0) toast(`💾 ${n} revisadas — exporte o CSV para não perder o trabalho`);
@@ -216,7 +222,7 @@ function marcar(c, v){
   }
 }
 function aceitar(){
-  const r = lista[pos]; if (!r || (cego(r) && !feito(r))) return;
+  const r = lista[pos]; if (!r || oculta(r)) return;
   const x = reg(r);
   if (!x.ambiente) x.ambiente = r.amb_sug;
   if (!x.fogo) x.fogo = r.fogo_sug;
@@ -225,7 +231,8 @@ function aceitar(){
 }
 function limpar(){
   const r = lista[pos]; if (!r) return;
-  delete st[r.caminho_relativo]; alteracoes++; salvar(); toast('🧹 marcações desta imagem apagadas'); mostrar();
+  const c = reg(r).cego; delete st[r.caminho_relativo]; if (c) reg(r).cego = c;
+  alteracoes++; salvar(); toast(c ? '🧹 marcações apagadas (a resposta cega da auditoria foi mantida)' : '🧹 marcações desta imagem apagadas'); mostrar();
 }
 function ir(d){ pos = Math.max(0, Math.min(lista.length-1, pos+d)); mostrar(); }
 function proxNaoRevisada(){
@@ -238,7 +245,7 @@ function resumo(){
   const rev = DATA.filter(feito);
   const cont = campo => { const a = {}; rev.forEach(r => { const v = reg(r)[campo]; a[v] = (a[v]||0)+1; }); return a; };
   const tab = (titulo, o) => `<b>${titulo}</b><table>${Object.entries(o).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<tr><td>${LABEL[k]||k}</td><td class="n">${v}</td></tr>`).join('') || '<tr><td>—</td></tr>'}</table>`;
-  const aud = DATA.filter(r => cego(r) && feito(r));
+  const aud = DATA.filter(r => cego(r) && reg(r).cego);
   const pc = f => aud.length ? (100*aud.filter(f).length/aud.length).toFixed(0)+'% ('+aud.filter(f).length+'/'+aud.length+')' : '—';
   const nf = rev.filter(r => /non_fire/i.test(r.classe_original) && reg(r).fogo==='sim').length;
   const fn = rev.filter(r => !/non_fire/i.test(r.classe_original) && reg(r).fogo==='nao').length;
@@ -248,9 +255,9 @@ function resumo(){
    <b>Rótulos da pasta que parecem errados (entre as revisadas)</b><table>
     <tr><td>pasta "sem fogo" com fogo visível</td><td class="n">${nf}</td></tr><tr><td>pasta "com fogo" sem fogo visível</td><td class="n">${fn}</td></tr></table>
    <b>Precisão do modelo na auditoria cega</b><table>
-    <tr><td>ambiente</td><td class="n">${pc(r=>reg(r).ambiente===r.amb_sug)}</td></tr>
-    <tr><td>fogo</td><td class="n">${pc(r=>reg(r).fogo===r.fogo_sug)}</td></tr>
-    <tr><td>fumaça</td><td class="n">${pc(r=>reg(r).fumaca===r.fum_sug)}</td></tr></table>
+    <tr><td>ambiente</td><td class="n">${pc(r=>reg(r).cego.ambiente===r.amb_sug)}</td></tr>
+    <tr><td>fogo</td><td class="n">${pc(r=>reg(r).cego.fogo===r.fogo_sug)}</td></tr>
+    <tr><td>fumaça</td><td class="n">${pc(r=>reg(r).cego.fumaca===r.fum_sug)}</td></tr></table>
    <p class="sm">Com poucas imagens auditadas a margem de erro é grande; o número final sai do script 05c.</p>
    <div style="display:flex;gap:8px;justify-content:space-between"><button id="zer">🗑️ Apagar todas as minhas marcações</button><button id="fec" class="pri">Fechar</button></div>`;
   $('modal').className = 'on';
@@ -286,9 +293,11 @@ document.addEventListener('keydown', e => {
 const esc = s => '"' + String(s ?? '').replace(/"/g,'""') + '"';
 function exportar(){
   const cols = ['n','caminho_relativo','classe_original','motivos_revisao','ambiente_sugerido','fogo_sugerido','fumaca_sugerida',
-                'ambiente_confirmado','fogo_confirmado','fumaca_confirmada','tipo_imagem','camera_confirmada','observacao','revisado'];
-  const linhas = DATA.map(r => { const x = reg(r); return [r.n,r.caminho_relativo,r.classe_original,r.motivos,r.amb_sug,r.fogo_sug,r.fum_sug,
-      x.ambiente||'',x.fogo||'',x.fumaca||'',x.tipo||'fotografia',x.camera||'',x.obs||'',feito(r)?'sim':'nao'].map(esc).join(','); });
+                'ambiente_confirmado','fogo_confirmado','fumaca_confirmada','tipo_imagem','camera_confirmada','observacao','revisado',
+                'ambiente_cego','fogo_cego','fumaca_cego','quando_cego'];
+  const linhas = DATA.map(r => { const x = reg(r), c = x.cego || {}; return [r.n,r.caminho_relativo,r.classe_original,r.motivos,r.amb_sug,r.fogo_sug,r.fum_sug,
+      x.ambiente||'',x.fogo||'',x.fumaca||'',x.tipo||(feito(r)?'fotografia':''),x.camera||'',x.obs||'',feito(r)?'sim':'nao',
+      c.ambiente||'',c.fogo||'',c.fumaca||'',c.quando||''].map(esc).join(','); });
   const blob = new Blob([cols.join(',')+'\r\n'+linhas.join('\r\n')+'\r\n'], {type:'text/csv;charset=utf-8'});
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'revisao_preenchida.csv';
   document.body.appendChild(a); a.click(); document.body.removeChild(a);
@@ -308,9 +317,12 @@ $('arq').onchange = async e => {
   const f = e.target.files[0]; if (!f) return;
   const t = parseCSV((await f.text()).replace(/^\uFEFF/,'')); const h = t.shift(); const ix = n => h.indexOf(n);
   let c = 0;
-  for (const l of t){ const k = l[ix('caminho_relativo')]; if (!k) continue;
-    st[k] = {ambiente:l[ix('ambiente_confirmado')],fogo:l[ix('fogo_confirmado')],fumaca:l[ix('fumaca_confirmada')],
-             tipo:l[ix('tipo_imagem')],camera:l[ix('camera_confirmada')],obs:l[ix('observacao')]}; c++; }
+  for (const l of t){ const g = n => (ix(n) >= 0 ? (l[ix(n)] || '') : ''); const k = g('caminho_relativo'); if (!k) continue;
+    const x = {ambiente:g('ambiente_confirmado'),fogo:g('fogo_confirmado'),fumaca:g('fumaca_confirmada'),
+               tipo:g('tipo_imagem'),camera:g('camera_confirmada'),obs:g('observacao')};
+    if (g('ambiente_cego') || g('fogo_cego') || g('fumaca_cego'))
+      x.cego = {ambiente:g('ambiente_cego'),fogo:g('fogo_cego'),fumaca:g('fumaca_cego'),quando:g('quando_cego')};
+    st[k] = x; c++; }
   salvar(); aplicar(); toast('📂 ' + c + ' linhas importadas');
 };
 aplicar();

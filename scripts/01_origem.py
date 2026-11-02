@@ -81,7 +81,22 @@ def main():
         "descricao_oficial_classes": "PREENCHER (copiar da página; conferir depois com as imagens)",
         "observacoes": "",
     }
-    (saida / "origem.json").write_text(json.dumps(origem, indent=2, ensure_ascii=False), encoding="utf-8")
+    # Preserva o que foi preenchido à mão (licença, autores, descrição, observações e qualquer campo extra).
+    destino = saida / "origem.json"
+    if destino.exists():
+        anterior = json.loads(destino.read_text(encoding="utf-8"))
+        automaticos = {"dataset_ref", "url", "versao_kaggle", "data_download_utc", "caminho_local",
+                       "total_arquivos", "tamanho_total_bytes", "python", "kagglehub"}
+        mantidos = []
+        for k, v in anterior.items():
+            if k not in automaticos and v and not str(v).startswith("PREENCHER"):
+                origem[k] = v; mantidos.append(k)
+        for k in ("total_arquivos", "tamanho_total_bytes"):
+            if k in anterior and anterior[k] != origem[k]:
+                print(f"ATENÇÃO: {k} mudou de {anterior[k]} para {origem[k]} (o dataset local mudou?)")
+        if mantidos:
+            print("Campos preenchidos à mão mantidos:", ", ".join(mantidos))
+    destino.write_text(json.dumps(origem, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(origem, indent=2, ensure_ascii=False))
     print(f"\nRelatórios em: {saida.resolve()}  | nada foi alterado no dataset.")
 

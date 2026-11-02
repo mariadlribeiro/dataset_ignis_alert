@@ -11,7 +11,7 @@ Gera em relatorios/03_duplicatas/:
 
 Nada é excluído: duplicatas só ganham o mesmo id_grupo.
 
-Uso:  python scripts/03_duplicatas.py [--limiar 4]
+Uso:  python scripts/03_duplicatas.py [--limiar 6]   (6 = limiar escolhido; 8+ encadeia cenas diferentes)
 """
 import argparse
 import csv
@@ -80,7 +80,7 @@ def main():
     ap.add_argument("--manifesto", default="relatorios/01_origem/manifesto_sha256.csv")
     ap.add_argument("--validacao", default="relatorios/02_validacao/validacao.csv")
     ap.add_argument("--saida", default="relatorios/03_duplicatas")
-    ap.add_argument("--limiar", type=int, default=4, help="distância de Hamming (0-64) p/ quase duplicata")
+    ap.add_argument("--limiar", type=int, default=6, help="distância de Hamming (0-64) p/ quase duplicata")
     ap.add_argument("--max-folhas", type=int, default=12)
     a = ap.parse_args()
 

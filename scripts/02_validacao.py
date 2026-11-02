@@ -1,5 +1,5 @@
- # pylint: disable=invalid-name
 #!/usr/bin/env python3
+# pylint: disable=invalid-name
 """
 Etapa 2 - Validação técnica e visual do dataset (SOMENTE LEITURA).
 
