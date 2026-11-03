@@ -1,0 +1,40 @@
+Plano gerado em 2026-11-03T20:49:05+00:00 | NADA FOI COPIADO
+dataset: phylake1337/fire-dataset v1 | arquivos: 999 | 408.8 MB | destino: data/dataset_organizado/
+situação: {'incluida': 988, 'fora_da_divisao': 11}
+extensão corrigida (ex.: .png que é JPEG -> .jpg): 988 arquivos | formato real: {'JPEG': 986, 'PNG': 11, 'MPO': 1, 'GIF': 1}
+
+Pastas de destino:
+  _fora_da_divisao/gif_animado                1
+  _fora_da_divisao/sintetica                  9
+  _fora_da_divisao/visualizacao_sensor        1
+  casa/com_fogo                              55
+  cidade/com_fogo                            61
+  cidade/sem_fogo                             1
+  floresta/com_fogo                         510
+  floresta/sem_fogo                         232
+  outros/com_fogo                            41
+  outros/sem_fogo                             5
+  predios/com_fogo                           82
+  predios/sem_fogo                            1
+
+Divisão (só as incluídas): split x fogo
+  treino     com fogo  523 | sem fogo  165
+  validacao  com fogo  114 | sem fogo   37
+  teste      com fogo  112 | sem fogo   37
+
+Origem dos rótulos (todas as imagens):
+  ambiente: {'revisao_humana': 671, 'modelo': 326, 'copia_exata': 2}
+  fogo    : {'revisao_humana': 405, 'modelo': 591, 'copia_exata': 3}
+
+Fora da divisão:
+  fire_dataset\non_fire_images\non_fire.120.png: nao_fotografia (sintetica)
+  fire_dataset\non_fire_images\non_fire.144.png: nao_fotografia (sintetica)
+  fire_dataset\non_fire_images\non_fire.163.png: nao_fotografia (sintetica)
+  fire_dataset\non_fire_images\non_fire.189.png: GIF animado (19 quadros)
+  fire_dataset\non_fire_images\non_fire.199.png: nao_fotografia (sintetica)
+  fire_dataset\non_fire_images\non_fire.222.png: nao_fotografia (sintetica)
+  fire_dataset\non_fire_images\non_fire.30.png: nao_fotografia (sintetica)
+  fire_dataset\non_fire_images\non_fire.43.png: nao_fotografia (sintetica)
+  fire_dataset\non_fire_images\non_fire.76.png: nao_fotografia (visualizacao_sensor)
+  fire_dataset\non_fire_images\non_fire.88.png: nao_fotografia (sintetica)
+  fire_dataset\non_fire_images\non_fire.92.png: nao_fotografia (sintetica)

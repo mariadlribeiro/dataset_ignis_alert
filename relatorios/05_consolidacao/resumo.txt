@@ -1,4 +1,4 @@
-Consolidação gerada em 2026-11-03T19:24:40+00:00
+Consolidação gerada em 2026-11-03T20:49:04+00:00
 imagens: 999 | situação: {'revisada_completa': 405, 'nao_revisada': 328, 'revisada_ambiente': 266}
 fonte do ambiente: {'revisao_humana': 671, 'modelo': 326, 'copia_exata': 2}
 fonte do fogo: {'revisao_humana': 405, 'modelo': 591, 'copia_exata': 3}
@@ -11,7 +11,7 @@ fogo: {'sim': 749, 'nao': 250}
 fumaça: {'sim': 756, 'nao': 191, 'incerto': 52}
 tipo de imagem: {'fotografia': 663, 'nao_verificado': 326, 'sintetica': 9, 'visualizacao_sensor': 1}
 pasta original diverge do fogo: 8
-decisões: {'incluir': 9, 'excluir': 1}
+decisões: {'incluir': 9, 'excluir': 11}
 grupos para conferir (quase duplicatas com rótulo diferente): 0
 
 Acerto do modelo:

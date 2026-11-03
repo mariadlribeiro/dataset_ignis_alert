@@ -1,2 +1,12 @@
 caminho_relativo,classe_original,id_grupo,motivo,decisao
+fire_dataset\non_fire_images\non_fire.120.png,fire_dataset/non_fire_images,G00702,excluida por decisao manual,excluir
+fire_dataset\non_fire_images\non_fire.144.png,fire_dataset/non_fire_images,G00728,excluida por decisao manual,excluir
+fire_dataset\non_fire_images\non_fire.163.png,fire_dataset/non_fire_images,G00749,excluida por decisao manual,excluir
 fire_dataset\non_fire_images\non_fire.189.png,fire_dataset/non_fire_images,G00777,GIF animado (19 quadros),excluir
+fire_dataset\non_fire_images\non_fire.199.png,fire_dataset/non_fire_images,G00788,excluida por decisao manual,excluir
+fire_dataset\non_fire_images\non_fire.222.png,fire_dataset/non_fire_images,G00814,excluida por decisao manual,excluir
+fire_dataset\non_fire_images\non_fire.30.png,fire_dataset/non_fire_images,G00844,excluida por decisao manual,excluir
+fire_dataset\non_fire_images\non_fire.43.png,fire_dataset/non_fire_images,G00858,excluida por decisao manual,excluir
+fire_dataset\non_fire_images\non_fire.76.png,fire_dataset/non_fire_images,G00893,excluida por decisao manual,excluir
+fire_dataset\non_fire_images\non_fire.88.png,fire_dataset/non_fire_images,G00906,excluida por decisao manual,excluir
+fire_dataset\non_fire_images\non_fire.92.png,fire_dataset/non_fire_images,G00911,excluida por decisao manual,excluir

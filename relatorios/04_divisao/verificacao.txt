@@ -2,7 +2,7 @@ grupos em mais de um split: 0 OK
 arquivos identicos (SHA-256) em mais de um split: 0 OK
 estratificacao: fogo_ambiente | semente: 42
 pares conferidos: 53 | unioes por mesma_cena: 7
-imagens divididas: 998 | pendentes/excluidas: 1 | total: 999
+imagens divididas: 988 | pendentes/excluidas: 11 | total: 999
 soma confere: True
-pares parecidos (Hamming <= 8) em splits diferentes: 15 | cenas_diferentes: 15 | sem revisao: 0 | mesma_cena (nao deveria ocorrer): 0
+pares parecidos (Hamming <= 8) em splits diferentes: 26 | cenas_diferentes: 26 | sem revisao: 0 | mesma_cena (nao deveria ocorrer): 0
 pares candidatos (todos entre grupos diferentes, Hamming <= 8): 53 | sem veredito: 0 -> todos conferidos
