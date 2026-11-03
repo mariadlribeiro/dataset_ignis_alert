@@ -12,7 +12,11 @@ Abra o arquivo gerado (relatorios/05_sugestoes/revisao.html) no Chrome ou Edge.
   * o progresso fica salvo no navegador; o botão "Exportar CSV" baixa revisao_preenchida.csv;
   * nada no dataset é alterado.
 
-Uso:  python scripts/05b_pagina_revisao.py
+Modo "ambiente" (2ª revisão, lista do 05c): só o ambiente é obrigatório; fogo e fumaça ficam opcionais
+(marque só se o modelo errou) e o CSV exportado se chama revisao_ambiente_preenchida.csv.
+
+Uso:  python scripts/05b_pagina_revisao.py                  # 1ª revisão (revisao.csv)
+      python scripts/05b_pagina_revisao.py --modo ambiente  # 2ª revisão (revisao_ambiente.csv)
 """
 import argparse, csv, json
 from collections import defaultdict
@@ -165,7 +169,7 @@ textarea{width:100%;height:52px;resize:vertical;background:var(--folha);border:1
 <header>
  <div class="marca">Revisão do dataset<small id="dsnome"></small></div>
  <div class="progresso">
-  <div class="rot"><span><b id="nrev">0</b> de <span id="ntot"></span> revisadas</span><span>auditoria cega <b id="naud">0</b> de <span id="ntaud"></span></span></div>
+  <div class="rot"><span><b id="nrev">0</b> de <span id="ntot"></span> revisadas</span><span id="caud">auditoria cega <b id="naud">0</b> de <span id="ntaud"></span></span></div>
   <div class="trilha"><i id="t1" style="background:var(--mata)"></i></div>
  </div>
  <div class="ferr">
@@ -174,7 +178,7 @@ textarea{width:100%;height:52px;resize:vertical;background:var(--folha);border:1
   <label style="font-size:13px"><span class="curto">Ir para </span>nº <input id="ir" type="number" min="1" style="width:64px"></label>
   <button id="res">Resumo</button>
   <button id="imp" title="Carrega um revisao_preenchida.csv exportado antes">Importar</button>
-  <button id="exp" class="forte" title="Baixa o revisao_preenchida.csv">Exportar CSV<span id="alt"></span></button>
+  <button id="exp" class="forte" title="Baixa o CSV preenchido">Exportar CSV<span id="alt"></span></button>
   <button id="aj" title="Atalhos de teclado (?)" aria-label="Atalhos de teclado">?</button>
   <input id="arq" type="file" accept=".csv" hidden>
  </div>
@@ -214,6 +218,8 @@ const DATA = __DATA__;
 const GRUPOS = __GRUPOS__;
 const LIM = __LIM__;
 const DATASET = __DATASET__;
+const MODO = __MODO__;
+const EXPORTAR_COMO = __EXPORTAR_COMO__;
 
 const LABEL = {floresta:'Floresta',cidade:'Cidade',casa:'Casa',predios:'Prédios',flores_jardins:'Flores e jardins',outros:'Outros',ambiente_incerto:'Incerto',
   sim:'Sim',nao:'Não',incerto:'Incerto',fotografia:'Fotografia',sintetica:'Sintética',visualizacao_sensor:'Sensor',
@@ -242,14 +248,16 @@ const CAMPOS = [
  {id:'tipo',nome:'Tipo de imagem',crit:'Fotografia já vem marcada; troque só se não for foto real.',op:[['fotografia','z'],['sintetica','x'],['visualizacao_sensor','c']],padrao:'fotografia'},
  {id:'camera',nome:'Câmera',crit:'De onde a imagem foi feita.',sug:'cam_sug',op:[['satelite','t'],['drone','y'],['vigilancia','u'],['celular_terrestre','i'],['incerto','o']],opcional:true}
 ];
-const OBRIG = ['ambiente','fogo','fumaca'];
+const OBRIG = MODO === 'ambiente' ? ['ambiente'] : ['ambiente','fogo','fumaca'];
+if (MODO === 'ambiente') CAMPOS.forEach(c => { if (c.id==='fogo' || c.id==='fumaca'){ c.opcional = true; c.crit = 'Só marque se a sugestão do modelo estiver errada.'; } });
 const MOTIVO = {
  auditoria:['Auditoria cega','Amostra aleatória das imagens em que o modelo estava seguro. Serve para medir quanto ele acerta: responda sem ver a sugestão.'],
  discorda_da_pasta:['Discorda da pasta','O modelo acha que o rótulo da pasta original está errado. Confira com atenção.'],
  pendente_etapa4:['Pendente da divisão','Ficou fora de treino/validação/teste na Etapa 4.'],
  fumaca_sem_fogo:['Fumaça sem fogo','O modelo vê fumaça mas não tem certeza de chama. Decida se há chama visível.'],
  fogo_incerto:['Fogo incerto','A probabilidade de fogo ficou entre os limites de Não e Sim.'],
- ambiente_incerto:['Ambiente incerto','O modelo não teve confiança ou margem suficiente para escolher o ambiente.']
+ ambiente_incerto:['Ambiente incerto','O modelo não teve confiança ou margem suficiente para escolher o ambiente.'],
+ ambiente_nao_confiavel:['Ambiente não confiável','O modelo estava seguro, mas a auditoria cega mostrou que ele erra muito quando sugere este ambiente. Marque só o ambiente.']
 };
 const OBS_RAPIDAS = ['só fumaça, sem chama','brilho ou céu laranja sem chama','marca d\'água','texto ou logotipo sobreposto','imagem sintética','montagem ou colagem','imagem muito escura','quase duplicata de outra'];
 
@@ -389,7 +397,7 @@ function mostrar(){
     e.onkeydown = ev => { if (ev.key===' ') { ev.preventDefault(); marcar(e.dataset.c, e.dataset.v); } }; });
   $('obs').value = reg(r).obs || '';
   $('ace').disabled = oc;
-  $('ace').title = oc ? 'Indisponível na auditoria cega até você responder' : 'Enter: preenche os campos vazios com a sugestão do modelo';
+  $('ace').title = oc ? 'Indisponível na auditoria cega até você responder' : (MODO === 'ambiente' ? 'Enter: usa o ambiente sugerido pelo modelo' : 'Enter: preenche os campos vazios com a sugestão do modelo');
   $('mapa').innerHTML = lista.map((q,i) => `<i data-i="${i}" class="${feito(q)?'ok':''} ${cego(q)?'aud':''} ${i===pos?'cur':''}" title="nº ${q.n}"></i>`).join('');
   document.querySelectorAll('.mapa i').forEach(e => e.onclick = () => { pos = +e.dataset.i; mostrar(); });
 }
@@ -397,7 +405,7 @@ function anotarObs(){ const r = lista[pos]; if (!r) return; reg(r).obs = $('obs'
   marcarPendencias(); }
 function marcarPendencias(){
   $('alt').innerHTML = alteracoes ? `<span class="pend">${alteracoes}</span>` : '';
-  $('exp').title = alteracoes ? `${alteracoes} alterações ainda não exportadas. Estão salvas neste navegador, mas exporte para não perder.` : 'Baixa o revisao_preenchida.csv';
+  $('exp').title = alteracoes ? `${alteracoes} alterações ainda não exportadas. Estão salvas neste navegador, mas exporte para não perder.` : 'Baixa o CSV preenchido';
 }
 $('obs').oninput = anotarObs;
 $('chips').innerHTML = OBS_RAPIDAS.map(t => `<span class="chip" role="button" tabindex="0" title="Acrescenta à observação">${esc(t)}</span>`).join('');
@@ -421,8 +429,7 @@ function aceitar(){
   const r = lista[pos]; if (!r || oculta(r)) return;
   const x = reg(r);
   if (!x.ambiente) x.ambiente = r.amb_sug;
-  if (!x.fogo) x.fogo = r.fogo_sug;
-  if (!x.fumaca) x.fumaca = r.fum_sug;
+  if (MODO !== 'ambiente'){ if (!x.fogo) x.fogo = r.fogo_sug; if (!x.fumaca) x.fumaca = r.fum_sug; }
   alteracoes++; salvar(); toast('Sugestão aceita nos campos vazios'); ir(1);
 }
 function limpar(){
@@ -510,9 +517,9 @@ function exportar(){
       x.ambiente||'',x.fogo||'',x.fumaca||'',x.tipo||(feito(r)?'fotografia':''),x.camera||'',x.obs||'',feito(r)?'sim':'nao',
       c.ambiente||'',c.fogo||'',c.fumaca||'',c.quando||''].map(csv).join(','); });
   const blob = new Blob([cols.join(',')+'\r\n'+linhas.join('\r\n')+'\r\n'], {type:'text/csv;charset=utf-8'});
-  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'revisao_preenchida.csv';
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = EXPORTAR_COMO;
   document.body.appendChild(a); a.click(); document.body.removeChild(a);
-  alteracoes = 0; mostrar(); toast('CSV exportado. Guarde em relatorios/05_sugestoes/');
+  alteracoes = 0; mostrar(); toast(EXPORTAR_COMO + ' exportado. Guarde em relatorios/05_sugestoes/');
 }
 function parseCSV(t){
   const out=[]; let row=[], cur='', q=false;
@@ -536,7 +543,12 @@ $('arq').onchange = async e => {
     st[k] = x; c++; }
   salvar(); aplicar(); toast(c + ' linhas importadas'); e.target.value = '';
 };
-$('dsnome').textContent = DATASET;
+$('dsnome').textContent = MODO === 'ambiente' ? '2ª revisão: só ambiente' : DATASET;
+if (MODO === 'ambiente'){
+  document.title = 'Revisão de ambiente – Ignis Alert';
+  $('ace').textContent = 'Aceitar o ambiente sugerido';
+}
+if (!DATA.some(cego)){ $('caud').hidden = true; document.querySelector('.legenda-mapa span:nth-child(3)').hidden = true; }
 aplicar();
 window.addEventListener('beforeunload', e => { if (alteracoes) { e.preventDefault(); e.returnValue = ''; } });
 </script></body></html>
@@ -558,11 +570,17 @@ def main():
     ap.add_argument("--validacao", default="relatorios/02_validacao/validacao.csv")
     ap.add_argument("--grupos", default="relatorios/03_duplicatas/imagem_grupo.csv")
     ap.add_argument("--pendentes", default="relatorios/04_divisao/pendentes.csv")
-    ap.add_argument("--revisao", default="relatorios/05_sugestoes/revisao.csv")
+    ap.add_argument("--modo", choices=["completo", "ambiente"], default="completo",
+                    help="ambiente = 2ª revisão, só o ambiente é obrigatório (lista do 05c)")
+    ap.add_argument("--revisao", help="padrão: revisao.csv (completo) ou revisao_ambiente.csv (ambiente)")
     ap.add_argument("--sugestoes", default="relatorios/05_sugestoes/sugestoes.csv")
     ap.add_argument("--metadados", default="relatorios/05_sugestoes/metadados.json")
-    ap.add_argument("--saida", default="relatorios/05_sugestoes/revisao.html")
+    ap.add_argument("--saida", help="padrão: revisao.html (completo) ou revisao_ambiente.html (ambiente)")
     a = ap.parse_args()
+    base = "relatorios/05_sugestoes/" + ("revisao_ambiente" if a.modo == "ambiente" else "revisao")
+    a.revisao = a.revisao or base + ".csv"
+    a.saida = a.saida or base + ".html"
+    exportar_como = Path(base).name + "_preenchida.csv"
 
     origem = json.loads(Path(a.origem).read_text(encoding="utf-8"))
     raiz = Path(origem["caminho_local"])
@@ -603,11 +621,13 @@ def main():
     if origem.get("versao_kaggle"):
         nome_ds += f" v{origem['versao_kaggle']}"
     html = (HTML.replace("__DATA__", js(dados)).replace("__GRUPOS__", js(grupos_usados))
-                .replace("__LIM__", js(lim)).replace("__DATASET__", js(nome_ds)))
+                .replace("__LIM__", js(lim)).replace("__DATASET__", js(nome_ds))
+                .replace("__MODO__", js(a.modo)).replace("__EXPORTAR_COMO__", js(exportar_como)))
     Path(a.saida).write_text(html, encoding="utf-8")
     cegas = sum(d["motivos"] == "auditoria" for d in dados)
     print(f"Página gerada: {a.saida}\nImagens: {len(dados)} (das quais {cegas} cegas, de auditoria)")
     print(f"Grupos de duplicatas mostrados: {len(grupos_usados)} | limiares: {lim}")
+    print(f"Modo: {a.modo} | o botão Exportar baixa: {exportar_como}")
     print("Abra o arquivo no Chrome ou Edge (duplo clique).")
 
 
