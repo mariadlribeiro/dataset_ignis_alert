@@ -7,6 +7,8 @@ Regras:
   * estratificada pelos rótulos CONSOLIDADOS (Etapa 5d: fogo x ambiente), se rotulos.csv existir;
     sem ele, pela classe original (pasta). A proporção de cada estrato é mantida em cada conjunto;
   * semente fixa -> resultado reproduzível;
+  * pares conferidos à mão (pares_revisados.csv, da página 04b): "mesma_cena" une os dois grupos numa
+    mesma unidade de divisão (ficam no mesmo split); "cenas_diferentes" registra falso positivo do hash;
   * ficam FORA da divisão (em pendentes.csv, nada é excluído): grupos com conflito de rótulo
     e GIFs animados. Para liberar um caso depois da revisão manual, use --decisoes.
 
@@ -16,7 +18,9 @@ Saídas   : relatorios/04_divisao/
   divisao.csv                      -> caminho_relativo, classe_original, id_grupo, estrato, fogo, ambiente, split
   pendentes.csv                    -> o que ficou fora e por quê
   resumo_divisao.csv               -> contagens e proporções por split x estrato
-  pares_proximos_entre_splits.csv  -> pares de imagens parecidas (Hamming <= --aviso) em splits diferentes
+  pares_proximos_entre_splits.csv  -> pares parecidos (Hamming <= --aviso) em splits diferentes, com o veredito
+  pares_candidatos.csv             -> TODOS os pares parecidos entre grupos diferentes (mesmo split ou não):
+                                      é a lista que a página 04b mostra, para que nenhuma redivisão crie par novo
   verificacao.txt                  -> resultado das verificações de vazamento
 
 Decisões manuais (opcional), CSV com colunas: caminho_relativo,decisao  (incluir | excluir)
@@ -51,6 +55,7 @@ def main():
     ap.add_argument("--validacao", default="relatorios/02_validacao/validacao.csv")
     ap.add_argument("--decisoes", default="relatorios/04_divisao/decisoes_revisao.csv")
     ap.add_argument("--rotulos", default="relatorios/05_consolidacao/rotulos.csv")
+    ap.add_argument("--pares-revisados", default="relatorios/04_divisao/pares_revisados.csv")
     ap.add_argument("--estrato", choices=["fogo_ambiente", "fogo", "classe_original"],
                     help="padrão: fogo_ambiente se rotulos.csv existir; senão classe_original")
     ap.add_argument("--saida", default="relatorios/04_divisao")
@@ -108,9 +113,36 @@ def main():
         else:
             incluidas.append(r)
 
-    # --- divisão por grupo, estratificada pelo estrato majoritário do grupo ---
+    # --- unidades de divisão: id_grupo, unindo os grupos de pares marcados como "mesma_cena" ---
+    veredito, conflitantes = {}, []
+    if Path(a.pares_revisados).exists():
+        for p in ler(a.pares_revisados):
+            v = p.get("veredito", "").strip().lower()
+            if v:
+                k = frozenset((p["imagem_a"], p["imagem_b"]))           # a ordem do par não importa
+                if k in veredito and veredito[k] != v:
+                    conflitantes.append(" x ".join(sorted(k)))
+                veredito[k] = v
+    if conflitantes:
+        raise SystemExit("Vereditos conflitantes para o mesmo par em pares_revisados.csv (corrija na página 04b):\n  "
+                         + "\n  ".join(conflitantes))
+    grupo_de = {r["caminho_relativo"]: r["id_grupo"] for r in imagens}
+    pai = {g: g for g in set(grupo_de.values())}
+    def raiz_de(g):
+        while pai[g] != g:
+            pai[g] = pai[pai[g]]; g = pai[g]
+        return g
+    unidos = 0
+    for par, v in veredito.items():
+        if v == "mesma_cena" and len(par) == 2:
+            x, y = (raiz_de(grupo_de[c]) for c in par)
+            if x != y:
+                pai[max(x, y)] = min(x, y); unidos += 1
+    unidade = {c: raiz_de(g) for c, g in grupo_de.items()}
+
+    # --- divisão por unidade, estratificada pelo estrato majoritário da unidade ---
     grupos = defaultdict(list)
-    for r in incluidas: grupos[r["id_grupo"]].append(r)
+    for r in incluidas: grupos[unidade[r["caminho_relativo"]]].append(r)
     estratos = defaultdict(list)
     for g, ms in grupos.items():
         cont_e = Counter(estrato_de(m["caminho_relativo"], m["classe_original"]) for m in ms)
@@ -132,10 +164,11 @@ def main():
                "id_grupo": r["id_grupo"], "estrato": estrato_de(r["caminho_relativo"], r["classe_original"]),
                "fogo": rot.get(r["caminho_relativo"], {}).get("fogo", ""),
                "ambiente": rot.get(r["caminho_relativo"], {}).get("ambiente", ""),
-               "split": destino[r["id_grupo"]]} for r in incluidas]
+               "unidade_divisao": unidade[r["caminho_relativo"]],
+               "split": destino[unidade[r["caminho_relativo"]]]} for r in incluidas]
     linhas.sort(key=lambda x: (x["split"], x["estrato"], x["caminho_relativo"]))
-    gravar(saida / "divisao.csv", linhas, ["caminho_relativo", "classe_original", "id_grupo", "estrato",
-                                          "fogo", "ambiente", "split"])
+    gravar(saida / "divisao.csv", linhas, ["caminho_relativo", "classe_original", "id_grupo", "unidade_divisao",
+                                          "estrato", "fogo", "ambiente", "split"])
     gravar(saida / "pendentes.csv", pendentes, ["caminho_relativo", "classe_original", "id_grupo", "motivo", "decisao"])
 
     # --- resumo ---
@@ -159,6 +192,7 @@ def main():
     msgs.append(f"arquivos identicos (SHA-256) em mais de um split: {len(viol_h)} {'OK' if not viol_h else 'FALHA'}")
     ok = not viol_g and not viol_h
     msgs.append(f"estratificacao: {a.estrato} | semente: {a.semente}")
+    msgs.append(f"pares conferidos: {len(veredito)} | unioes por mesma_cena: {unidos}")
     msgs.append(f"imagens divididas: {len(linhas)} | pendentes/excluidas: {len(pendentes)} | total: {len(imagens)}")
     msgs.append(f"soma confere: {len(linhas) + len(pendentes) == len(imagens)}")
 
@@ -169,13 +203,34 @@ def main():
             if linhas[i]["split"] != linhas[j]["split"]:
                 d = (hi ^ dh[linhas[j]["caminho_relativo"]]).bit_count()
                 if d <= a.aviso:
+                    v = veredito.get(frozenset((linhas[i]["caminho_relativo"], linhas[j]["caminho_relativo"])), "")
                     pares.append({"imagem_a": linhas[i]["caminho_relativo"], "split_a": linhas[i]["split"],
                                   "imagem_b": linhas[j]["caminho_relativo"], "split_b": linhas[j]["split"],
-                                  "hamming": d})
-    pares.sort(key=lambda p: p["hamming"])
+                                  "hamming": d, "veredito": v})
+    pares.sort(key=lambda p: (p["hamming"], p["imagem_a"], p["imagem_b"]))
+    split_de = {l["caminho_relativo"]: l["split"] for l in linhas}
+    cand = []
+    for i in range(len(linhas)):
+        ci = linhas[i]["caminho_relativo"]; hi = dh[ci]
+        for j in range(i + 1, len(linhas)):
+            cj = linhas[j]["caminho_relativo"]
+            if grupo_de[ci] != grupo_de[cj]:
+                d = (hi ^ dh[cj]).bit_count()
+                if d <= a.aviso:
+                    cand.append({"imagem_a": ci, "split_a": split_de[ci], "imagem_b": cj, "split_b": split_de[cj],
+                                 "hamming": d, "veredito": veredito.get(frozenset((ci, cj)), "")})
+    cand.sort(key=lambda p: (p["hamming"], p["imagem_a"], p["imagem_b"]))
+    gravar(saida / "pares_candidatos.csv", cand, ["imagem_a", "split_a", "imagem_b", "split_b", "hamming", "veredito"])
     gravar(saida / "pares_proximos_entre_splits.csv", pares,
-           ["imagem_a", "split_a", "imagem_b", "split_b", "hamming"])
-    msgs.append(f"pares parecidos (Hamming <= {a.aviso}) em splits diferentes: {len(pares)} (revisar se > 0)")
+           ["imagem_a", "split_a", "imagem_b", "split_b", "hamming", "veredito"])
+    cv = Counter(p["veredito"] or "sem_revisao" for p in pares)
+    msgs.append(f"pares parecidos (Hamming <= {a.aviso}) em splits diferentes: {len(pares)} | "
+                f"cenas_diferentes: {cv['cenas_diferentes']} | sem revisao: {cv['sem_revisao']} | "
+                f"mesma_cena (nao deveria ocorrer): {cv['mesma_cena']}")
+    ok = ok and cv["mesma_cena"] == 0
+    sem_cand = sum(1 for p in cand if not p["veredito"])
+    msgs.append(f"pares candidatos (todos entre grupos diferentes, Hamming <= {a.aviso}): {len(cand)} | "
+                f"sem veredito: {sem_cand}" + (" -> rode o 04b para conferir" if sem_cand else " -> todos conferidos"))
     (saida / "verificacao.txt").write_text("\n".join(msgs) + "\n", encoding="utf-8")
 
     print(f"Estratificação: {a.estrato}")
