@@ -4,23 +4,25 @@ Etapa 4 - Divisão treino/validação/teste POR GRUPO, sem vazamento (SOMENTE LE
 
 Regras:
   * a unidade de divisão é o id_grupo (Etapa 3): cópias e quase duplicatas ficam no mesmo conjunto;
-  * estratificada pela classe original (proporção de fogo/sem fogo mantida em cada conjunto);
+  * estratificada pelos rótulos CONSOLIDADOS (Etapa 5d: fogo x ambiente), se rotulos.csv existir;
+    sem ele, pela classe original (pasta). A proporção de cada estrato é mantida em cada conjunto;
   * semente fixa -> resultado reproduzível;
   * ficam FORA da divisão (em pendentes.csv, nada é excluído): grupos com conflito de rótulo
     e GIFs animados. Para liberar um caso depois da revisão manual, use --decisoes.
 
-Entradas : relatorios/03_duplicatas/imagem_grupo.csv, conflitos_rotulo.csv, 02_validacao/validacao.csv
+Entradas : relatorios/03_duplicatas/imagem_grupo.csv, conflitos_rotulo.csv, 02_validacao/validacao.csv,
+           05_consolidacao/rotulos.csv (opcional, recomendado)
 Saídas   : relatorios/04_divisao/
-  divisao.csv                      -> caminho_relativo, classe_original, id_grupo, split
+  divisao.csv                      -> caminho_relativo, classe_original, id_grupo, estrato, fogo, ambiente, split
   pendentes.csv                    -> o que ficou fora e por quê
-  resumo_divisao.csv               -> contagens e proporções por split x classe
+  resumo_divisao.csv               -> contagens e proporções por split x estrato
   pares_proximos_entre_splits.csv  -> pares de imagens parecidas (Hamming <= --aviso) em splits diferentes
   verificacao.txt                  -> resultado das verificações de vazamento
 
 Decisões manuais (opcional), CSV com colunas: caminho_relativo,decisao  (incluir | excluir)
-  incluir -> a imagem volta para a divisão com a classe original; excluir -> fica de fora (documentado).
+  incluir -> a imagem volta para a divisão com o seu rótulo; excluir -> fica de fora (documentado).
 
-Uso:  python scripts/04_divisao.py [--treino 0.70 --val 0.15 --teste 0.15 --semente 42]
+Uso:  python scripts/04_divisao.py [--estrato fogo_ambiente|fogo|classe_original] [--semente 42]
 """
 import argparse, csv, json, random
 from collections import Counter, defaultdict
@@ -48,6 +50,9 @@ def main():
     ap.add_argument("--conflitos", default="relatorios/03_duplicatas/conflitos_rotulo.csv")
     ap.add_argument("--validacao", default="relatorios/02_validacao/validacao.csv")
     ap.add_argument("--decisoes", default="relatorios/04_divisao/decisoes_revisao.csv")
+    ap.add_argument("--rotulos", default="relatorios/05_consolidacao/rotulos.csv")
+    ap.add_argument("--estrato", choices=["fogo_ambiente", "fogo", "classe_original"],
+                    help="padrão: fogo_ambiente se rotulos.csv existir; senão classe_original")
     ap.add_argument("--saida", default="relatorios/04_divisao")
     ap.add_argument("--treino", type=float, default=0.70)
     ap.add_argument("--val", type=float, default=0.15)
@@ -66,6 +71,20 @@ def main():
     conflito = {r["caminho_relativo"] for r in ler(a.conflitos)} if Path(a.conflitos).exists() else set()
     decisoes = {r["caminho_relativo"]: r["decisao"].strip().lower()
                 for r in ler(a.decisoes)} if Path(a.decisoes).exists() else {}
+    rot = {r["caminho_relativo"]: r for r in ler(a.rotulos)} if Path(a.rotulos).exists() else {}
+    a.estrato = a.estrato or ("fogo_ambiente" if rot else "classe_original")
+    if a.estrato != "classe_original":
+        if not rot:
+            raise SystemExit(f"--estrato {a.estrato} precisa de {a.rotulos} (rode antes o 05d_consolidar.py)")
+        faltam = [r["caminho_relativo"] for r in imagens if r["caminho_relativo"] not in rot]
+        if faltam:
+            raise SystemExit(f"{len(faltam)} imagens sem rótulo consolidado (ex.: {faltam[0]})")
+
+    def estrato_de(rel, classe):
+        if a.estrato == "classe_original":
+            return classe
+        x = rot[rel]
+        return x["fogo"] if a.estrato == "fogo" else f"{x['fogo']}|{x['ambiente']}"
 
     # --- pendentes ---
     pendentes, incluidas = [], []
@@ -89,12 +108,13 @@ def main():
         else:
             incluidas.append(r)
 
-    # --- divisão por grupo, estratificada pela classe majoritária do grupo ---
+    # --- divisão por grupo, estratificada pelo estrato majoritário do grupo ---
     grupos = defaultdict(list)
     for r in incluidas: grupos[r["id_grupo"]].append(r)
     estratos = defaultdict(list)
     for g, ms in grupos.items():
-        classe = Counter(m["classe_original"] for m in ms).most_common(1)[0][0]
+        cont_e = Counter(estrato_de(m["caminho_relativo"], m["classe_original"]) for m in ms)
+        classe = sorted(cont_e.items(), key=lambda kv: (-kv[1], kv[0]))[0][0]   # empate: ordem alfabética
         estratos[classe].append((g, len(ms)))
 
     rnd = random.Random(a.semente)
@@ -109,18 +129,22 @@ def main():
             destino[g] = s; atual[s] += n
 
     linhas = [{"caminho_relativo": r["caminho_relativo"], "classe_original": r["classe_original"],
-               "id_grupo": r["id_grupo"], "split": destino[r["id_grupo"]]} for r in incluidas]
-    linhas.sort(key=lambda x: (x["split"], x["classe_original"], x["caminho_relativo"]))
-    gravar(saida / "divisao.csv", linhas, ["caminho_relativo", "classe_original", "id_grupo", "split"])
+               "id_grupo": r["id_grupo"], "estrato": estrato_de(r["caminho_relativo"], r["classe_original"]),
+               "fogo": rot.get(r["caminho_relativo"], {}).get("fogo", ""),
+               "ambiente": rot.get(r["caminho_relativo"], {}).get("ambiente", ""),
+               "split": destino[r["id_grupo"]]} for r in incluidas]
+    linhas.sort(key=lambda x: (x["split"], x["estrato"], x["caminho_relativo"]))
+    gravar(saida / "divisao.csv", linhas, ["caminho_relativo", "classe_original", "id_grupo", "estrato",
+                                          "fogo", "ambiente", "split"])
     gravar(saida / "pendentes.csv", pendentes, ["caminho_relativo", "classe_original", "id_grupo", "motivo", "decisao"])
 
     # --- resumo ---
-    cont = Counter((l["split"], l["classe_original"]) for l in linhas)
-    tot_classe = Counter(l["classe_original"] for l in linhas)
-    resumo = [{"split": s, "classe_original": c, "imagens": cont[(s, c)],
-               "proporcao_da_classe": round(cont[(s, c)] / tot_classe[c], 3)}
+    cont = Counter((l["split"], l["estrato"]) for l in linhas)
+    tot_classe = Counter(l["estrato"] for l in linhas)
+    resumo = [{"split": s, "estrato": c, "imagens": cont[(s, c)],
+               "proporcao_do_estrato": round(cont[(s, c)] / tot_classe[c], 3)}
               for s in SPLITS for c in sorted(tot_classe)]
-    gravar(saida / "resumo_divisao.csv", resumo, ["split", "classe_original", "imagens", "proporcao_da_classe"])
+    gravar(saida / "resumo_divisao.csv", resumo, ["split", "estrato", "imagens", "proporcao_do_estrato"])
 
     # --- verificações de vazamento ---
     sha = {r["caminho_relativo"]: r["sha256"] for r in imagens}
@@ -134,6 +158,7 @@ def main():
     msgs.append(f"grupos em mais de um split: {len(viol_g)} {'OK' if not viol_g else 'FALHA'}")
     msgs.append(f"arquivos identicos (SHA-256) em mais de um split: {len(viol_h)} {'OK' if not viol_h else 'FALHA'}")
     ok = not viol_g and not viol_h
+    msgs.append(f"estratificacao: {a.estrato} | semente: {a.semente}")
     msgs.append(f"imagens divididas: {len(linhas)} | pendentes/excluidas: {len(pendentes)} | total: {len(imagens)}")
     msgs.append(f"soma confere: {len(linhas) + len(pendentes) == len(imagens)}")
 
@@ -153,9 +178,13 @@ def main():
     msgs.append(f"pares parecidos (Hamming <= {a.aviso}) em splits diferentes: {len(pares)} (revisar se > 0)")
     (saida / "verificacao.txt").write_text("\n".join(msgs) + "\n", encoding="utf-8")
 
-    print("Divisão por split e classe:")
-    for r in resumo:
-        print(f"  {r['split']:10s} {r['classe_original']:32s} {r['imagens']:4d}  ({r['proporcao_da_classe']:.1%})")
+    print(f"Estratificação: {a.estrato}")
+    print(f"{'estrato':32s} {'treino':>7s} {'validacao':>10s} {'teste':>7s}  total")
+    for c in sorted(tot_classe):
+        print(f"  {c:30s} " + " ".join(f"{cont[(s, c)]:>{w}d}" for s, w in zip(SPLITS, (7, 10, 7))) + f"  {tot_classe[c]:5d}")
+    if a.estrato != "fogo":
+        cf = Counter((l["split"], l["fogo"] or l["classe_original"]) for l in linhas)
+        print("Por fogo:", {s: {f: cf[(s, f)] for f in sorted({k[1] for k in cf})} for s in SPLITS})
     print("\nVerificações:"); [print("  " + m) for m in msgs]
     print(f"\nSemente: {a.semente}. Nada foi alterado no dataset.")
     if not ok: raise SystemExit("VAZAMENTO DETECTADO - veja verificacao.txt")

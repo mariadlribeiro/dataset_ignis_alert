@@ -1,5 +1,6 @@
 grupos em mais de um split: 0 OK
 arquivos identicos (SHA-256) em mais de um split: 0 OK
-imagens divididas: 989 | pendentes/excluidas: 10 | total: 999
+estratificacao: fogo_ambiente | semente: 42
+imagens divididas: 998 | pendentes/excluidas: 1 | total: 999
 soma confere: True
-pares parecidos (Hamming <= 8) em splits diferentes: 12 (revisar se > 0)
+pares parecidos (Hamming <= 8) em splits diferentes: 19 (revisar se > 0)

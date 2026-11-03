@@ -1,0 +1,29 @@
+Consolidação gerada em 2026-11-03T19:24:40+00:00
+imagens: 999 | situação: {'revisada_completa': 405, 'nao_revisada': 328, 'revisada_ambiente': 266}
+fonte do ambiente: {'revisao_humana': 671, 'modelo': 326, 'copia_exata': 2}
+fonte do fogo: {'revisao_humana': 405, 'modelo': 591, 'copia_exata': 3}
+fonte da fumaça: {'revisao_humana': 405, 'modelo': 591, 'copia_exata': 3}
+fonte do tipo: {'revisao_humana': 671, 'nenhuma': 326, 'copia_exata': 2}
+herdados de cópia exata: {'fogo': 3, 'fumaca': 3, 'ambiente': 2, 'tipo_imagem': 2}
+conflitos entre cópias exatas revisadas: 0
+ambiente: {'floresta': 751, 'cidade': 62, 'casa': 55, 'outros': 48, 'predios': 83}
+fogo: {'sim': 749, 'nao': 250}
+fumaça: {'sim': 756, 'nao': 191, 'incerto': 52}
+tipo de imagem: {'fotografia': 663, 'nao_verificado': 326, 'sintetica': 9, 'visualizacao_sensor': 1}
+pasta original diverge do fogo: 8
+decisões: {'incluir': 9, 'excluir': 1}
+grupos para conferir (quase duplicatas com rótulo diferente): 0
+
+Acerto do modelo:
+  auditoria_cega    ambiente  todas                    43/66    65.1%  IC95 53.1% a 75.5%
+  auditoria_cega    fogo      todas                    65/66    98.5%  IC95 91.9% a 99.7%
+  auditoria_cega    fumaca    todas                    60/66    90.9%  IC95 81.5% a 95.8%
+  auditoria_cega    ambiente  sugerido=casa             5/19    26.3%  IC95 11.8% a 48.8%
+  auditoria_cega    ambiente  sugerido=cidade           1/2     50.0%  IC95 9.4% a 90.5%
+  auditoria_cega    ambiente  sugerido=floresta        33/33   100.0%  IC95 89.6% a 100.0%
+  auditoria_cega    ambiente  sugerido=outros           0/5      0.0%  IC95 0.0% a 43.5%
+  auditoria_cega    ambiente  sugerido=predios          4/7     57.1%  IC95 25.1% a 84.2%
+  revisao_ambiente  ambiente  sugerido=casa            43/161   26.7%  IC95 20.5% a 34.0%
+  revisao_ambiente  ambiente  sugerido=cidade           8/14    57.1%  IC95 32.6% a 78.6%
+  revisao_ambiente  ambiente  sugerido=outros           5/50    10.0%  IC95 4.3% a 21.4%
+  revisao_ambiente  ambiente  sugerido=predios         38/41    92.7%  IC95 80.6% a 97.5%

@@ -1,0 +1,13 @@
+origem,campo,recorte,acertos,n,acerto,ic95_inf,ic95_sup
+auditoria_cega,ambiente,todas,43,66,0.6515,0.5311,0.7552
+auditoria_cega,fogo,todas,65,66,0.9848,0.919,0.9973
+auditoria_cega,fumaca,todas,60,66,0.9091,0.8155,0.9577
+auditoria_cega,ambiente,sugerido=casa,5,19,0.2632,0.1181,0.4879
+auditoria_cega,ambiente,sugerido=cidade,1,2,0.5,0.0945,0.9055
+auditoria_cega,ambiente,sugerido=floresta,33,33,1.0,0.8957,1.0
+auditoria_cega,ambiente,sugerido=outros,0,5,0.0,0.0,0.4345
+auditoria_cega,ambiente,sugerido=predios,4,7,0.5714,0.2505,0.8418
+revisao_ambiente,ambiente,sugerido=casa,43,161,0.2671,0.2047,0.3403
+revisao_ambiente,ambiente,sugerido=cidade,8,14,0.5714,0.3259,0.7862
+revisao_ambiente,ambiente,sugerido=outros,5,50,0.1,0.0435,0.2136
+revisao_ambiente,ambiente,sugerido=predios,38,41,0.9268,0.8057,0.9748
