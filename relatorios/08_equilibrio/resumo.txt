@@ -1,0 +1,38 @@
+Etapa 8 gerada em 2026-11-10T21:37:44+00:00 | NENHUMA IMAGEM FOI ALTERADA
+esquema: classe
+imagens incluídas: 988 | treino: 688 | validação e teste ficam sem peso (distribuição real)
+
+Treino, chance de cada classe no sorteio:
+  com fogo  antes  76.2%  ->  depois  50.0%   (524 imagens)
+  sem fogo  antes  23.8%  ->  depois  50.0%   (164 imagens)
+  peso mínimo 0.656 | máximo 2.098 | razão 3.2x
+
+Treino por estrato (ambiente|fogo): imagens, chance antes -> depois
+  floresta|sim                  357    51.9% ->  34.1%
+  floresta|nao                  159    23.1% ->  48.5%
+  predios|sim                    57     8.3% ->   5.4%
+  cidade|sim                     43     6.2% ->   4.1%
+  casa|sim                       38     5.5% ->   3.6%
+  outros|sim                     29     4.2% ->   2.8%
+  outros|nao                      3     0.4% ->   0.9%
+  cidade|nao                      1     0.1% ->   0.3%
+  predios|nao                     1     0.1% ->   0.3%
+
+Lacunas (menos de 20 imagens no estrato). O peso NÃO resolve: faltam exemplos reais.
+  casa             sem fogo: treino 0, validacao 0, teste 0
+  cidade           sem fogo: treino 1, validacao 0, teste 0
+  outros           sem fogo: treino 3, validacao 1, teste 1
+  predios          sem fogo: treino 1, validacao 0, teste 0
+  casa             com fogo: validacao 9, teste 8
+  cidade           com fogo: validacao 9, teste 9
+  outros           com fogo: validacao 6, teste 6
+  predios          com fogo: validacao 13, teste 13
+
+Leitura: os estratos sem fogo fora da floresta são os que mais faltam. Sem eles o modelo pode
+aprender 'cena urbana = fogo', e o teste não mede alarmes falsos em cidade. Prioridade para os
+próximos datasets: cenas urbanas sem fogo e imagens que confundem (pôr do sol, luzes, neblina).
+
+Como usar no treino (PyTorch):
+  pesos = [float(l['peso']) for l in csv.DictReader(open('relatorios/08_equilibrio/pesos_treino.csv'))]
+  sampler = WeightedRandomSampler(pesos, num_samples=len(pesos), replacement=True)
+  (a ordem das imagens no Dataset do treino tem de ser a mesma do CSV)

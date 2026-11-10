@@ -1,0 +1,22 @@
+Organização executada em 2026-11-10T21:37:11+00:00
+origem (somente leitura): C:\Users\maria\.cache\kagglehub\datasets\phylake1337\fire-dataset\versions\1
+destino: data\dataset_organizado
+status: {'copiado': 999}
+arquivos do plano presentes no destino: 999 de 999
+arquivos temporários (.tmp) restantes: 0
+arquivos no destino fora do plano: 0
+falhas: 0
+
+Arquivos por pasta:
+  _fora_da_divisao/gif_animado                1
+  _fora_da_divisao/sintetica                  9
+  _fora_da_divisao/visualizacao_sensor        1
+  casa/com_fogo                              55
+  cidade/com_fogo                            61
+  cidade/sem_fogo                             1
+  floresta/com_fogo                         510
+  floresta/sem_fogo                         231
+  outros/com_fogo                            41
+  outros/sem_fogo                             5
+  predios/com_fogo                           83
+  predios/sem_fogo                            1
