@@ -333,7 +333,7 @@ n,caminho_relativo,classe_original,motivos_revisao,ambiente_sugerido,fogo_sugeri
 "332","fire_dataset\non_fire_images\non_fire.92.png","fire_dataset/non_fire_images","fumaca_sem_fogo","floresta","nao","sim","floresta","nao","nao","sintetica","","","sim","","","",""
 "333","fire_dataset\non_fire_images\non_fire.189.png","fire_dataset/non_fire_images","fumaca_sem_fogo;pendente_etapa4","floresta","nao","incerto","floresta","nao","incerto","fotografia","","","sim","","","",""
 "334","fire_dataset\non_fire_images\non_fire.5.png","fire_dataset/non_fire_images","fumaca_sem_fogo;pendente_etapa4","floresta","nao","incerto","floresta","nao","incerto","fotografia","","","sim","","","",""
-"335","fire_dataset\fire_images\fire.204.png","fire_dataset/fire_images","pendente_etapa4","predios","sim","sim","floresta","nao","nao","fotografia","","","sim","","","",""
+"335","fire_dataset\fire_images\fire.204.png","fire_dataset/fire_images","pendente_etapa4","predios","sim","sim","predios","sim","sim","fotografia","","corrigido em 10/11/2026: conferencia visual mostra predio em chamas, com fumaca","sim","","","",""
 "336","fire_dataset\fire_images\fire.506.png","fire_dataset/fire_images","pendente_etapa4","casa","sim","sim","cidade","sim","sim","fotografia","","","sim","","","",""
 "337","fire_dataset\fire_images\fire.559.png","fire_dataset/fire_images","pendente_etapa4","casa","sim","sim","floresta","sim","sim","fotografia","","","sim","","","",""
 "338","fire_dataset\non_fire_images\non_fire.210.png","fire_dataset/non_fire_images","pendente_etapa4","floresta","nao","incerto","floresta","nao","nao","fotografia","","","sim","","","",""

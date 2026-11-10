@@ -1,4 +1,4 @@
-Plano gerado em 2026-11-03T20:49:05+00:00 | NADA FOI COPIADO
+Plano gerado em 2026-11-10T21:32:20+00:00 | NADA FOI COPIADO
 dataset: phylake1337/fire-dataset v1 | arquivos: 999 | 408.8 MB | destino: data/dataset_organizado/
 situação: {'incluida': 988, 'fora_da_divisao': 11}
 extensão corrigida (ex.: .png que é JPEG -> .jpg): 988 arquivos | formato real: {'JPEG': 986, 'PNG': 11, 'MPO': 1, 'GIF': 1}
@@ -11,14 +11,14 @@ Pastas de destino:
   cidade/com_fogo                            61
   cidade/sem_fogo                             1
   floresta/com_fogo                         510
-  floresta/sem_fogo                         232
+  floresta/sem_fogo                         231
   outros/com_fogo                            41
   outros/sem_fogo                             5
-  predios/com_fogo                           82
+  predios/com_fogo                           83
   predios/sem_fogo                            1
 
 Divisão (só as incluídas): split x fogo
-  treino     com fogo  523 | sem fogo  165
+  treino     com fogo  524 | sem fogo  164
   validacao  com fogo  114 | sem fogo   37
   teste      com fogo  112 | sem fogo   37
 

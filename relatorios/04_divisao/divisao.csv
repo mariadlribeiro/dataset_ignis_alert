@@ -149,7 +149,6 @@ fire_dataset\fire_images\fire.251.png,fire_dataset/fire_images,G00169,G00169,sim
 fire_dataset\fire_images\fire.252.png,fire_dataset/fire_images,G00170,G00170,sim|predios,sim,predios,teste
 fire_dataset\fire_images\fire.599.png,fire_dataset/fire_images,G00502,G00502,sim|predios,sim,predios,teste
 fire_dataset\non_fire_images\non_fire.104.png,fire_dataset/non_fire_images,G00684,G00684,nao|cidade,nao,cidade,treino
-fire_dataset\fire_images\fire.204.png,fire_dataset/fire_images,G00092,G00092,nao|floresta,nao,floresta,treino
 fire_dataset\fire_images\fire.390.png,fire_dataset/fire_images,G00315,G00315,nao|floresta,nao,floresta,treino
 fire_dataset\fire_images\fire.724.png,fire_dataset/fire_images,G00624,G00624,nao|floresta,nao,floresta,treino
 fire_dataset\fire_images\fire.73.png,fire_dataset/fire_images,G00629,G00629,nao|floresta,nao,floresta,treino
@@ -810,6 +809,7 @@ fire_dataset\fire_images\fire.197.png,fire_dataset/fire_images,G00109,G00109,sim
 fire_dataset\fire_images\fire.20.png,fire_dataset/fire_images,G00113,G00113,sim|predios,sim,predios,treino
 fire_dataset\fire_images\fire.201.png,fire_dataset/fire_images,G00115,G00115,sim|predios,sim,predios,treino
 fire_dataset\fire_images\fire.202.png,fire_dataset/fire_images,G00116,G00116,sim|predios,sim,predios,treino
+fire_dataset\fire_images\fire.204.png,fire_dataset/fire_images,G00092,G00092,sim|predios,sim,predios,treino
 fire_dataset\fire_images\fire.206.png,fire_dataset/fire_images,G00119,G00119,sim|predios,sim,predios,treino
 fire_dataset\fire_images\fire.207.png,fire_dataset/fire_images,G00120,G00120,sim|predios,sim,predios,treino
 fire_dataset\fire_images\fire.208.png,fire_dataset/fire_images,G00121,G00121,sim|predios,sim,predios,treino

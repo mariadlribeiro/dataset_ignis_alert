@@ -1,6 +1,6 @@
 id_grupo,campos_diferentes,caminho_relativo,ambiente,fonte_ambiente,fogo,fonte_fogo,situacao
 G00092,ambiente|fogo,fire_dataset\fire_images\fire.181.png,cidade,revisao_humana,sim,revisao_humana,decisao_registrada
-G00092,ambiente|fogo,fire_dataset\fire_images\fire.204.png,floresta,revisao_humana,nao,revisao_humana,decisao_registrada
+G00092,ambiente|fogo,fire_dataset\fire_images\fire.204.png,predios,revisao_humana,sim,revisao_humana,decisao_registrada
 G00092,ambiente|fogo,fire_dataset\fire_images\fire.30.png,cidade,revisao_humana,sim,revisao_humana,decisao_registrada
 G00092,ambiente|fogo,fire_dataset\fire_images\fire.506.png,cidade,revisao_humana,sim,revisao_humana,decisao_registrada
 G00092,ambiente|fogo,fire_dataset\fire_images\fire.559.png,floresta,revisao_humana,sim,revisao_humana,decisao_registrada
