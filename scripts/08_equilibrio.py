@@ -23,7 +23,12 @@ Saídas  : relatorios/08_equilibrio/
   diagnostico.csv   -> contagem por conjunto x ambiente x fogo, com as lacunas marcadas
   resumo.txt        -> o que muda no sorteio e as lacunas que só dados novos resolvem
 
-Uso:  python scripts/08_equilibrio.py [--esquema classe|estrato] [--minimo 20] [--teto 5]
+  ambiente         Cada classe vale metade do sorteio e, DENTRO de cada classe, cada ambiente recebe a mesma
+                   fatia. Proteção: nenhuma imagem pode ser sorteada mais que --max-repeticoes vezes por época
+                   (padrão 3); a fatia que passaria disso volta para os outros ambientes da mesma classe. Assim
+                   ambientes com poucas imagens (ex.: cidade sem fogo, 1 imagem) não são decorados pelo modelo.
+
+Uso:  python scripts/08_equilibrio.py [--esquema classe|estrato|ambiente] [--max-repeticoes 3] [--minimo 20] [--teto 5]
 """
 import argparse, csv, math
 from collections import Counter, defaultdict
@@ -49,6 +54,28 @@ def pesos_classe(treino):
     return {id(r): len(treino) / (len(n) * n[r["fogo"]]) for r in treino}
 
 
+def pesos_ambiente(treino, max_rep):
+    """Fatias iguais por ambiente dentro de cada classe, com teto de repetições por imagem (enchimento por nível)."""
+    N = len(treino)
+    n_cls = Counter(r["fogo"] for r in treino)
+    n_est = Counter((r["fogo"], r["ambiente"]) for r in treino)
+    fatia = {}
+    for c in n_cls:
+        ambs = [amb for (cc, amb) in n_est if cc == c]
+        massa, livres = 1 / len(n_cls), set(ambs)
+        teto = {amb: max_rep * n_est[(c, amb)] / N for amb in ambs}   # fatia máxima = max_rep vezes por imagem
+        while livres:
+            igual = massa / len(livres)
+            presos = {amb for amb in livres if teto[amb] < igual}
+            if not presos:
+                for amb in livres: fatia[(c, amb)] = igual
+                break
+            for amb in presos:
+                fatia[(c, amb)] = teto[amb]; massa -= teto[amb]
+            livres -= presos
+    return {id(r): fatia[(r["fogo"], r["ambiente"])] * N / n_est[(r["fogo"], r["ambiente"])] for r in treino}
+
+
 def pesos_estrato(treino, teto):
     """Dentro de cada classe: peso proporcional a 1/raiz(n_estrato), com teto; depois cada classe soma N/2."""
     n_cls = Counter(r["fogo"] for r in treino)
@@ -68,7 +95,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--inventario", default="relatorios/06_plano/inventario.csv")
     ap.add_argument("--saida", default="relatorios/08_equilibrio")
-    ap.add_argument("--esquema", choices=["classe", "estrato"], default="classe")
+    ap.add_argument("--esquema", choices=["classe", "estrato", "ambiente"], default="classe")
+    ap.add_argument("--max-repeticoes", type=float, default=3.0, help="(esquema ambiente) máximo de sorteios por imagem por época")
     ap.add_argument("--minimo", type=int, default=20, help="abaixo disso, o estrato é marcado como lacuna")
     ap.add_argument("--teto", type=float, default=5.0, help="(esquema estrato) peso máximo = teto x menor peso da classe")
     a = ap.parse_args()
@@ -84,7 +112,8 @@ def main():
         raise SystemExit("Inventário inconsistente:\n  " + "\n  ".join(erros[:20]))
 
     treino = [r for r in inc if r["split"] == "treino"]
-    w = pesos_classe(treino) if a.esquema == "classe" else pesos_estrato(treino, a.teto)
+    w = (pesos_classe(treino) if a.esquema == "classe" else pesos_estrato(treino, a.teto) if a.esquema == "estrato"
+         else pesos_ambiente(treino, a.max_repeticoes))
     total_w = sum(w.values())
     n_est = Counter((r["fogo"], r["ambiente"]) for r in treino)
 
@@ -122,15 +151,17 @@ def main():
     pmin, pmax = min(w.values()), max(w.values())
 
     txt = [f"Etapa 8 gerada em {datetime.now(timezone.utc).isoformat(timespec='seconds')} | NENHUMA IMAGEM FOI ALTERADA",
-           f"esquema: {a.esquema}" + (f" (teto {a.teto})" if a.esquema == "estrato" else ""),
+           f"esquema: {a.esquema}" + (f" (teto {a.teto})" if a.esquema == "estrato" else f" (máx. {a.max_repeticoes:g} repetições por imagem por época)" if a.esquema == "ambiente" else ""),
            f"imagens incluídas: {len(inc)} | treino: {len(treino)} | validação e teste ficam sem peso (distribuição real)",
            "", "Treino, chance de cada classe no sorteio:"]
     for f, nome in (("sim", "com fogo"), ("nao", "sem fogo")):
         txt.append(f"  {nome:9s} antes {100 * antes[f] / len(treino):5.1f}%  ->  depois {100 * depois[f]:5.1f}%   ({antes[f]} imagens)")
     txt += [f"  peso mínimo {pmin:.3f} | máximo {pmax:.3f} | razão {pmax / pmin:.1f}x", "",
-            "Treino por estrato (ambiente|fogo): imagens, chance antes -> depois"]
+            "Treino por estrato (ambiente|fogo): imagens, chance antes -> depois, vezes que cada imagem sai por época"]
     for e in sorted(est_antes, key=lambda e: -est_antes[e]):
-        txt.append(f"  {e:28s} {est_antes[e]:4d}   {100 * est_antes[e] / len(treino):5.1f}% -> {100 * est_depois[e]:5.1f}%")
+        rep = est_depois[e] * len(treino) / est_antes[e]
+        txt.append(f"  {e:28s} {est_antes[e]:4d}   {100 * est_antes[e] / len(treino):5.1f}% -> {100 * est_depois[e]:5.1f}%   {rep:4.1f}x"
+                   + ("  (no teto)" if a.esquema == "ambiente" and rep >= a.max_repeticoes - 1e-6 else ""))
     txt += ["", f"Lacunas (menos de {a.minimo} imagens no estrato). O peso NÃO resolve: faltam exemplos reais."]
     por_amb = defaultdict(list)
     for s, amb, f, q in lacunas: por_amb[(amb, f)].append(f"{s} {q}")
