@@ -245,6 +245,8 @@ def main():
     ap.add_argument("--saida", default="relatorios/09_condicoes")
     ap.add_argument("--limite-escura", type=float, default=70.0)
     ap.add_argument("--limite-clara", type=float, default=110.0)
+    ap.add_argument("--usar-copia", action="store_true",
+                    help="lê cada imagem da cópia organizada (coluna destino); serve para o inventário combinado, com mais de uma fonte")
     a = ap.parse_args()
 
     raiz = Path(json.loads(Path(a.origem).read_text(encoding="utf-8"))["caminho_local"])
@@ -253,7 +255,7 @@ def main():
     for i, r in enumerate(inv, 1):
         k = r["caminho_original"]
         try:
-            m = medir(raiz / k.replace("\\", "/"))
+            m = medir(Path(r["destino"]) if a.usar_copia else raiz / k.replace("\\", "/"))
         except Exception as e:
             falhas.append(f"{k}: {e}"); continue
         linhas.append({"caminho_original": k, "sha256": r["sha256"], "split": r["split"],
@@ -296,6 +298,9 @@ def main():
     for c in ("pct_ceu_est", "pct_bordas", "ruido", "pct_maior_foco"):
         v = np.array([l[c] for l in linhas], dtype=float)
         print(f"  {c:14s} mediana {np.median(v):8.1f} | 10% {np.percentile(v, 10):8.1f} | 90% {np.percentile(v, 90):8.1f}")
+    if a.usar_copia:
+        print(f"Arquivo: {saida / 'medidas_auto.csv'} (a folha de iluminação não é gerada com --usar-copia). Nada no dataset foi alterado.")
+        return
     folha(linhas, raiz, saida / "folha_iluminacao.png")
     print(f"Arquivos: {saida / 'medidas_auto.csv'} e {saida / 'folha_iluminacao.png'}. Nada no dataset foi alterado.")
 
