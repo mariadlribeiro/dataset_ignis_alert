@@ -253,6 +253,7 @@ if (MODO === 'ambiente') CAMPOS.forEach(c => { if (c.id==='fogo' || c.id==='fuma
 const MOTIVO = {
  auditoria:['Auditoria cega','Amostra aleatória das imagens em que o modelo estava seguro. Serve para medir quanto ele acerta: responda sem ver a sugestão.'],
  discorda_da_pasta:['Discorda da pasta','O modelo acha que o rótulo da pasta original está errado. Confira com atenção.'],
+ nova_fonte_floresta_sem_fogo:['Nova fonte','Candidata a floresta sem fogo. Confira: é floresta? há chama visível? é foto real (não arte, não montagem)?'],
  pendente_etapa4:['Pendente da divisão','Ficou fora de treino/validação/teste na Etapa 4.'],
  fumaca_sem_fogo:['Fumaça sem fogo','O modelo vê fumaça mas não tem certeza de chama. Decida se há chama visível.'],
  fogo_incerto:['Fogo incerto','A probabilidade de fogo ficou entre os limites de Não e Sim.'],
@@ -576,11 +577,13 @@ def main():
     ap.add_argument("--sugestoes", default="relatorios/05_sugestoes/sugestoes.csv")
     ap.add_argument("--metadados", default="relatorios/05_sugestoes/metadados.json")
     ap.add_argument("--saida", help="padrão: revisao.html (completo) ou revisao_ambiente.html (ambiente)")
+    ap.add_argument("--exportar-como", help="nome do CSV que o botão Exportar baixa (use um nome próprio para cada fonte)")
+    ap.add_argument("--chave", help="nome do progresso salvo no navegador (use um nome próprio para cada fonte)")
     a = ap.parse_args()
     base = "relatorios/05_sugestoes/" + ("revisao_ambiente" if a.modo == "ambiente" else "revisao")
     a.revisao = a.revisao or base + ".csv"
     a.saida = a.saida or base + ".html"
-    exportar_como = Path(base).name + "_preenchida.csv"
+    exportar_como = a.exportar_como or Path(base).name + "_preenchida.csv"
 
     origem = json.loads(Path(a.origem).read_text(encoding="utf-8"))
     raiz = Path(origem["caminho_local"])
@@ -623,6 +626,9 @@ def main():
     html = (HTML.replace("__DATA__", js(dados)).replace("__GRUPOS__", js(grupos_usados))
                 .replace("__LIM__", js(lim)).replace("__DATASET__", js(nome_ds))
                 .replace("__MODO__", js(a.modo)).replace("__EXPORTAR_COMO__", js(exportar_como)))
+    if a.chave:
+        if "'ignis_revisao_v2'" not in html: raise SystemExit("Não achei a chave do navegador na página; --chave não aplicado.")
+        html = html.replace("'ignis_revisao_v2'", js(a.chave))
     Path(a.saida).write_text(html, encoding="utf-8")
     cegas = sum(d["motivos"] == "auditoria" for d in dados)
     print(f"Página gerada: {a.saida}\nImagens: {len(dados)} (das quais {cegas} cegas, de auditoria)")

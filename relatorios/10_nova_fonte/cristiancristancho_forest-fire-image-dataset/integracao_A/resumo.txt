@@ -1,0 +1,26 @@
+Etapa 10d gerada em 2026-11-13T12:22:06+00:00 | CÓPIA EXECUTADA e conferida por SHA-256
+fonte: cristiancristancho/forest-fire-image-dataset v2 | LICENÇA: A CONFERIR na página do Kaggle antes de publicar ou redistribuir
+revisadas: 410 | entram: 400 | ficam de fora: 10 (fora.csv)
+unidades de divisão novas: 377 (das quais 9 com 2+ imagens da mesma cena)
+origem dos rótulos das novas: {'revisao_ia': 400}
+
+copiadas agora: 400 | já existiam idênticas: 0 | SHA conferido em 400 de 400
+
+Dataset combinado (com fogo / sem fogo):
+  ambiente          treino     validacao         teste         total
+  floresta      357/357        77/77         76/76        510/510   
+  predios        57/4          13/1          13/1          83/6     
+  cidade         43/13          9/2           9/2          61/17    
+  casa           38/3           9/1           8/1          55/5     
+  outros         30/69          6/15          6/15         42/99    
+  TOTAL incluídas: 1388 | com fogo 751 | sem fogo 637
+
+Entram, por ambiente|fogo e conjunto:
+  casa|nao            5  treino   3 | validação   1 | teste   1
+  cidade|nao         16  treino  12 | validação   2 | teste   2
+  floresta|nao      279  treino 198 | validação  41 | teste  40
+  outros|nao         94  treino  66 | validação  14 | teste  14
+  outros|sim          1  treino   1 | validação   0 | teste   0
+  predios|nao         5  treino   3 | validação   1 | teste   1
+
+Arquivos em relatorios/10_nova_fonte/cristiancristancho_forest-fire-image-dataset/integracao_A e relatorios/10_nova_fonte/inventario_combinado.csv.

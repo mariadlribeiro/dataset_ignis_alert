@@ -1,0 +1,20 @@
+Etapa 10a gerada em 2026-11-12T22:18:15+00:00 | SOMENTE LEITURA
+fonte: cristiancristancho_forest-fire-image-dataset
+pasta: C:\Users\maria\.cache\kagglehub\datasets\cristiancristancho\forest-fire-image-dataset\versions\2
+
+arquivos: 11034 | imagens: 11034 | abrem: 11034 | não abrem: 0 | outros arquivos: 0
+
+Por pasta (os nomes descrevem a fonte; NÃO viram rótulo):
+  FOREST_FIRE_DATASET\FIRE                           .jpg 3102, .png 770, .jpeg 21, .gif 2
+  FOREST_FIRE_DATASET\NON_FIRE                       .jpg 6879, .png 253, .jpeg 7
+
+Extensão -> formato real: .jpg -> JPEG 9976; .png -> JPEG 987; .png -> PNG 34; .jpeg -> JPEG 28; .jpg -> PNG 3; .gif -> GIF 2; .jpg -> MPO 2; .png -> MPO 1; .png -> GIF 1
+Tamanhos mais comuns: 1920x1080 (2051); 250x250 (1908); 400x360 (960); 399x360 (957); 640x360 (906); 240x240 (541)
+Menor lado da menor imagem: 147px
+Animadas/várias páginas (quadros > 1): 4
+
+Duplicatas internas (limiar 6): 699 grupos, 1933 imagens (1234 além da primeira de cada grupo)
+Já existem no dataset atual: 1117 imagens da nova fonte (1022 pares idênticos por SHA)
+Arquivos de texto no download: 0 (ver textos_encontrados.txt; procurar a licença)
+
+Arquivos em relatorios\10_nova_fonte\cristiancristancho_forest-fire-image-dataset. Nada foi copiado, movido ou alterado.

@@ -1,0 +1,10 @@
+Etapa 10c gerada em 2026-11-13T00:18:05+00:00 | SOMENTE LEITURA | seleção para revisão, não rótulos
+fonte: cristiancristancho/forest-fire-image-dataset | python 3.10.12 | Pillow 12.3.0 | numpy 2.2.6 | semente 42
+
+Floresta sem fogo sugerida: 1013 candidatas -> 350 selecionadas por diversidade (k-centros)
+  tamanhos das selecionadas: 250x250 (262); 399x360 (12); 240x240 (11); 400x360 (8); 640x360 (5); 1920x1080 (5); 320x240 (5); 210x210 (5)
+Possíveis confusores (sugestão discorda da pasta): 60 (21 pasta FIRE sem fogo sugerido, 39 pasta NON_FIRE com fogo sugerido)
+Auditoria cega: 52 das 350 de floresta
+TOTAL para revisar: 410 | ficaram de reserva: 8480 (nao_selecionadas.csv)
+
+Arquivos em relatorios/10_nova_fonte/cristiancristancho_forest-fire-image-dataset/selecao_A. Nada foi copiado, movido ou alterado.

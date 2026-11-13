@@ -1,0 +1,177 @@
+{
+  "modelo": "openai/clip-vit-base-patch16",
+  "dispositivo": "cpu",
+  "torch": "2.15.0+cpu",
+  "transformers": "5.22.0",
+  "limiares": {
+    "conf_min": 0.5,
+    "margem_min": 0.15,
+    "conf_min_binario": 0.7
+  },
+  "auditoria": 0.1,
+  "semente": 42,
+  "python": "3.12.10",
+  "prompts": {
+    "ponto_vista": {
+      "chao": [
+        "a photo taken from the ground at eye level",
+        "a photo taken by a person standing on the ground"
+      ],
+      "elevado": [
+        "a wide view from a high fixed camera or a watchtower",
+        "a photo taken from a hilltop overlooking the landscape"
+      ],
+      "aereo": [
+        "an aerial photo taken from a drone or an aircraft",
+        "a bird's eye view from directly above"
+      ],
+      "satelite": [
+        "a satellite image of the earth from space"
+      ]
+    },
+    "distancia_fogo": {
+      "perto": [
+        "a close-up of flames filling the frame",
+        "a photo of flames at close range"
+      ],
+      "medio": [
+        "a fire a short distance away with its surroundings visible",
+        "a burning building or trees seen from across the street"
+      ],
+      "distante": [
+        "a distant fire far away on the horizon",
+        "a small fire and smoke far away in a wide landscape"
+      ]
+    },
+    "pessoas": {
+      "sim": [
+        "a photo with people or firefighters in it",
+        "a photo showing a person"
+      ],
+      "nao": [
+        "a photo with no people in it",
+        "an empty scene without any person"
+      ]
+    },
+    "veiculos": {
+      "sim": [
+        "a photo with a car, a truck, a fire engine or a helicopter",
+        "a photo showing a vehicle"
+      ],
+      "nao": [
+        "a photo with no vehicles in it",
+        "a scene without any car or truck"
+      ]
+    },
+    "texto": {
+      "sim": [
+        "a photo with text, a caption, a logo or a watermark on it",
+        "an image with written words overlaid on it"
+      ],
+      "nao": [
+        "a clean photo with no text and no watermark",
+        "a photo without any writing on it"
+      ]
+    },
+    "hora_dia": {
+      "dia": [
+        "a photo taken during the day in daylight",
+        "a daytime outdoor scene"
+      ],
+      "noite": [
+        "a photo taken at night",
+        "a night scene with a dark sky"
+      ],
+      "entardecer": [
+        "a photo taken at dusk or dawn",
+        "a twilight scene at sunset"
+      ]
+    },
+    "ceu": {
+      "sim": [
+        "a photo where the sky is visible",
+        "a scene with sky above the horizon"
+      ],
+      "nao": [
+        "a close-up photo with no sky visible",
+        "a scene where the sky cannot be seen"
+      ]
+    },
+    "vegetacao": {
+      "floresta_densa": [
+        "a dense forest with many trees",
+        "a thick woodland"
+      ],
+      "campo": [
+        "a grassland, savanna or pasture",
+        "dry grass and low shrubs in a field"
+      ],
+      "urbana": [
+        "street trees, a garden or a lawn in a city",
+        "a few trees in an urban area"
+      ],
+      "sem_vegetacao": [
+        "a scene with no plants or trees",
+        "buildings and streets without vegetation"
+      ]
+    },
+    "agua": {
+      "sim": [
+        "a photo with water, a river, a lake or the sea",
+        "a photo with a water jet from a fire hose"
+      ],
+      "nao": [
+        "a photo with no water visible",
+        "a dry scene without water"
+      ]
+    },
+    "tipo_fogo": {
+      "florestal": [
+        "a forest fire burning trees",
+        "a wildfire in the woods"
+      ],
+      "estrutura": [
+        "a burning building or house",
+        "a structure fire"
+      ],
+      "veiculo": [
+        "a burning car or truck",
+        "a vehicle on fire"
+      ],
+      "campo": [
+        "a grass fire in a field",
+        "a burning pasture or crop field"
+      ],
+      "controlado": [
+        "a campfire, a candle or a stove flame",
+        "a small controlled fire"
+      ],
+      "outro": [
+        "a burning pile of trash or an explosion",
+        "a fire of another kind"
+      ]
+    },
+    "confusor": {
+      "nenhum": [
+        "an ordinary photo with nothing unusual",
+        "a plain scene"
+      ],
+      "por_do_sol": [
+        "a photo of a sunset or a sunrise with an orange sky",
+        "the sun low on the horizon with a red sky"
+      ],
+      "luz_artificial": [
+        "a photo with bright orange artificial lights or street lamps",
+        "city lights glowing at night"
+      ],
+      "reflexo": [
+        "light or fire reflected on water or glass",
+        "a reflection on a lake or a window"
+      ],
+      "neblina": [
+        "a photo with fog, mist or haze",
+        "a hazy scene with low visibility"
+      ]
+    }
+  }
+}

@@ -10,3 +10,9 @@ relatorios/05_sugestoes/folhas/
 relatorios/05_sugestoes/revisao.html
 relatorios/05_sugestoes/revisao_ambiente.html
 relatorios/04_divisao/pares.html
+
+# Etapa 10: folhas de miniaturas e paginas geradas (grandes; podem ser refeitas pelos scripts)
+relatorios/10_nova_fonte/**/folhas*/
+relatorios/10_nova_fonte/**/*.html
+relatorios/10_nova_fonte/**/amostras.png
+relatorios/10_nova_fonte/**/duvidas_fogo.jpg

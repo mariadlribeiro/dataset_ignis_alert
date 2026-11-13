@@ -1,0 +1,11 @@
+n,caminho_relativo,motivo,quem_decidiu
+113,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2923).jpg,excedente da meta 510 x 510: quadro repetido da mata nevada (nº 103 e 107 entram),revisao_ia
+117,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3013).jpg,excedente da meta 510 x 510: quadro repetido da mata nevada (nº 103 e 107 entram),revisao_ia
+120,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3057).jpg,excedente da meta 510 x 510: quadro repetido da mata nevada (nº 103 e 107 entram),revisao_ia
+126,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3101).jpg,excedente da meta 510 x 510: quadro repetido da mata nevada (nº 103 e 107 entram),revisao_ia
+130,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3202).jpg,excedente da meta 510 x 510: quadro repetido da mata nevada (nº 103 e 107 entram),revisao_ia
+307,FOREST_FIRE_DATASET\FIRE\05398.jpg,"tela só com texto, sem cena",revisao_ia
+319,FOREST_FIRE_DATASET\FIRE\FIRE (96).jpg,imagem muito editada (cores e céu artificiais),decisao_humana
+325,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5861).jpg,fogo controlado (lareira acesa e velas),decisao_humana
+337,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (167).jpg,"excedente da meta 510 x 510: mesma cena da nº 223, que entra",revisao_ia
+342,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3289).jpg,montagem (carro com rodas duplicadas),revisao_ia

@@ -1,0 +1,13 @@
+n,decisao,ambiente,fogo,fumaca,motivo,quem
+113,fora,,,,excedente da meta 510 x 510: quadro repetido da mata nevada (nº 103 e 107 entram),revisao_ia
+117,fora,,,,excedente da meta 510 x 510: quadro repetido da mata nevada (nº 103 e 107 entram),revisao_ia
+120,fora,,,,excedente da meta 510 x 510: quadro repetido da mata nevada (nº 103 e 107 entram),revisao_ia
+126,fora,,,,excedente da meta 510 x 510: quadro repetido da mata nevada (nº 103 e 107 entram),revisao_ia
+130,fora,,,,excedente da meta 510 x 510: quadro repetido da mata nevada (nº 103 e 107 entram),revisao_ia
+307,fora,,,,"tela só com texto, sem cena",revisao_ia
+314,incluir,outros,sim,sim,linha de chamas visível no horizonte à noite (conferida em tamanho maior),revisao_ia
+319,fora,,,,imagem muito editada (cores e céu artificiais),decisao_humana
+325,fora,,,,fogo controlado (lareira acesa e velas),decisao_humana
+337,fora,,,,"excedente da meta 510 x 510: mesma cena da nº 223, que entra",revisao_ia
+342,fora,,,,montagem (carro com rodas duplicadas),revisao_ia
+353,incluir,cidade,nao,sim,"coluna de fumaça saindo de prédio, sem chama visível (conferida em tamanho maior)",revisao_ia

@@ -1,0 +1,411 @@
+n,caminho_relativo,motivos_revisao,ambiente_ia,fogo_ia,fumaca_ia,duvida,observacao_ia,revisor,data
+1,FOREST_FIRE_DATASET\FIRE\FIRE (1796).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"pôr do sol com céu laranja, sem chama","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+2,FOREST_FIRE_DATASET\FIRE\FIRE (2011).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,incerto,fumaca,"nuvem baixa ou fumaça no vale, não dá para afirmar","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+3,FOREST_FIRE_DATASET\FIRE\FIRE (2049).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,incerto,fumaca,nuvem grande que pode ser coluna de fumaça,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+4,FOREST_FIRE_DATASET\NON_FIRE\00648.jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+5,FOREST_FIRE_DATASET\NON_FIRE\01844.jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+6,FOREST_FIRE_DATASET\NON_FIRE\05205.jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+7,FOREST_FIRE_DATASET\NON_FIRE\07082.jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+8,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1011).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+9,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1012).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+10,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1018).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,pequena pluma branca (vapor?),"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+11,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1103).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+12,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1136).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+13,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1137).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+14,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1144).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+15,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1146).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+16,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1147).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+17,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1152).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+18,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1154).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+19,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1155).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+20,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1156).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+21,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1157).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+22,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1160).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+23,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1161).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+24,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1162).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+25,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1168).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+26,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1171).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+27,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1173).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+28,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1174).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+29,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1175).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+30,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1176).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+31,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1177).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+32,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1178).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+33,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1180).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+34,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1182).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+35,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1186).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+36,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1187).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+37,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1188).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+38,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1191).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+39,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1192).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+40,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1196).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+41,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1197).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+42,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1198).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+43,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1201).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+44,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1203).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,cores artificiais; possível edição,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+45,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1208).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+46,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1211).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+47,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1223).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+48,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1240).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+49,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1247).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+50,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1251).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+51,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1252).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+52,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1253).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+53,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1255).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+54,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1257).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+55,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1258).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+56,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1261).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+57,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1262).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+58,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1264).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+59,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1267).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+60,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1268).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+61,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1279).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+62,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1281).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+63,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1282).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+64,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1285).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+65,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1292).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+66,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1293).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+67,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1295).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+68,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1296).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+69,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1297).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+70,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1299).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+71,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1303).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+72,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1307).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+73,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1312).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,cores com filtro; possível edição,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+74,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1316).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+75,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1317).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+76,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1320).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,neblina,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+77,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (140).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+78,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (142).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+79,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (143).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+80,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (148).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+81,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1522).jpg,nova_fonte_floresta_sem_fogo,cidade,nao,nao,ambiente,"parque urbano visto de cima, com estádio e prédios","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+82,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1569).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+83,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (157).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+84,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (158).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+85,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (159).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+86,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (160).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+87,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (164).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"folhagem ou luz em tons laranja/vermelho, sem chama","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+88,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (170).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+89,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (172).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+90,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (175).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+91,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (178).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+92,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (179).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+93,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (180).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+94,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (182).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+95,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (183).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+96,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (187).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+97,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (188).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+98,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (189).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+99,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (190).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+100,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (193).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+101,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (194).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+102,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2016).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+103,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2071).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 107, 113, 117, 120, 126, 130","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+104,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2105).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+105,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2448).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+106,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (256).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,neblina,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+107,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2666).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 103, 113, 117, 120, 126, 130","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+108,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (280).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+109,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (281).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+110,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (282).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+111,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (284).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+112,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (291).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+113,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2923).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 103, 107, 117, 120, 126, 130","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+114,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2984).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+115,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3004).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,vista de satélite ou mapa aéreo,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+116,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (301).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+117,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3013).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 103, 107, 113, 120, 126, 130","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+118,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (302).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+119,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (304).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+120,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3057).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 103, 107, 113, 117, 126, 130","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+121,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3063).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+122,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (307).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+123,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3075).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+124,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (308).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+125,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (309).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+126,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3101).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 103, 107, 113, 117, 120, 130","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+127,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (311).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+128,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (312).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+129,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (317).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+130,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3202).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 103, 107, 113, 117, 120, 126","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+131,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (323).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+132,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3295).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+133,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3296).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+134,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3321).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,cores muito saturadas,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+135,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3345).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+136,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3386).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+137,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3489).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+138,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3496).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+139,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3500).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+140,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3509).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+141,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3515).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+142,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3521).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+143,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3524).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+144,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3537).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+145,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3568).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,sim,,"pequena coluna de fumaça no morro, sem chama visível","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+146,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3569).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+147,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3575).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+148,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3580).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+149,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3590).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,neblina,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+150,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3635).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+151,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3637).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+152,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3654).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+153,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3673).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 154, 155","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+154,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3734).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 153, 155","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+155,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3738).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 153, 154","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+156,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3741).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+157,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3860).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+158,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3937).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,casas no meio da mata,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+159,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3942).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+160,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3960).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+161,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3981).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+162,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (404).jpg,nova_fonte_floresta_sem_fogo,cidade,nao,nao,ambiente,cidade pequena em vale com morros de mata,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+163,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4104).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 164, 165","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+164,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4108).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 163, 165","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+165,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4115).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 163, 164","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+166,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4156).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,mata com prédios ao fundo (parque urbano),"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+167,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4291).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,mesma cena ou vídeo que nº 168,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+168,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4682).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,mesma cena ou vídeo que nº 167,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+169,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4934).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+170,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5041).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"mesma cena ou vídeo que nº 171, 172","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+171,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5053).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,"mesma cena ou vídeo que nº 170, 172","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+172,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5057).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,"mesma cena ou vídeo que nº 170, 171","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+173,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5080).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+174,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5091).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,mesma cena ou vídeo que nº 177,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+175,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5102).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,mesma cena ou vídeo que nº 176,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+176,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5169).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,mesma cena ou vídeo que nº 175,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+177,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5177).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,mesma cena ou vídeo que nº 174,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+178,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5178).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+179,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (527).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+180,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5325).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+181,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (561).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+182,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (565).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+183,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (568).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+184,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (581).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+185,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (582).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+186,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5844).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+187,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5855).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+188,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (604).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,imagem girada 90 graus,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+189,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (605).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+190,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (609).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+191,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (613).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+192,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (615).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+193,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (619).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+194,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (621).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+195,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (623).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+196,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (625).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+197,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (629).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+198,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (632).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+199,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (634).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+200,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (643).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+201,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (644).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+202,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (645).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+203,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (647).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+204,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (655).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+205,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (660).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+206,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (662).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+207,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (663).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+208,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (664).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+209,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (665).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,duas pessoas em parque,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+210,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (666).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+211,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (668).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+212,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (669).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+213,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (672).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+214,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (674).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+215,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (676).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+216,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (677).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+217,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (679).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+218,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (681).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+219,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (684).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+220,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (685).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+221,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (686).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+222,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (688).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+223,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (692).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,mesma cena ou vídeo que nº 337,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+224,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (696).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"folhagem ou luz em tons laranja/vermelho, sem chama","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+225,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (697).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+226,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (698).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+227,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (702).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+228,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (705).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+229,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (708).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,animais na mata,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+230,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (711).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+231,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (717).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+232,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (719).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+233,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (720).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+234,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (723).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+235,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (728).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+236,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (735).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+237,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (737).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+238,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (739).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+239,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (740).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+240,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (743).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+241,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (746).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+242,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (748).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+243,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (752).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+244,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (754).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+245,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (755).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+246,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (759).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+247,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (766).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+248,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (768).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+249,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (769).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+250,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (770).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+251,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (773).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+252,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (776).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"folhagem ou luz em tons laranja/vermelho, sem chama; mesma cena ou vídeo que nº 253, 254, 255","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+253,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (778).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"folhagem ou luz em tons laranja/vermelho, sem chama; mesma cena ou vídeo que nº 252, 254, 255","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+254,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (779).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"folhagem ou luz em tons laranja/vermelho, sem chama; mesma cena ou vídeo que nº 252, 253, 255","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+255,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (781).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,"folhagem ou luz em tons laranja/vermelho, sem chama; mesma cena ou vídeo que nº 252, 253, 254","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+256,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (784).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+257,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (786).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+258,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (790).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+259,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (792).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+260,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (793).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+261,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (797).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+262,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (799).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+263,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (802).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+264,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (803).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+265,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (804).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+266,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (805).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+267,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (809).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+268,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (810).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+269,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (812).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+270,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (815).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+271,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (818).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+272,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (822).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+273,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (825).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+274,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (826).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+275,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (827).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+276,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (828).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+277,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (833).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+278,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (834).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+279,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (835).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+280,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (840).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+281,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (843).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+282,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (844).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+283,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (846).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+284,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (852).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+285,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (854).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+286,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (873).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+287,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (879).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,incerto,fumaca,névoa alaranjada ao pôr do sol; confunde com fumaça de incêndio,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+288,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (882).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+289,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (887).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+290,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (901).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+291,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (902).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+292,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (904).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+293,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (906).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+294,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (907).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+295,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (914).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+296,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (952).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+297,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (96).jpg,nova_fonte_floresta_sem_fogo,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+298,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (987).jpg,nova_fonte_floresta_sem_fogo,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+299,FOREST_FIRE_DATASET\FIRE\01659.jpg,discorda_da_pasta,outros,nao,nao,,pedreira/água vista de cima; mesma cena ou vídeo que nº 300,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+300,FOREST_FIRE_DATASET\FIRE\01723.jpg,discorda_da_pasta,outros,nao,nao,,pedreira/água vista de cima; mesma cena ou vídeo que nº 299,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+301,FOREST_FIRE_DATASET\FIRE\03057.jpg,discorda_da_pasta,outros,nao,nao,,"campo de beisebol com pessoas, aéreo","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+302,FOREST_FIRE_DATASET\FIRE\03729.jpg,discorda_da_pasta,outros,nao,nao,ambiente,pessoa no alto de árvore; casas ao fundo,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+303,FOREST_FIRE_DATASET\FIRE\04696.jpg,discorda_da_pasta,predios,nao,nao,,prédio visto de cima,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+304,FOREST_FIRE_DATASET\FIRE\04847.jpg,discorda_da_pasta,outros,nao,nao,,praia,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+305,FOREST_FIRE_DATASET\FIRE\04965.jpg,discorda_da_pasta,outros,nao,nao,,"pessoas em areia escura, aéreo","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+306,FOREST_FIRE_DATASET\FIRE\05172.jpg,discorda_da_pasta,outros,nao,nao,,campo esportivo,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+307,FOREST_FIRE_DATASET\FIRE\05398.jpg,discorda_da_pasta,outros,nao,nao,,"SUGIRO DEIXAR DE FORA: tela preta só com texto, sem cena","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+308,FOREST_FIRE_DATASET\FIRE\06021.jpg,discorda_da_pasta,outros,nao,nao,,"casamento em gramado, aéreo","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+309,FOREST_FIRE_DATASET\FIRE\06897.jpg,discorda_da_pasta,outros,nao,nao,ambiente,mirante com rio e morros de mata; pessoas,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+310,FOREST_FIRE_DATASET\FIRE\06928.jpg,discorda_da_pasta,outros,nao,nao,,barcos em mar,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+311,FOREST_FIRE_DATASET\FIRE\07762.jpg,discorda_da_pasta,outros,nao,nao,,casamento em gramado,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+312,FOREST_FIRE_DATASET\FIRE\07988.jpg,discorda_da_pasta,predios,nao,nao,,prédio abandonado; texto sobreposto,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+313,FOREST_FIRE_DATASET\FIRE\08349.jpg,discorda_da_pasta,cidade,nao,sim,,"fumaça saindo de prédio, caminhões de bombeiro; chama não visível","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+314,FOREST_FIRE_DATASET\FIRE\FIRE (103).jpg,discorda_da_pasta,outros,incerto,nao,fogo,linha laranja brilhante no horizonte à noite (frente de fogo distante?); decidir se conta como chama visível,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+315,FOREST_FIRE_DATASET\FIRE\FIRE (1322).jpg,discorda_da_pasta,outros,nao,sim,,madeireira vista de cima com fumaça; chama não visível,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+316,FOREST_FIRE_DATASET\FIRE\FIRE (1885).jpg,discorda_da_pasta,outros,nao,sim,,grande coluna de fumaça/cinzas; marca-d'água de banco de imagens,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+317,FOREST_FIRE_DATASET\FIRE\FIRE (357).jpg,discorda_da_pasta,outros,nao,nao,,"pôr do sol atrás de nuvens, brilho laranja; sem chama","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+318,FOREST_FIRE_DATASET\FIRE\FIRE (94).jpg,discorda_da_pasta,outros,nao,sim,,faixa de fumaça sobre morros ao longe; chama não visível,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+319,FOREST_FIRE_DATASET\FIRE\FIRE (96).jpg,discorda_da_pasta,floresta,incerto,incerto,fogo+fumaca,clarão laranja na linha das árvores sob nuvens escuras; pode ser pôr do sol ou fogo; possível edição,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+320,FOREST_FIRE_DATASET\NON_FIRE\00423.jpg,discorda_da_pasta,cidade,nao,nao,,multidão em estacionamento,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+321,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5730).jpg,discorda_da_pasta,casa,nao,nao,,luminária acesa com luz laranja,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+322,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4673).jpg,discorda_da_pasta,outros,nao,nao,,"fogos de artifício à noite; mesma cena ou vídeo que nº 328, 333, 341, 349, 352, 355","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+323,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3541).jpg,discorda_da_pasta,outros,nao,nao,,neve e fonte termal vistas de cima,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+324,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3433).jpg,discorda_da_pasta,outros,nao,nao,,"mancha escura em terreno, aéreo, baixa qualidade","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+325,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5861).jpg,discorda_da_pasta,casa,sim,nao,fogo,"lareira acesa e velas: chama visível, mas fogo controlado; marca-d'água. Decidir se entra como 'com fogo'","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+326,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (44).jpg,discorda_da_pasta,casa,nao,nao,,sala com lareira apagada,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+327,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3457).jpg,discorda_da_pasta,outros,nao,incerto,fumaca,morros sob névoa cinza; pluma branca no canto,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+328,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4719).jpg,discorda_da_pasta,cidade,nao,nao,,"fogos de artifício sobre cidade à noite; mesma cena ou vídeo que nº 322, 333, 341, 349, 352, 355","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+329,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5452).jpg,discorda_da_pasta,cidade,nao,nao,,escultura dourada em praça,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+330,FOREST_FIRE_DATASET\NON_FIRE\06869.jpg,discorda_da_pasta,outros,nao,nao,,resgate em lago congelado,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+331,FOREST_FIRE_DATASET\NON_FIRE\00439.jpg,discorda_da_pasta,cidade,nao,nao,,"rua com caminhões de bombeiro, aéreo","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+332,FOREST_FIRE_DATASET\NON_FIRE\07787.jpg,discorda_da_pasta,casa,nao,nao,,casa com marcas de incêndio já apagado; bombeiro,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+333,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4868).jpg,discorda_da_pasta,cidade,nao,nao,,"fogos de artifício sobre cidade à noite; mesma cena ou vídeo que nº 322, 328, 341, 349, 352, 355","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+334,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (94).jpg,discorda_da_pasta,casa,nao,nao,,interior com luz vermelha,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+335,FOREST_FIRE_DATASET\NON_FIRE\06641.jpg,discorda_da_pasta,cidade,nao,nao,,bombeiros em telhado,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+336,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (71).jpg,discorda_da_pasta,outros,nao,sim,,carro com fumaça de pneu,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+337,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (167).jpg,discorda_da_pasta,floresta,nao,nao,,"folhagem de outono laranja entre pinheiros, sem chama; mesma cena ou vídeo que nº 223","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+338,FOREST_FIRE_DATASET\NON_FIRE\04642.jpg,discorda_da_pasta,cidade,nao,sim,,bombeiros jogando água; fumaça/névoa; chama não visível,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+339,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (6).jpg,discorda_da_pasta,outros,nao,nao,,caminhão de bombeiros,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+340,FOREST_FIRE_DATASET\NON_FIRE\07409.jpg,discorda_da_pasta,outros,nao,nao,,gelo/água vistos de cima,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+341,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4876).jpg,discorda_da_pasta,cidade,nao,nao,,"fogos de artifício; texto sobreposto; mesma cena ou vídeo que nº 322, 328, 333, 349, 352, 355","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+342,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3289).jpg,discorda_da_pasta,outros,nao,nao,,SUGIRO DEIXAR DE FORA: montagem (carro com rodas duplicadas),"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+343,FOREST_FIRE_DATASET\NON_FIRE\07057.jpg,discorda_da_pasta,outros,nao,nao,,caminhões de bombeiro em campo,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+344,FOREST_FIRE_DATASET\NON_FIRE\08145.jpg,discorda_da_pasta,predios,nao,nao,,telhado com bombeiros,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+345,FOREST_FIRE_DATASET\NON_FIRE\02531.jpg,discorda_da_pasta,casa,nao,nao,,"casa queimada, fogo já apagado; bombeiros","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+346,FOREST_FIRE_DATASET\NON_FIRE\08844.jpg,discorda_da_pasta,outros,nao,nao,,bombeiros,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+347,FOREST_FIRE_DATASET\NON_FIRE\02176.jpg,discorda_da_pasta,predios,nao,nao,,galpão; bombeiros,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+348,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3458).jpg,discorda_da_pasta,outros,nao,incerto,fumaca,paisagem sob névoa ou fumaça fraca,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+349,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4818).jpg,discorda_da_pasta,cidade,nao,nao,,"fogos de artifício sobre cidade à noite; mesma cena ou vídeo que nº 322, 328, 333, 341, 352, 355","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+350,FOREST_FIRE_DATASET\NON_FIRE\06126.jpg,discorda_da_pasta,outros,nao,nao,,grupo de pessoas,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+351,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1916).jpg,discorda_da_pasta,outros,nao,nao,,imagem torta e borrada de telhado,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+352,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4685).jpg,discorda_da_pasta,cidade,nao,nao,,"fogos de artifício sobre cidade à noite; mesma cena ou vídeo que nº 322, 328, 333, 341, 349, 355","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+353,FOREST_FIRE_DATASET\NON_FIRE\07698.jpg,discorda_da_pasta,cidade,incerto,sim,fogo,grande coluna de fumaça saindo de prédio; chama não distinguível na miniatura,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+354,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3442).jpg,discorda_da_pasta,outros,nao,incerto,fumaca,"vista aérea esbranquiçada, baixa qualidade","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+355,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4861).jpg,discorda_da_pasta,cidade,nao,nao,,"fogos de artifício sobre cidade à noite; mesma cena ou vídeo que nº 322, 328, 333, 341, 349, 352","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+356,FOREST_FIRE_DATASET\NON_FIRE\01485.jpg,discorda_da_pasta,outros,nao,nao,,bombeiros em telhado,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+357,FOREST_FIRE_DATASET\NON_FIRE\03806.jpg,discorda_da_pasta,cidade,nao,nao,,"acidente em rua, caminhões de bombeiro","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+358,FOREST_FIRE_DATASET\NON_FIRE\02225.jpg,discorda_da_pasta,predios,nao,nao,,"telhado queimado, fogo já apagado","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+359,FOREST_FIRE_DATASET\FIRE\FIRE (405).jpg,auditoria,floresta,nao,nao,,preto e branco; árvores sem folhas,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+360,FOREST_FIRE_DATASET\FIRE\FIRE (64).JPG,auditoria,floresta,nao,nao,,"área queimada (pós-incêndio), sem chama","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+361,FOREST_FIRE_DATASET\NON_FIRE\03652.jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+362,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1020).jpg,auditoria,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+363,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1035).jpg,auditoria,floresta,nao,nao,,neblina,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+364,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1166).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+365,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1190).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+366,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1202).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+367,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1209).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+368,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1214).jpg,auditoria,outros,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+369,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1238).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+370,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1263).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+371,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1315).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+372,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1375).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+373,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (163).jpg,auditoria,floresta,nao,nao,,"folhagem ou luz em tons laranja/vermelho, sem chama","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+374,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (191).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+375,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2463).jpg,auditoria,floresta,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+376,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (271).jpg,auditoria,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+377,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (316).jpg,auditoria,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+378,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (320).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+379,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3298).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+380,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3451).jpg,auditoria,floresta,nao,nao,,neblina; baixa qualidade; mesma cena ou vídeo que nº 381,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+381,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3454).jpg,auditoria,floresta,nao,nao,ambiente,"borrada, baixa qualidade; mesma cena ou vídeo que nº 380","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+382,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3520).jpg,auditoria,outros,nao,nao,ambiente,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+383,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3581).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+384,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (39).jpg,auditoria,floresta,nao,nao,,postes com luz laranja em bosque com neve; possível edição,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+385,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4141).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+386,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4142).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+387,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (602).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+388,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (603).jpg,auditoria,outros,nao,nao,ambiente,cena difícil de identificar (rocha/tronco?),"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+389,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (611).jpg,auditoria,floresta,nao,nao,,"folhagem ou luz em tons laranja/vermelho, sem chama","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+390,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (618).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+391,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (642).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+392,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (649).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+393,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (675).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+394,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (687).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+395,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (691).jpg,auditoria,floresta,nao,nao,,"folhagem ou luz em tons laranja/vermelho, sem chama","IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+396,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (694).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+397,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (699).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+398,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (704).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+399,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (712).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+400,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (713).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+401,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (724).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+402,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (745).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+403,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (753).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+404,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (767).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+405,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (787).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+406,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (788).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+407,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (798).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+408,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (813).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+409,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (830).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12
+410,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (837).jpg,auditoria,floresta,nao,nao,,,"IA (Claude), por miniaturas de 330 px, sem ver a sugestão do CLIP nem a pasta",2026-11-12

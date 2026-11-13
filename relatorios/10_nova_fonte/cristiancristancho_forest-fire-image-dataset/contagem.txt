@@ -1,0 +1,37 @@
+Etapa 10b gerada em 2026-11-13T00:10:48+00:00 | SOMENTE LEITURA | SUGESTÕES, não rótulos
+fonte: cristiancristancho_forest-fire-image-dataset | modelo: openai/clip-vit-base-patch16
+
+Situação dos arquivos:
+    8890  candidata
+    1115  fora: já existe no dataset atual
+    1024  fora: duplicata interna (outra do grupo foi analisada)
+       4  fora: animada ou várias páginas
+       1  fora: grupo de duplicatas que já existe no dataset atual
+
+Candidatas (8890) por ambiente sugerido x fogo sugerido:
+  ambiente              sim    nao  incerto   total
+  floresta              666   1013      111    1790
+  cidade                117   1010      112    1239
+  casa                  482    386       78     946
+  predios               363    380       94     837
+  flores_jardins          1     74        5      80
+  outros                307   1520      181    2008
+  ambiente_incerto      722   1052      216    1990
+
+Fumaça sugerida entre as candidatas SEM fogo sugerido (possíveis cenas de fumaça sem chama):
+  {'nao': 3825, 'incerto': 1538, 'sim': 72}
+
+Candidatas de FLORESTA por tamanho de imagem (tamanhos repetidos costumam ser quadros de vídeo):
+  250x250      total   935 | sim   474 | nao   419 | incerto    42
+  400x360      total   176 | sim     0 | nao   176 | incerto     0
+  399x360      total   172 | sim     0 | nao   172 | incerto     0
+  1280x720     total    90 | sim     4 | nao    86 | incerto     0
+  640x360      total    50 | sim     0 | nao    50 | incerto     0
+  1920x1080    total    31 | sim     3 | nao    24 | incerto     4
+  240x240      total    22 | sim     0 | nao    20 | incerto     2
+  320x240      total     9 | sim     0 | nao     9 | incerto     0
+
+Sugestão x pasta da fonte (só para ver discordâncias; a pasta NÃO é rótulo):
+  {('FIRE', 'sim'): 2490, ('FIRE', 'incerto'): 278, ('FIRE', 'nao'): 26, ('NON_FIRE', 'nao'): 5409, ('NON_FIRE', 'incerto'): 519, ('NON_FIRE', 'sim'): 168}
+
+Arquivos em relatorios\10_nova_fonte\cristiancristancho_forest-fire-image-dataset. Nada foi copiado, movido ou alterado.
