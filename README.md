@@ -1,3 +1,8 @@
+
+
+**Site do projeto:** https://mariadlribeiro.github.io/dataset_ignis_alert/
+
+O site fica na pasta `docs/` (página, vídeo da retrospectiva e imagem de capa) e é publicado pelo GitHub Pages a partir dela.
 ﻿# dataset_ignis_alert â€“ preparaÃ§Ã£o do dataset `phylake1337/fire-dataset` (Ignis Alert)
 
 Pipeline reprodutÃ­vel, um dataset por vez. Originais nunca sÃ£o modificados; imagens ficam fora do git
