@@ -23,6 +23,7 @@ Cada grupo de duplicatas fica inteiro em uma só parte (treino, validação ou t
 | 8. Equilíbrio | `08_equilibrio.py` | Pesos do sampler por classe, estrato ou ambiente |
 | 9. Condições | `09a`–`09e` | Medidas de luz, tamanho, formato, nitidez, cor e moldura |
 | 10. Segunda fonte | `10a`–`10d` | Inventário, sugestões, seleção por diversidade e integração |
+| 11. Exportar para o treino | `11_exportar_treino.py` | Cópia em `train/val/test` × `Fire/NoFire` com `split_manifest.csv` no formato do RD_Ignisalert |
 
 Achado principal (etapa 9): igualar a quantidade não igualou as condições. Imagens sem fogo são mais
 quadradas e menores; imagens com fogo são mais escuras. Isso é risco de atalho para o modelo e está
