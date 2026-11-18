@@ -1,4 +1,4 @@
-# dataset_ignis_alert – preparação do dataset `phylake1337/fire-dataset` (Ignis Alert)
+# dataset_ignis_alert – preparação do dataset (Ignis Alert)
 
 **Site do projeto:** https://mariadlribeiro.github.io/dataset_ignis_alert/
 
