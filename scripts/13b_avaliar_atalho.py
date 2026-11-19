@@ -50,6 +50,9 @@ def main():
 
     pasta = RAIZ / a.pasta; sai = pasta / "resultado"; sai.mkdir(parents=True, exist_ok=True)
     raiz_fonte = Path(json.loads((pasta / "origem.json").read_text(encoding="utf-8"))["caminho_local"])
+    if not Path(a.revisao).is_file():
+        sys.exit(f"[PARADO] Não achei {a.revisao}.\nEsse arquivo só existe depois da revisão: abra relatorios\\13_atalho\\revisao_atalho.html, "
+                 "marque as imagens e clique em Exportar (o navegador salva em Downloads).")
     rev = ler(a.revisao)
     sel = {r["caminho_relativo"]: r for r in ler(pasta / "revisao.csv")}
 
