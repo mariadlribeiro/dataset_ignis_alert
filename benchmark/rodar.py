@@ -189,7 +189,9 @@ def relatorio_treino(c, rodadas):
                    "não indicam que uma é melhor."]
     if any(x["id"].endswith("_rapido") for x in linhas):
         md += ["", "> Teste rápido: 1 época e 40 imagens por conjunto. Os números não têm valor."]
-    md += ["", "Validação: 210 imagens. Teste: 207 imagens. Métricas com o limiar calibrado na validação.",
+    rapido = any(x["id"].endswith("_rapido") for x in linhas)
+    md += ["", ("Validação e teste: 40 imagens cada (amostra do teste rápido)." if rapido else
+                "Validação: 210 imagens. Teste: 207 imagens.") + " Métricas com o limiar calibrado na validação.",
            "Arquivos de cada rodada: `relatorios/12_treino/<rodada>/`."]
     (sai / "relatorio.md").write_text("\n".join(md) + "\n", encoding="utf-8")
     grafico(linhas, sai / "grafico.png", c["nome"])

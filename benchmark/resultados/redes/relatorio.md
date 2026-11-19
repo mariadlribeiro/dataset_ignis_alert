@@ -2,7 +2,7 @@
 
 ResNet18 x DenseNet121 x EfficientNet-B0, mesmo protocolo (Etapa 12)
 
-Gerado em 2026-11-19T21:38:49+00:00 a partir de `benchmark/campanhas/redes.toml`.
+Gerado em 2026-11-19T21:45:43+00:00 a partir de `benchmark/campanhas/redes.toml`.
 
 Ordenado pelo **F2 na validação** (o critério de escolha). As colunas de teste são só registro.
 
