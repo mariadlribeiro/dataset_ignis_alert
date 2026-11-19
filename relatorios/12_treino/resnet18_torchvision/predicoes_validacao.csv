@@ -1,0 +1,211 @@
+path,classe_real,prob_fogo,previsto,acertou,erro,ambiente,fonte,iluminacao,formato,tamanho
+val/Fire/fire-dataset__fire.10.jpg,Fire,0.9999,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.105.jpg,Fire,0.9994,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.109.jpg,Fire,1.0,Fire,sim,,outros,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.11.jpg,Fire,0.8677,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.110.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.112.jpg,Fire,0.9973,Fire,sim,,casa,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.115.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.117.jpg,Fire,1.0,Fire,sim,,predios,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.120.jpg,Fire,1.0,Fire,sim,,predios,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.123.jpg,Fire,0.9995,Fire,sim,,casa,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.126.jpg,Fire,0.999,Fire,sim,,predios,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.145.jpg,Fire,1.0,Fire,sim,,predios,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.149.jpg,Fire,1.0,Fire,sim,,cidade,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.158.jpg,Fire,0.944,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.160.jpg,Fire,1.0,Fire,sim,,outros,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.166.jpg,Fire,1.0,Fire,sim,,predios,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.178.jpg,Fire,1.0,Fire,sim,,casa,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.187.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.19.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.195.jpg,Fire,0.9602,Fire,sim,,predios,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.241.jpg,Fire,0.9866,Fire,sim,,casa,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.242.jpg,Fire,0.9917,Fire,sim,,predios,fire-dataset,escura,nao_quadrada,pequena (<300 px)
+val/Fire/fire-dataset__fire.244.jpg,Fire,0.7281,Fire,sim,,predios,fire-dataset,escura,nao_quadrada,pequena (<300 px)
+val/Fire/fire-dataset__fire.255.jpg,Fire,0.9995,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.276.jpg,Fire,0.9942,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.286.jpg,Fire,0.8018,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.287.jpg,Fire,0.9993,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.29.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.300.jpg,Fire,0.7622,Fire,sim,,outros,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.311.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.313.jpg,Fire,0.6379,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.316.jpg,Fire,0.9998,Fire,sim,,cidade,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.319.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.323.jpg,Fire,0.9999,Fire,sim,,floresta,fire-dataset,media,quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.334.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.339.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.34.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.352.jpg,Fire,0.9999,Fire,sim,,predios,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.361.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.364.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.369.jpg,Fire,1.0,Fire,sim,,casa,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.371.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.375.jpg,Fire,0.8239,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.387.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.392.jpg,Fire,0.9997,Fire,sim,,cidade,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.394.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.396.jpg,Fire,0.9992,Fire,sim,,cidade,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.399.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.40.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,pequena (<300 px)
+val/Fire/fire-dataset__fire.400.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.403.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.421.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.424.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.429.jpg,Fire,0.9999,Fire,sim,,outros,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.430.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.431.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.434.jpg,Fire,1.0,Fire,sim,,outros,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.439.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.450.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.459.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.460.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.462.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.466.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.469.jpg,Fire,0.9994,Fire,sim,,cidade,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.476.jpg,Fire,0.9973,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.482.jpg,Fire,0.9944,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.484.jpg,Fire,0.9997,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.488.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.49.jpg,Fire,1.0,Fire,sim,,predios,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.5.jpg,Fire,1.0,Fire,sim,,cidade,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.500.jpg,Fire,0.9982,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.504.jpg,Fire,0.9991,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.51.jpg,Fire,0.9192,Fire,sim,,predios,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.510.jpg,Fire,0.6225,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.512.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.518.jpg,Fire,0.9997,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,pequena (<300 px)
+val/Fire/fire-dataset__fire.519.jpg,Fire,0.9994,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.528.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.536.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.540.jpg,Fire,0.9988,Fire,sim,,cidade,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.545.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.56.jpg,Fire,0.9992,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,pequena (<300 px)
+val/Fire/fire-dataset__fire.564.jpg,Fire,0.9999,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.577.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.582.jpg,Fire,0.9999,Fire,sim,,predios,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.583.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.595.jpg,Fire,0.972,Fire,sim,,outros,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.597.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.607.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.618.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.621.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.622.jpg,Fire,1.0,Fire,sim,,casa,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.623.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.631.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.635.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.653.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,pequena (<300 px)
+val/Fire/fire-dataset__fire.655.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.656.jpg,Fire,0.9996,Fire,sim,,cidade,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.679.jpg,Fire,0.9999,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.691.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.697.jpg,Fire,0.9996,Fire,sim,,casa,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.7.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.705.jpg,Fire,0.9998,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.706.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.722.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.723.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.731.jpg,Fire,1.0,Fire,sim,,cidade,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.738.jpg,Fire,0.9998,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.740.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.743.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.746.jpg,Fire,1.0,Fire,sim,,casa,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.76.jpg,Fire,1.0,Fire,sim,,predios,fire-dataset,media,nao_quadrada,300 px ou mais
+val/Fire/fire-dataset__fire.83.jpg,Fire,0.9865,Fire,sim,,casa,fire-dataset,media,nao_quadrada,pequena (<300 px)
+val/Fire/fire-dataset__fire.96.jpg,Fire,1.0,Fire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.10.jpg,NoFire,0.1185,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.101.jpg,NoFire,0.0004,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.102.jpg,NoFire,0.0,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.103.jpg,NoFire,0.5853,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.109.jpg,NoFire,0.0024,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.112.jpg,NoFire,0.0,NoFire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.119.jpg,NoFire,0.2007,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.13.jpg,NoFire,0.0127,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.132.jpg,NoFire,0.0002,NoFire,sim,,floresta,fire-dataset,clara,nao_quadrada,pequena (<300 px)
+val/NoFire/fire-dataset__non_fire.134.jpg,NoFire,0.0002,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.136.jpg,NoFire,0.0004,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.137.jpg,NoFire,0.006,NoFire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.14.jpg,NoFire,0.0018,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.152.jpg,NoFire,0.0,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.165.jpg,NoFire,0.0,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.17.jpg,NoFire,0.0004,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.179.jpg,NoFire,0.0024,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.182.jpg,NoFire,0.0026,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.186.jpg,NoFire,0.0771,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.193.jpg,NoFire,0.0034,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.21.jpg,NoFire,0.0005,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.211.jpg,NoFire,0.0021,NoFire,sim,,outros,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.213.jpg,NoFire,0.0012,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.227.jpg,NoFire,0.4474,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.25.jpg,NoFire,0.0012,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.4.jpg,NoFire,0.1484,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.42.jpg,NoFire,0.0001,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.59.jpg,NoFire,0.0001,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,pequena (<300 px)
+val/NoFire/fire-dataset__non_fire.63.jpg,NoFire,0.0007,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.68.jpg,NoFire,0.0418,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.69.jpg,NoFire,0.0001,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.73.jpg,NoFire,0.0002,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.8.jpg,NoFire,0.0007,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.81.jpg,NoFire,0.0012,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.86.jpg,NoFire,0.0,NoFire,sim,,floresta,fire-dataset,escura,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.95.jpg,NoFire,0.0137,NoFire,sim,,floresta,fire-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/fire-dataset__non_fire.99.jpg,NoFire,0.0001,NoFire,sim,,floresta,fire-dataset,clara,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__FIRE_2049.jpg,NoFire,0.0092,NoFire,sim,,floresta,forest-fire-image-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1144.jpg,NoFire,0.002,NoFire,sim,,outros,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1168.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1175.jpg,NoFire,0.0015,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1187.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1196.jpg,NoFire,0.0072,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1197.jpg,NoFire,0.0,NoFire,sim,,outros,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1198.jpg,NoFire,0.0004,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1264.jpg,NoFire,0.0095,NoFire,sim,,floresta,forest-fire-image-dataset,escura,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1303.jpg,NoFire,0.0002,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1307.jpg,NoFire,0.0001,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1316.jpg,NoFire,0.0002,NoFire,sim,,floresta,forest-fire-image-dataset,escura,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_158.jpg,NoFire,0.0009,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_281.jpg,NoFire,0.0002,NoFire,sim,,outros,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_282.jpg,NoFire,0.0036,NoFire,sim,,outros,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_291.jpg,NoFire,0.0298,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_2984.jpg,NoFire,0.0248,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_302.jpg,NoFire,0.0012,NoFire,sim,,outros,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_3296.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_3521.jpg,NoFire,0.0097,NoFire,sim,,outros,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_3524.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_3568.jpg,NoFire,0.0049,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_3580.jpg,NoFire,0.0165,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_3590.jpg,NoFire,0.0016,NoFire,sim,,outros,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_3860.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_404.jpg,NoFire,0.0872,NoFire,sim,,cidade,forest-fire-image-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_5178.jpg,NoFire,0.0061,NoFire,sim,,outros,forest-fire-image-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_621.jpg,NoFire,0.2999,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_668.jpg,NoFire,0.0025,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_674.jpg,NoFire,0.0001,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_692.jpg,NoFire,0.9921,Fire,nao,falso_positivo,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_723.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_743.jpg,NoFire,0.0025,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_748.jpg,NoFire,0.0004,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_752.jpg,NoFire,0.0007,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_766.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_773.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_792.jpg,NoFire,0.0008,NoFire,sim,,floresta,forest-fire-image-dataset,escura,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_793.jpg,NoFire,0.0281,NoFire,sim,,floresta,forest-fire-image-dataset,escura,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_815.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_834.jpg,NoFire,0.0004,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_846.jpg,NoFire,0.0904,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_907.jpg,NoFire,0.0054,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__FIRE_04696.jpg,NoFire,0.0019,NoFire,sim,,predios,forest-fire-image-dataset,clara,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__FIRE_1885.jpg,NoFire,0.0171,NoFire,sim,,outros,forest-fire-image-dataset,clara,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_3457.jpg,NoFire,0.1967,NoFire,sim,,outros,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_07787.jpg,NoFire,0.0733,NoFire,sim,,casa,forest-fire-image-dataset,clara,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_07057.jpg,NoFire,0.0009,NoFire,sim,,outros,forest-fire-image-dataset,clara,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_08844.jpg,NoFire,0.0327,NoFire,sim,,outros,forest-fire-image-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1916.jpg,NoFire,0.1172,NoFire,sim,,outros,forest-fire-image-dataset,clara,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_07698.jpg,NoFire,0.0445,NoFire,sim,,cidade,forest-fire-image-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_1190.jpg,NoFire,0.0032,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_2463.jpg,NoFire,0.0002,NoFire,sim,,floresta,forest-fire-image-dataset,media,nao_quadrada,300 px ou mais
+val/NoFire/forest-fire-image-dataset__NON_FIRE_316.jpg,NoFire,0.0098,NoFire,sim,,outros,forest-fire-image-dataset,media,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_320.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_611.jpg,NoFire,0.154,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_687.jpg,NoFire,0.0,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_691.jpg,NoFire,0.0089,NoFire,sim,,floresta,forest-fire-image-dataset,clara,quadrada,pequena (<300 px)
+val/NoFire/forest-fire-image-dataset__NON_FIRE_704.jpg,NoFire,0.0037,NoFire,sim,,floresta,forest-fire-image-dataset,media,quadrada,pequena (<300 px)

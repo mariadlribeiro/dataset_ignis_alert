@@ -1,0 +1,15 @@
+{
+  "limiar": 0.5853,
+  "precisao_fogo": 0.991304347826087,
+  "recall_fogo": 1.0,
+  "f2_fogo": 0.9982486865148863,
+  "taxa_falso_negativo": 0.0,
+  "especificidade": 0.9895833333333334,
+  "acuracia": 0.9952380952380953,
+  "vp": 114,
+  "vn": 95,
+  "fp": 1,
+  "fn": 0,
+  "auc_roc": 0.9987207602339181,
+  "imagens": 210
+}
