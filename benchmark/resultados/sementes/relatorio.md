@@ -2,7 +2,7 @@
 
 EfficientNet-B0 com 3 sementes: quanto o resultado varia por acaso
 
-Gerado em 2026-11-19T23:24:50+00:00 a partir de `benchmark/campanhas/sementes.toml`.
+Gerado em 2026-11-19T23:27:04+00:00 a partir de `benchmark/campanhas/sementes.toml`.
 
 Ordenado pelo **F2 na validação** (o critério de escolha). As colunas de teste são só registro.
 
