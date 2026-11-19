@@ -94,6 +94,20 @@ EfficientNet-B0 para o aplicativo foi feita pelo empate de desempenho somado ao 
 rápido que a DenseNet121), e não por uma vantagem no teste. Para separar as redes de verdade, o próximo passo é
 uma validação maior ou com casos difíceis.
 
+### O que as campanhas mostraram (19 nov. 2026)
+
+| Campanha | Resultado |
+|---|---|
+| `redes` | F2 no teste de 97,8% (ResNet18) a 99,1% (DenseNet121 e EfficientNet-B0); na validação, 99,5% a 99,8% |
+| `sementes` | Mesma EfficientNet-B0, só a semente muda: F2 no teste 99,1% nas três, mas **alarme falso de 1 a 5** e fogo perdido de 0 a 1 |
+| `aumento` | Com aumento: 1 fogo perdido / 1 alarme falso; sem: 1 / 0. Diferença menor que a variação entre sementes |
+| `atalho` | Recall nas 297 fotos quadradas e pequenas: 95,3% (ResNet18), 96,6% (EfficientNet-B0), 100% (DenseNet121) |
+| `custo` | Por imagem, na CPU das autoras: ResNet18 ~34 ms, EfficientNet-B0 ~30–35 ms, DenseNet121 ~92–97 ms |
+
+Conclusão: as diferenças de desempenho entre as redes (1 a 2 imagens) ficam dentro do que muda por acaso, e o
+F2 sozinho esconde a variação de alarmes falsos. A EfficientNet-B0 foi escolhida pelo custo: cerca de 3 vezes
+mais rápida por imagem que a DenseNet121, com o mesmo F2. Cada campanha tem seu `relatorio.md` em `resultados/`.
+
 ## Como foi gerado com IA
 
 Este benchmark foi construído com apoio do **Claude (Anthropic)**, em conversa com as autoras, em novembro de 2026.
@@ -107,8 +121,7 @@ Este benchmark foi construído com apoio do **Claude (Anthropic)**, em conversa 
 | Rótulos do teste de atalho | revisão cega pelo Claude, conferida pelas autoras por amostra |
 | Treinos e medições | executados pelas autoras, na CPU do próprio computador |
 
-O que foi conferido: todas as campanhas foram listadas e planejadas (`--so-plano`); a campanha `redes` foi
-consolidada a partir dos treinos reais da Etapa 12. Os números nos relatórios vêm dos arquivos gerados pelos
+O que foi conferido: as seis campanhas foram executadas pelas autoras no próprio computador em 19/11/2026. Os números nos relatórios vêm dos arquivos gerados pelos
 scripts, não foram digitados à mão.
 
 ## Autoras
