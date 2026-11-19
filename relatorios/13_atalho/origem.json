@@ -1,0 +1,6 @@
+{
+  "dataset_ref": "cristiancristancho/forest-fire-image-dataset",
+  "versao_kaggle": 2,
+  "caminho_local": "C:\\Users\\maria\\.cache\\kagglehub\\datasets\\cristiancristancho\\forest-fire-image-dataset\\versions\\2",
+  "observacoes": "Teste de atalho (Etapa 13): só avaliação, nunca treino. A pasta da fonte não é rótulo."
+}

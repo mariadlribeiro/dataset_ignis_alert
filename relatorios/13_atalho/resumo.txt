@@ -1,0 +1,11 @@
+Etapa 13a gerada em 2026-11-19T20:19:36+00:00 | SOMENTE LEITURA | seleção, não rótulos
+python 3.12.10 | Pillow 13.0.0 | numpy 2.5.4 | semente 42
+
+Candidatas de floresta, quadradas e pequenas, fora do dataset e da opção A: 481 sugeridas com fogo, 171 sugeridas sem fogo
+Descartadas por serem quase iguais a imagens do dataset (dHash <= 10): 28
+Selecionadas: 150 sugeridas com fogo + 150 sugeridas sem fogo = 300, em ordem embaralhada
+  tamanhos: 250x250 (287); 240x240 (6); 230x226 (1); 297x280 (1); 200x220 (1); 210x210 (1)
+Revisão: toda cega. O rótulo final é o da revisão, não a sugestão.
+Reserva (não selecionadas, com motivo): 352 em reserva.csv
+
+Arquivos em C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\relatorios\13_atalho. Nada foi copiado, movido ou alterado.

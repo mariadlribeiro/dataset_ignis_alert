@@ -1,0 +1,11 @@
+Etapa 13b | 2026-11-19T20:58:53+00:00 | teste de atalho (só avaliação)
+297 imagens da segunda fonte, todas de floresta, quadradas e pequenas: com fogo 148, sem fogo 149 (rótulo da revisão cega) | fora: 3 (fora.csv)
+A sugestão do CLIP concordou com a revisão em 100% das imagens.
+
+Teste principal -> teste de atalho (mesmo limiar da validação):
+  resnet18         recall de fogo 0.973 -> 0.953 | especificidade 1.000 -> 1.000 | FN 7 FP 0 | sem sinal de atalho de formato: acha o fogo também nesse formato
+  efficientnet_b0  recall de fogo 0.991 -> 0.966 | especificidade 0.989 -> 0.993 | FN 5 FP 1 | sem sinal de atalho de formato: acha o fogo também nesse formato
+  densenet121      recall de fogo 0.991 -> 1.000 | especificidade 0.989 -> 1.000 | FN 0 FP 0 | sem sinal de atalho de formato: acha o fogo também nesse formato
+
+Leitura: o recall de fogo é o número que responde à pergunta. Uma queda grande quer dizer que a rede
+usa o formato da imagem (quadrada e pequena = sem fogo) em vez de olhar a chama.

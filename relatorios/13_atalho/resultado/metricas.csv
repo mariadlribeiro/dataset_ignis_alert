@@ -1,0 +1,4 @@
+rede,limiar,recall_fogo_teste,recall_fogo_atalho,especificidade_teste,especificidade_atalho,f2_teste,f2_atalho,auc_atalho,fn_atalho,fp_atalho,imagens_atalho
+resnet18,0.5853,0.9732,0.9527,1.0,1.0,0.9785,0.9618,1.0,7,0,297
+efficientnet_b0,0.2274,0.9911,0.9662,0.9895,0.9933,0.9911,0.9715,0.9996,5,1,297
+densenet121,0.1695,0.9911,1.0,0.9895,1.0,0.9911,1.0,1.0,0,0,297
