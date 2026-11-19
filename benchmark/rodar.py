@@ -184,9 +184,15 @@ def relatorio_treino(c, rodadas):
         md += ["", f"Variação entre as rodadas: F2 na validação de {pct(min(f2v))} a {pct(max(f2v))}; "
                    f"no teste, de {pct(min(f2t))} a {pct(max(f2t))}."]
         if len({x["rede"] for x in linhas}) == 1 and len({x["aumento"] for x in linhas}) == 1:
-            md += [f"Só a semente muda: média do F2 no teste {pct(statistics.mean(f2t))}, "
-                   f"desvio-padrão {statistics.stdev(f2t) * 100:.2f} pontos. Diferenças entre redes menores que isso "
-                   "não indicam que uma é melhor."]
+            dp = lambda v: f"{statistics.stdev(v) * 100:.1f}".replace(".", ",")
+            esp = [x["espec_teste"] for x in linhas]; rec = [x["recall_teste"] for x in linhas]
+            fn = [x["fn_teste"] for x in linhas]; fp = [x["fp_teste"] for x in linhas]
+            md += ["", "**Só a semente muda.** O que varia por acaso, no teste:",
+                   f"- F2: média {pct(statistics.mean(f2t))}, desvio-padrão {dp(f2t)} ponto(s);",
+                   f"- recall de fogo: de {pct(min(rec))} a {pct(max(rec))} (fogo perdido: de {min(fn)} a {max(fn)});",
+                   f"- especificidade: de {pct(min(esp))} a {pct(max(esp))} (alarme falso: de {min(fp)} a {max(fp)}).",
+                   "", "O F2 pesa mais o fogo perdido e por isso quase não muda quando só os alarmes falsos mudam. "
+                   "Diferenças entre configurações menores que essas faixas não indicam que uma é melhor."]
     if any(x["id"].endswith("_rapido") for x in linhas):
         md += ["", "> Teste rápido: 1 época e 40 imagens por conjunto. Os números não têm valor."]
     rapido = any(x["id"].endswith("_rapido") for x in linhas)
