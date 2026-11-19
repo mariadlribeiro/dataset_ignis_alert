@@ -1,0 +1,13 @@
+# Campanha "sementes": a mesma configuração com sementes diferentes.
+# Mostra quanto o resultado muda só por acaso (ordem das imagens, aumento sorteado).
+# Diferença entre redes menor que essa variação não deve ser lida como "uma é melhor".
+nome = "sementes"
+descricao = "EfficientNet-B0 com 3 sementes: quanto o resultado varia por acaso"
+tipo = "treino"
+
+[base]
+aumento = "torchvision"
+
+[grade]
+rede = ["efficientnet_b0"]
+semente = [42, 7, 2026]

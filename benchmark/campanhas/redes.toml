@@ -1,0 +1,17 @@
+# Campanha "redes": as três arquiteturas com o mesmo protocolo (reproduz a Etapa 12).
+# Se as rodadas da Etapa 12 já existirem com os mesmos parâmetros, elas são reaproveitadas.
+nome = "redes"
+descricao = "ResNet18 x DenseNet121 x EfficientNet-B0, mesmo protocolo (Etapa 12)"
+tipo = "treino"
+
+[base]
+aumento = "torchvision"
+epocas = 20
+lote = 8
+lr = 0.0001
+paciencia = 7
+tamanho = 224
+semente = 42
+
+[grade]
+rede = ["resnet18", "densenet121", "efficientnet_b0"]

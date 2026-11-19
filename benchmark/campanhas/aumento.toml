@@ -1,0 +1,13 @@
+# Campanha "aumento": quanto o aumento de dados (recorte, espelho, rotação, brilho) ajuda a rede escolhida.
+nome = "aumento"
+descricao = "EfficientNet-B0 com e sem aumento de dados"
+tipo = "treino"
+
+[base]
+epocas = 20
+lote = 8
+semente = 42
+
+[grade]
+rede = ["efficientnet_b0"]
+aumento = ["nenhum", "torchvision"]

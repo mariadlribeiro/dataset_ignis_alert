@@ -1,0 +1,12 @@
+# Campanha "custo": quanto cada rede custa para rodar (nada é treinado).
+# Mede tempo por imagem, número de parâmetros e tamanho do arquivo de pesos.
+nome = "custo"
+descricao = "Tempo por imagem, parâmetros e tamanho das 3 redes, por lote e resolução"
+tipo = "custo"
+
+[parametros]
+redes = ["resnet18", "densenet121", "efficientnet_b0"]
+lote = [1, 8]            # imagens por vez
+tamanho = [224]          # resolução de entrada (pixels)
+repeticoes = 20          # medições por combinação (depois de 3 de aquecimento)
+threads = 0              # 0 = o padrão do PyTorch; um número fixa as threads da CPU

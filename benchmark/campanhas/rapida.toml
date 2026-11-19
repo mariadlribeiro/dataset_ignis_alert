@@ -1,0 +1,11 @@
+# Campanha "rapida": confere se o benchmark roda do começo ao fim (1 época, 40 imagens por conjunto).
+# Os números desta campanha NÃO têm valor; servem só para testar a instalação.
+nome = "rapida"
+descricao = "Teste de fumaça: 1 época e 40 imagens por conjunto, só para ver se tudo roda"
+tipo = "treino"
+
+[base]
+teste_rapido = true
+
+[grade]
+rede = ["resnet18"]

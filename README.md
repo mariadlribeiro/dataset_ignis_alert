@@ -2,6 +2,8 @@
 
 **Site do projeto:** https://mariadlribeiro.github.io/dataset_ignis_alert/
 
+**Benchmark parametrizável (LEAS):** [`benchmark/`](benchmark/README.md) — escolha uma campanha de experimentos e rode com `python benchmark/rodar.py --campanha <nome>`.
+
 O site fica na pasta `docs/` (página, vídeo da retrospectiva e imagem de capa) e é publicado pelo GitHub Pages a partir dela.
 
 Pipeline reprodutível, um dataset por vez. Originais nunca são modificados; imagens ficam fora do git

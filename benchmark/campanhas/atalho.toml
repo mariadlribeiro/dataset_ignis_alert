@@ -1,0 +1,10 @@
+# Campanha "atalho": avalia redes JÁ treinadas no teste de atalho da Etapa 13 (nada é treinado).
+# Pergunta: a rede acha o fogo também nas fotos quadradas e pequenas da segunda fonte?
+nome = "atalho"
+descricao = "Redes já treinadas no teste de atalho (297 fotos quadradas e pequenas)"
+tipo = "atalho"
+
+[parametros]
+redes = ["resnet18", "efficientnet_b0", "densenet121"]
+sufixo = "torchvision"                                       # rodadas da Etapa 12: <rede>_<sufixo>
+revisao = "relatorios/13_atalho/revisao_atalho_ia.csv"      # rótulos do teste de atalho
