@@ -1,0 +1,39 @@
+$ C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\.venv\Scripts\python.exe scripts/12_treinar.py --rede efficientnet_b0 --nome efficientnet_b0_nenhum --aumento nenhum --epocas 20 --lote 8 --lr 0.0001 --paciencia 7 --tamanho 224 --semente 42 --sobrescrever
+Conferindo C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\data\treino_ignis\split_manifest.csv (SHA-256 de cada imagem)...
+Rede efficientnet_b0 | dispositivo cpu | treino 971 (fogo 525, sem fogo 446) | validação 210 | teste 207
+época  1/20 | perda treino 0.327 | val: F2 0.956 recall 0.947 espec. 0.990 | 193s  <- melhor até agora (salvo)
+época  2/20 | perda treino 0.149 | val: F2 0.997 recall 1.000 espec. 0.979 | 192s  <- melhor até agora (salvo)
+época  3/20 | perda treino 0.103 | val: F2 0.997 recall 1.000 espec. 0.979 | 223s
+época  4/20 | perda treino 0.048 | val: F2 0.990 recall 0.991 espec. 0.979 | 238s
+época  5/20 | perda treino 0.029 | val: F2 0.977 recall 0.974 espec. 0.990 | 211s
+época  6/20 | perda treino 0.053 | val: F2 0.995 recall 1.000 espec. 0.969 | 237s
+época  7/20 | perda treino 0.045 | val: F2 0.997 recall 1.000 espec. 0.979 | 162s
+época  8/20 | perda treino 0.050 | val: F2 0.997 recall 1.000 espec. 0.979 | 160s
+época  9/20 | perda treino 0.036 | val: F2 0.997 recall 1.000 espec. 0.979 | 157s
+Parada antecipada: 7 épocas sem melhorar na validação.
+
+Etapa 12 | efficientnet_b0_nenhum | 2026-11-19T23:19:56+00:00 | 29.9 min em cpu
+melhor época 2 de 9 | limiar calibrado na validação: 0.5
+
+TESTE (207 imagens, usado uma única vez)
+  recall de fogo 0.991 | precisão 1.000 | F2 0.993 | especificidade 1.000 | AUC 1.000
+  fogo perdido (falso negativo): 1 | alarme falso (falso positivo): 0
+
+Por condição no teste (recall = fogo encontrado; especificidade = sem fogo reconhecido):
+  ambiente   casa               n=  9  recall    1.0  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  ambiente   cidade             n= 11  recall    1.0  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  ambiente   floresta           n=152  recall 0.9868  espec.    1.0  FN 1 FP 0  
+  ambiente   outros             n= 21  recall    1.0  espec.    1.0  FN 0 FP 0  
+  ambiente   predios            n= 14  recall    1.0  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  fonte      fire-dataset       n=149  recall 0.9911  espec.    1.0  FN 1 FP 0  
+  fonte      forest-fire-image-dataset n= 58  recall      -  espec.    1.0  FN 0 FP 0  
+  formato    nao_quadrada       n=158  recall  0.991  espec.    1.0  FN 1 FP 0  
+  formato    quadrada           n= 49  recall    1.0  espec.    1.0  FN 0 FP 0  
+  iluminacao clara              n= 66  recall 0.9545  espec.    1.0  FN 1 FP 0  
+  iluminacao escura             n= 53  recall    1.0  espec.    1.0  FN 0 FP 0  
+  iluminacao media              n= 88  recall    1.0  espec.    1.0  FN 0 FP 0  
+  tamanho    300 px ou mais     n=152  recall 0.9906  espec.    1.0  FN 1 FP 0  
+  tamanho    pequena (<300 px)  n= 55  recall    1.0  espec.    1.0  FN 0 FP 0  
+
+[OK] Relatórios em C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\relatorios\12_treino\efficientnet_b0_nenhum
+     Pesos em C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\data\modelos\efficientnet_b0_nenhum\modelo.pth (fora do git)

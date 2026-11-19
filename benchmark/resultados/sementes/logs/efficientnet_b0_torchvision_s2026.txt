@@ -1,0 +1,41 @@
+$ C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\.venv\Scripts\python.exe scripts/12_treinar.py --rede efficientnet_b0 --nome efficientnet_b0_torchvision_s2026 --aumento torchvision --epocas 20 --lote 8 --lr 0.0001 --paciencia 7 --tamanho 224 --semente 2026 --sobrescrever
+Conferindo C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\data\treino_ignis\split_manifest.csv (SHA-256 de cada imagem)...
+Rede efficientnet_b0 | dispositivo cpu | treino 971 (fogo 525, sem fogo 446) | validação 210 | teste 207
+época  1/20 | perda treino 0.306 | val: F2 0.983 recall 0.983 espec. 0.979 | 166s  <- melhor até agora (salvo)
+época  2/20 | perda treino 0.124 | val: F2 0.963 recall 0.956 espec. 0.990 | 163s
+época  3/20 | perda treino 0.091 | val: F2 0.977 recall 0.974 espec. 0.990 | 156s
+época  4/20 | perda treino 0.070 | val: F2 0.984 recall 0.983 espec. 0.990 | 167s  <- melhor até agora (salvo)
+época  5/20 | perda treino 0.075 | val: F2 0.957 recall 0.947 espec. 1.000 | 196s
+época  6/20 | perda treino 0.043 | val: F2 0.965 recall 0.956 espec. 1.000 | 214s
+época  7/20 | perda treino 0.040 | val: F2 0.963 recall 0.956 espec. 0.990 | 240s
+época  8/20 | perda treino 0.087 | val: F2 0.941 recall 0.930 espec. 0.990 | 204s
+época  9/20 | perda treino 0.046 | val: F2 0.977 recall 0.974 espec. 0.990 | 206s
+época 10/20 | perda treino 0.023 | val: F2 0.963 recall 0.956 espec. 0.990 | 211s
+época 11/20 | perda treino 0.036 | val: F2 0.977 recall 0.974 espec. 0.990 | 187s
+Parada antecipada: 7 épocas sem melhorar na validação.
+
+Etapa 12 | efficientnet_b0_torchvision_s2026 | 2026-11-19T22:49:46+00:00 | 35.6 min em cpu
+melhor época 4 de 11 | limiar calibrado na validação: 0.1699
+
+TESTE (207 imagens, usado uma única vez)
+  recall de fogo 1.000 | precisão 0.957 | F2 0.991 | especificidade 0.947 | AUC 1.000
+  fogo perdido (falso negativo): 0 | alarme falso (falso positivo): 5
+
+Por condição no teste (recall = fogo encontrado; especificidade = sem fogo reconhecido):
+  ambiente   casa               n=  9  recall    1.0  espec.    0.0  FN 0 FP 1  poucas imagens (<20): ler com cuidado
+  ambiente   cidade             n= 11  recall    1.0  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  ambiente   floresta           n=152  recall    1.0  espec. 0.9868  FN 0 FP 1  
+  ambiente   outros             n= 21  recall    1.0  espec. 0.8667  FN 0 FP 2  
+  ambiente   predios            n= 14  recall    1.0  espec.    0.0  FN 0 FP 1  poucas imagens (<20): ler com cuidado
+  fonte      fire-dataset       n=149  recall    1.0  espec.  0.973  FN 0 FP 1  
+  fonte      forest-fire-image-dataset n= 58  recall      -  espec.  0.931  FN 0 FP 4  
+  formato    nao_quadrada       n=158  recall    1.0  espec. 0.9149  FN 0 FP 4  
+  formato    quadrada           n= 49  recall    1.0  espec. 0.9792  FN 0 FP 1  
+  iluminacao clara              n= 66  recall    1.0  espec. 0.9318  FN 0 FP 3  
+  iluminacao escura             n= 53  recall    1.0  espec.    1.0  FN 0 FP 0  
+  iluminacao media              n= 88  recall    1.0  espec. 0.9512  FN 0 FP 2  
+  tamanho    300 px ou mais     n=152  recall    1.0  espec.  0.913  FN 0 FP 4  
+  tamanho    pequena (<300 px)  n= 55  recall    1.0  espec. 0.9796  FN 0 FP 1  
+
+[OK] Relatórios em C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\relatorios\12_treino\efficientnet_b0_torchvision_s2026
+     Pesos em C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\data\modelos\efficientnet_b0_torchvision_s2026\modelo.pth (fora do git)

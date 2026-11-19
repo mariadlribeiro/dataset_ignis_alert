@@ -1,0 +1,4 @@
+id,rede,aumento,semente,epocas_rodadas,melhor_epoca,limiar,f2_val,recall_val,espec_val,f2_teste,recall_teste,espec_teste,fn_teste,fp_teste,min_por_epoca,concluido_em
+efficientnet_b0_torchvision,efficientnet_b0,torchvision,42,10,3,0.2274,0.9965,1.0,0.9792,0.9911,0.9911,0.9895,1,1,2.59,2026-11-19T13:40:36+00:00
+efficientnet_b0_torchvision_s2026,efficientnet_b0,torchvision,2026,11,4,0.1699,0.9965,1.0,0.9792,0.9912,1.0,0.9474,0,5,3.27,2026-11-19T22:49:46+00:00
+efficientnet_b0_torchvision_s7,efficientnet_b0,torchvision,7,8,1,0.5,0.9948,1.0,0.9688,0.9911,0.9911,0.9895,1,1,3.04,2026-11-19T22:13:57+00:00

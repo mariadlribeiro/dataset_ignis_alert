@@ -1,0 +1,31 @@
+$ C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\.venv\Scripts\python.exe scripts/12_treinar.py --rede resnet18 --nome resnet18_torchvision_rapido --aumento torchvision --epocas 20 --lote 8 --lr 0.0001 --paciencia 7 --tamanho 224 --semente 42 --sobrescrever --teste-rapido
+Conferindo C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\data\treino_ignis\split_manifest.csv (SHA-256 de cada imagem)...
+Rede resnet18 | dispositivo cpu | treino 40 (fogo 22, sem fogo 18) | validação 40 | teste 40
+época  1/1 | perda treino 0.591 | val: F2 0.922 recall 1.000 espec. 0.214 | 8s  <- melhor até agora (salvo)
+
+Etapa 12 | resnet18_torchvision_rapido | 2026-11-19T21:40:28+00:00 | 0.2 min em cpu
+TESTE RÁPIDO: 1 época e 40 imagens por split. Números sem valor; só confere que o código roda.
+melhor época 1 de 1 | limiar calibrado na validação: 0.8387
+
+TESTE (40 imagens, usado uma única vez)
+  recall de fogo 0.952 | precisão 1.000 | F2 0.962 | especificidade 1.000 | AUC 1.000
+  fogo perdido (falso negativo): 1 | alarme falso (falso positivo): 0
+
+Por condição no teste (recall = fogo encontrado; especificidade = sem fogo reconhecido):
+  ambiente   casa               n=  3  recall    1.0  espec.      -  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  ambiente   cidade             n=  1  recall    1.0  espec.      -  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  ambiente   floresta           n= 27  recall 0.9333  espec.    1.0  FN 1 FP 0  
+  ambiente   outros             n=  7  recall      -  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  ambiente   predios            n=  2  recall    1.0  espec.      -  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  fonte      fire-dataset       n= 26  recall 0.9524  espec.    1.0  FN 1 FP 0  
+  fonte      forest-fire-image-dataset n= 14  recall      -  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  formato    nao_quadrada       n= 27  recall 0.9524  espec.    1.0  FN 1 FP 0  
+  formato    quadrada           n= 13  recall      -  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  iluminacao clara              n= 15  recall   0.75  espec.    1.0  FN 1 FP 0  poucas imagens (<20): ler com cuidado
+  iluminacao escura             n= 14  recall    1.0  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  iluminacao media              n= 11  recall    1.0  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  tamanho    300 px ou mais     n= 29  recall 0.9524  espec.    1.0  FN 1 FP 0  
+  tamanho    pequena (<300 px)  n= 11  recall      -  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+
+[OK] Relatórios em C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\relatorios\12_treino\resnet18_torchvision_rapido
+     Pesos em C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\data\modelos\resnet18_torchvision_rapido\modelo.pth (fora do git)

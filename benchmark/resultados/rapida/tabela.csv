@@ -1,0 +1,2 @@
+id,rede,aumento,semente,epocas_rodadas,melhor_epoca,limiar,f2_val,recall_val,espec_val,f2_teste,recall_teste,espec_teste,fn_teste,fp_teste,min_por_epoca,concluido_em
+resnet18_torchvision_rapido,resnet18,torchvision,42,1,1,0.8387,0.9848,1.0,0.8571,0.9615,0.9524,1.0,1,0,0.13,2026-11-19T21:40:28+00:00

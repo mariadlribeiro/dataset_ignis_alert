@@ -1,0 +1,22 @@
+Etapa 12 | efficientnet_b0_nenhum | 2026-11-19T23:19:56+00:00 | 29.9 min em cpu
+melhor época 2 de 9 | limiar calibrado na validação: 0.5
+
+TESTE (207 imagens, usado uma única vez)
+  recall de fogo 0.991 | precisão 1.000 | F2 0.993 | especificidade 1.000 | AUC 1.000
+  fogo perdido (falso negativo): 1 | alarme falso (falso positivo): 0
+
+Por condição no teste (recall = fogo encontrado; especificidade = sem fogo reconhecido):
+  ambiente   casa               n=  9  recall    1.0  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  ambiente   cidade             n= 11  recall    1.0  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  ambiente   floresta           n=152  recall 0.9868  espec.    1.0  FN 1 FP 0  
+  ambiente   outros             n= 21  recall    1.0  espec.    1.0  FN 0 FP 0  
+  ambiente   predios            n= 14  recall    1.0  espec.    1.0  FN 0 FP 0  poucas imagens (<20): ler com cuidado
+  fonte      fire-dataset       n=149  recall 0.9911  espec.    1.0  FN 1 FP 0  
+  fonte      forest-fire-image-dataset n= 58  recall      -  espec.    1.0  FN 0 FP 0  
+  formato    nao_quadrada       n=158  recall  0.991  espec.    1.0  FN 1 FP 0  
+  formato    quadrada           n= 49  recall    1.0  espec.    1.0  FN 0 FP 0  
+  iluminacao clara              n= 66  recall 0.9545  espec.    1.0  FN 1 FP 0  
+  iluminacao escura             n= 53  recall    1.0  espec.    1.0  FN 0 FP 0  
+  iluminacao media              n= 88  recall    1.0  espec.    1.0  FN 0 FP 0  
+  tamanho    300 px ou mais     n=152  recall 0.9906  espec.    1.0  FN 1 FP 0  
+  tamanho    pequena (<300 px)  n= 55  recall    1.0  espec.    1.0  FN 0 FP 0  
