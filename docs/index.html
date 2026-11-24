@@ -356,6 +356,7 @@ footer p{margin:0 0 6px}
 .mp .t-corrigiu{stroke:#35b985;stroke-dasharray:8 5}
 .mp .t-gerou{stroke:#35b985;stroke-width:2.4}
 .mp .t-depende{stroke:#a9bdb1;stroke-dasharray:5 5}
+.mp .t-testou{stroke:#5aa0f0;stroke-dasharray:2 5;stroke-linecap:round}
 .mp.foco .no:not(.on) .corpo-no{opacity:.2}
 .mp.foco .lg:not(.on){opacity:.06}
 .mp.foco .lg.on{opacity:1;stroke-width:3}
@@ -385,7 +386,7 @@ footer p{margin:0 0 6px}
 .mapa-lista li{break-inside:avoid;margin-bottom:6px} .mapa-lista b{color:var(--tinta)}
 
 /* ---------- equilíbrio e condições ---------- */
-.segmentos{grid-template-columns:repeat(10,1fr)}
+.segmentos{grid-template-columns:repeat(13,1fr)}
 .eq-topo{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:6px}
 .eq-alt{display:flex;gap:4px;background:var(--linha2);border-radius:8px;padding:3px}
 .eq-alt button{font:inherit;font-size:14px;color:var(--mudo);background:none;border:0;border-radius:6px;padding:5px 12px;cursor:pointer}
@@ -526,7 +527,7 @@ footer p{margin:0 0 6px}
   footer{background:#fff;color:#000} footer h3,footer a{color:#000}
   a{text-decoration:none}
 }
-.mp .mk-segue{fill:#eaf2ec}.mp .mk-alimenta{fill:#e2b33c}.mp .mk-regra{fill:#5aa0f0}.mp .mk-revelou{fill:#f0703a}.mp .mk-corrigiu{fill:#35b985}.mp .mk-gerou{fill:#35b985}.mp .mk-depende{fill:#a9bdb1}
+.mp .mk-segue{fill:#eaf2ec}.mp .mk-alimenta{fill:#e2b33c}.mp .mk-regra{fill:#5aa0f0}.mp .mk-revelou{fill:#f0703a}.mp .mk-corrigiu{fill:#35b985}.mp .mk-gerou{fill:#35b985}.mp .mk-depende{fill:#a9bdb1}.mp .mk-testou{fill:#5aa0f0}
 
 /* vídeo da retrospectiva */
 #video .sec-cab h2::before{background:var(--fogo);clip-path:polygon(15% 0,100% 50%,15% 100%);border-radius:0}
@@ -781,16 +782,16 @@ footer p{margin:0 0 6px}
  <div class="envolve">
   <div class="sec-cab">
    <h2>Método</h2>
-   <p class="intro">Dez etapas, cada uma um script que pode ser refeito. A máquina sugere, uma pessoa decide, e cada decisão vira um CSV.</p>
+   <p class="intro">Treze etapas, cada uma um script que pode ser refeito: dez montam o dataset e três treinam e testam as redes. A máquina sugere, uma pessoa decide, e cada decisão vira um CSV.</p>
   </div>
   <div class="corpo">
    <div class="regras-chips"><span><i></i>Originais nunca são alterados</span><span><i></i>Fumaça não é fogo</span><span><i></i>O modelo sugere, a pessoa decide</span></div>
    <div class="pipeline espera" id="pipeline">
-    <div class="topo"><b>Pipeline do dataset</b><span>9 de 10 etapas concluídas</span></div>
+    <div class="topo"><b>Pipeline do dataset</b><span>12 de 13 etapas concluídas</span></div>
     <ol class="segmentos">
      <li class="feito" style="--k:0">1 <span>Origem</span></li><li class="feito" style="--k:1">2 <span>Validação</span></li><li class="feito" style="--k:2">3 <span>Duplicatas</span></li>
      <li class="feito" style="--k:3">4 <span>Divisão</span></li><li class="feito" style="--k:4">5 <span>Revisão</span></li><li class="feito" style="--k:5">6 <span>Plano</span></li><li class="feito" style="--k:6">7 <span>Cópia</span></li>
-     <li class="feito" style="--k:7">8 <span>Equilíbrio</span></li><li class="agora" style="--k:8">9 <span>Condições</span></li><li class="feito" style="--k:9">10 <span>2ª fonte</span></li>
+     <li class="feito" style="--k:7">8 <span>Equilíbrio</span></li><li class="agora" style="--k:8">9 <span>Condições</span></li><li class="feito" style="--k:9">10 <span>2ª fonte</span></li><li class="feito" style="--k:10">11 <span>Exportar</span></li><li class="feito" style="--k:11">12 <span>Treino</span></li><li class="feito" style="--k:12">13 <span>Atalho</span></li>
     </ol>
    </div>
    <h3 class="sub-titulo">O projeto em um mapa</h3>
@@ -870,7 +871,7 @@ footer p{margin:0 0 6px}
    <h3 class="sub-titulo" style="margin-top:0">As três redes no teste</h3>
    <p class="aviso-res"><i aria-hidden="true"></i><span id="res-status"></span></p>
    <div class="redes" id="redes"></div>
-   <p class="leitura-res">Num alerta, perder um incêndio custa mais que um alarme falso, por isso a escolha é pelo F2, que pesa mais o fogo perdido. DenseNet121 e EfficientNet-B0 empataram: cada uma errou 2 das 207 imagens. <b>A escolhida para o aplicativo é a EfficientNet-B0</b>: mesmo F2, treino 2 a 3 vezes mais rápido e resposta mais leve no celular. A DenseNet121, que acertou todo o teste de atalho, fica como referência de robustez.</p>
+   <p class="leitura-res">A escolha é pelo F2, que pesa mais o incêndio perdido. DenseNet121 e EfficientNet-B0 empataram, com 2 erros em 207. <b>A EfficientNet-B0 vai para o aplicativo</b> por ser cerca de 3 vezes mais rápida no computador (35 ms contra 97 ms por imagem).</p>
    <figure class="fig-atalho">
     <h3>O teste de atalho: a rede olha a chama ou o formato?</h3>
     <p class="sub">Recall de fogo no teste principal <b class="lg-teste">●</b> e em 297 fotos quadradas e pequenas da segunda fonte <b class="lg-novo">●</b></p>
@@ -890,7 +891,7 @@ footer p{margin:0 0 6px}
      <div class="disse"><span>Rótulo <b class="chip c-fogo">com fogo</b></span><span>ResNet18 <b class="chip c-sem">53% de fogo</b></span></div>
      <b>fire.135.</b> Fogo evidente, mas a probabilidade ficou logo abaixo do limiar de 58,5%. Erro de limiar, não de visão.</figcaption></figure>
    </div>
-   <p class="nota-erros">O alarme falso da DenseNet121 foi uma copa de outono amarelo-alaranjada, da segunda fonte (a foto não aparece aqui enquanto a licença não for confirmada).</p>
+   <p class="nota-erros">O alarme falso da DenseNet121 foi uma copa de outono da segunda fonte, sem foto aqui até a licença ser confirmada.</p>
    <details class="mais"><summary>Como foi medido <span>protocolo, referência do CLIP e matriz de confusão</span></summary><div class="dentro">
    <div class="res-baixo">
     <div class="base">
@@ -907,10 +908,10 @@ footer p{margin:0 0 6px}
       <li><b>Teste medido uma vez</b>, com matriz de confusão e catálogo de erros.</li>
       <li><b>Teste de atalho</b> com 297 fotos de outra fonte e outro formato, sem treinar de novo.</li>
      </ol>
-     <p class="sub" style="margin:14px 0 0">Matriz de confusão do teste: <b id="m-rede"></b></p><div class="matriz" aria-label="Matriz de confusão do teste">
+     <p class="sub" style="margin:14px 0 0">Matriz de confusão do teste: <b id="m-rede">EfficientNet-B0</b></p><div class="matriz" aria-label="Matriz de confusão do teste da EfficientNet-B0: 111 fogos achados, 1 fogo perdido, 1 alarme falso e 94 acertos sem fogo, em 207 imagens">
       <div class="cab"></div><div class="cab">previu fogo</div><div class="cab">previu sem fogo</div>
-      <div class="cab">é fogo</div><div id="m-vp">—</div><div id="m-fn">—</div>
-      <div class="cab">sem fogo</div><div id="m-fp">—</div><div id="m-vn">—</div>
+      <div class="cab">é fogo</div><div id="m-vp">111</div><div id="m-fn">1</div>
+      <div class="cab">sem fogo</div><div id="m-fp">1</div><div id="m-vn">94</div>
      </div>
     </div>
    </div>
@@ -945,8 +946,9 @@ footer p{margin:0 0 6px}
      <figcaption>Pequena: menor lado abaixo de 300 px. Escura: brilho médio abaixo de 70, de 0 a 255.</figcaption>
     </figure>
    </div>
-   <h3 class="sub-titulo" id="erros-ia">Onde o CLIP errou ao sugerir rótulos</h3>
+   <details class="mais" id="erros-ia"><summary>Onde o CLIP errou ao sugerir rótulos <span>quatro casos reais</span></summary><div class="dentro">
    <div class="erros" id="erros"></div>
+   </div></details>
   </div>
  </div>
 </section>
@@ -960,7 +962,10 @@ footer p{margin:0 0 6px}
   <div class="corpo">
    <div class="placar-c" id="placar-c"><i style="background:var(--semfogo)" data-w="76.9">10</i><i style="background:#b9871b" data-w="23.1">3</i></div>
    <p class="placar-leg"><span><i style="background:var(--semfogo)"></i>entregue <b>10</b></span><span><i style="background:#b9871b"></i>parcial <b>3</b></span></p>
-   <ul class="comb"><li><span class="st ok">entregue</span><b>Usar um dataset só, sem misturar três</b><span class="e">Uma fonte auditada; a segunda, conferida contra ela.</span></li><li><span class="st ok">entregue</span><b>Separar com fogo e sem fogo, por ambiente</b><span class="e">Cinco ambientes.</span></li><li><span class="st ok">entregue</span><b>Repositório só com o dataset e a validação</b><span class="e">Scripts 01 a 13, o benchmark e um CSV por decisão.</span></li><li><span class="st ok">entregue</span><b>Explicar como as duplicatas são achadas</b><span class="e">SHA-256 e dHash, com o limiar testado acima.</span></li><li><span class="st ok">entregue</span><b>Tirar as imagens fora de contexto</b><span class="e">21 ficaram de fora, cada uma com o motivo.</span></li><li><span class="st ok">entregue</span><b>Avaliar a variação de resolução</b><span class="e">Medida nas 1.388; revelou um atalho.</span></li><li><span class="st ok">entregue</span><b>Mostrar exemplos de erros da IA</b><span class="e">Quatro casos reais na seção Resultados.</span></li><li><span class="st ok">entregue</span><b>Treinar e comparar as três redes</b><span class="e">Mesmo protocolo; F2 de 97,8% a 99,1%.</span></li><li><span class="st ok">entregue</span><b>Site e vídeo do projeto</b><span class="e">Esta página e a retrospectiva no topo.</span></li><li><span class="st parcial">parcial</span><b>Revisar 100% das imagens</b><span class="e">Parte ficou com o rótulo do modelo.</span></li><li><span class="st parcial">parcial</span><b>Ter fotos sem fogo do mesmo ambiente</b><span class="e">Só na floresta: 510 e 510.</span></li><li><span class="st parcial">parcial</span><b>Mais de mil imagens por ambiente</b><span class="e">Só a floresta passa de mil.</span></li><li><span class="st ok">entregue</span><b>Benchmark parametrizável no LEAS</b><span class="e">Seis campanhas, escolhidas por arquivo; <a href="https://github.com/mariadlribeiro/dataset_ignis_alert/tree/main/benchmark">pasta benchmark/</a>.</span></li></ul>
+   <ul class="comb"><li><span class="st parcial">parcial</span><b>Revisar 100% das imagens</b><span class="e">Parte ficou com o rótulo do modelo.</span></li><li><span class="st parcial">parcial</span><b>Ter fotos sem fogo do mesmo ambiente</b><span class="e">Só na floresta: 510 e 510.</span></li><li><span class="st parcial">parcial</span><b>Mais de mil imagens por ambiente</b><span class="e">Só a floresta passa de mil.</span></li></ul>
+   <details class="mais"><summary>Os 10 pontos entregues <span>do dataset único ao benchmark no LEAS</span></summary><div class="dentro">
+   <ul class="comb"><li><span class="st ok">entregue</span><b>Usar um dataset só, sem misturar três</b><span class="e">Uma fonte auditada; a segunda, conferida contra ela.</span></li><li><span class="st ok">entregue</span><b>Separar com fogo e sem fogo, por ambiente</b><span class="e">Cinco ambientes.</span></li><li><span class="st ok">entregue</span><b>Repositório só com o dataset e a validação</b><span class="e">Scripts 01 a 13, o benchmark e um CSV por decisão.</span></li><li><span class="st ok">entregue</span><b>Explicar como as duplicatas são achadas</b><span class="e">SHA-256 e dHash, com o limiar testado acima.</span></li><li><span class="st ok">entregue</span><b>Tirar as imagens fora de contexto</b><span class="e">21 ficaram de fora, cada uma com o motivo.</span></li><li><span class="st ok">entregue</span><b>Avaliar a variação de resolução</b><span class="e">Medida nas 1.388; revelou um atalho.</span></li><li><span class="st ok">entregue</span><b>Mostrar exemplos de erros da IA</b><span class="e">Quatro casos reais na seção Resultados.</span></li><li><span class="st ok">entregue</span><b>Treinar e comparar as três redes</b><span class="e">Mesmo protocolo; F2 de 97,8% a 99,1%.</span></li><li><span class="st ok">entregue</span><b>Site e vídeo do projeto</b><span class="e">Esta página e a retrospectiva no topo.</span></li><li><span class="st ok">entregue</span><b>Benchmark parametrizável no LEAS</b><span class="e">Seis campanhas, escolhidas por arquivo; <a href="https://github.com/mariadlribeiro/dataset_ignis_alert/tree/main/benchmark">pasta benchmark/</a>.</span></li></ul>
+   </div></details>
    <h3 class="sub-titulo trajeto-tit">O caminho do semestre</h3>
    <ol class="trajeto" id="trajeto"></ol>
    <p class="trajeto-leg"><span><i style="background:var(--fogo);transform:rotate(45deg);border-radius:2px"></i>mudança de rumo</span><span><i style="background:var(--folha);border:2px solid var(--apagado);border-radius:50%;box-sizing:border-box"></i>apresentação</span><span><i style="background:var(--semfogo);border-radius:50%"></i>pipeline atual</span></p>
@@ -1460,7 +1465,7 @@ const MAPA = {
     produto: {nome:'Produto', cor:'var(--m-produto)'},
     afazer:  {nome:'A fazer', cor:'var(--m-afazer)'}
   },
-  tipos: {segue:'vem antes de', alimenta:'alimenta', regra:'vale em', revelou:'revelou', corrigiu:'corrigiu', gerou:'gerou', depende:'é necessário para'},
+  tipos: {segue:'vem antes de', alimenta:'alimenta', regra:'vale em', revelou:'revelou', corrigiu:'corrigiu', testou:'testou', gerou:'gerou', depende:'é necessário para'},
   nos: [
     {id:'f1', g:'fonte', x:90, y:180, r:31, n:'999', t:['fire-dataset'], h:'#problema', d:'Primeira fonte, do Kaggle: 999 arquivos em duas pastas, fogo e sem fogo. Foi auditada imagem por imagem.'},
     {id:'f2', g:'fonte', x:1098, y:180, r:35, n:'11.034', t:['forest-fire-','image-dataset'], h:'#metodo', d:'Segunda fonte, do Kaggle: 11.034 arquivos. Trazia dentro dela 1.115 imagens que o projeto já tinha.'},
@@ -1483,13 +1488,16 @@ const MAPA = {
     {id:'a4', g:'achado', x:562, y:600, r:24, n:'11', t:['Não são','fotografia'], h:'#problema', d:'9 imagens sintéticas, 1 visualização de sensor e 1 GIF animado ficaram fora da divisão.'},
     {id:'a5', g:'achado', x:668, y:486, r:27, n:'65%', t:['CLIP erra','o ambiente'], h:'#metodo', d:'Na auditoria cega, o modelo acertou o fogo em 98,5% das imagens, mas o ambiente em só 65%.'},
     {id:'a7', g:'achado', x:874, y:500, r:27, n:'2:1', t:['Floresta','desigual'], h:'#equilibrio', d:'A floresta tinha 510 imagens com fogo e 231 sem fogo. O peso ajusta o sorteio, mas não cria exemplos.'},
-    {id:'a6', g:'achado', x:1004, y:604, r:27, n:'49%', t:['Atalho de','formato e luz'], h:'#equilibrio', d:'49% das imagens sem fogo são quadradas, contra 1% das com fogo. O modelo pode acertar pelo formato, sem olhar a chama.'},
+    {id:'a6', g:'achado', x:1026, y:590, r:27, lado:'e', n:'49%', t:['Atalho de','formato e luz'], h:'#equilibrio', d:'49% das imagens sem fogo são quadradas, contra 1% das com fogo. O modelo pode acertar pelo formato, sem olhar a chama.'},
     {id:'p3', g:'produto', x:1250, y:170, r:30, n:'32', t:['Medidas das','imagens'], h:'#equilibrio', d:'Mais de 30 medidas automáticas por imagem, para as 1.388 imagens do dataset.'},
     {id:'p1', g:'produto', x:1250, y:340, r:38, n:'1.388', t:['Dataset v2'], h:'#topo', d:'1.388 imagens de duas fontes, com floresta em 510 com fogo e 510 sem fogo em cada conjunto.'},
-    {id:'p2', g:'produto', x:1250, y:500, r:30, n:'971', t:['Pesos de','treino'], h:'#equilibrio', d:'Um peso para cada uma das 971 imagens do treino. Validação e teste ficam sem peso.'},
+    {id:'p2', g:'produto', x:1150, y:560, r:30, acima:true, n:'971', t:['Pesos de','treino'], h:'#equilibrio', d:'Um peso para cada uma das 971 imagens do treino. Validação e teste ficam sem peso.'},
     {id:'t2', g:'afazer', x:980, y:84, r:24, t:['Revisão humana','que falta'], h:'#limites', d:'Conferir as 400 imagens da segunda fonte, revisadas por IA, e responder as 14 perguntas de condições.'},
-    {id:'t1', g:'produto', x:1140, y:650, r:26, n:'3', t:['Redes','treinadas'], h:'#resultados', d:'ResNet18, DenseNet121 e EfficientNet-B0: F2 de 97,8% a 99,1% no teste e sem sinal de atalho de formato.'},
-    {id:'t3', g:'afazer', x:1272, y:650, r:22, t:['Aplicativo'], h:'#metodo', d:'O aplicativo que recebe imagens e mostra os alertas para uma pessoa confirmar.'}
+    {id:'e11', g:'etapa', x:1250, y:730, t:['11 Exportar'], h:'#resultados', d:'Copia o dataset para treino, validação e teste, com fogo e sem fogo, e um manifesto da divisão no formato do treino.'},
+    {id:'e12', g:'etapa', x:1138, y:730, t:['12 Treino'], h:'#resultados', d:'ResNet18, DenseNet121 e EfficientNet-B0 com o mesmo protocolo. Limiar calibrado na validação; teste usado uma única vez.'},
+    {id:'e13', g:'etapa', x:1026, y:730, t:['13 Atalho'], h:'#resultados', d:'297 fotos quadradas e pequenas da segunda fonte, revisadas às cegas, mostram se a rede olha o formato em vez da chama.'},
+    {id:'t1', g:'produto', x:880, y:730, r:26, n:'3', t:['Redes','treinadas'], h:'#resultados', d:'ResNet18, DenseNet121 e EfficientNet-B0: F2 de 97,8% a 99,1% no teste e sem sinal de atalho de formato.'},
+    {id:'t3', g:'afazer', x:750, y:730, r:22, t:['Aplicativo'], h:'#metodo', d:'O aplicativo que recebe imagens e mostra os alertas para uma pessoa confirmar.'}
   ],
   lig: [
     ['f1','e1','alimenta'], ['f2','e10','alimenta'],
@@ -1498,7 +1506,8 @@ const MAPA = {
     ['e2','a1','revelou'], ['e3','a2','revelou'], ['e5','a3','revelou'], ['e5','a4','revelou'], ['e5','a5','revelou'], ['e8','a7','revelou'], ['e9','a6','revelou'],
     ['e10','a7','corrigiu'],
     ['e7','p1','gerou',-78], ['e10','p1','gerou'], ['e8','p2','gerou'], ['e9','p3','gerou'],
-    ['t2','p3','depende'], ['t2','p1','depende'], ['p1','t1','depende'], ['p2','t1','depende'], ['a6','t1','depende'], ['t1','t3','depende']
+    ['t2','p3','depende'], ['t2','p1','depende'],
+    ['p1','e11','alimenta'], ['e11','e12','segue'], ['e12','e13','segue'], ['p2','e12','alimenta'], ['e13','a6','testou'], ['e12','t1','gerou',40], ['t1','t3','depende']
   ]
 };
 function mapa(){
@@ -1530,11 +1539,13 @@ function mapa(){
     } else {
       const traco = n.g === 'afazer' ? `fill:rgba(169,189,177,.12);stroke:${cor};stroke-width:2;stroke-dasharray:5 4` : `fill:${cor}`;
       forma = `<circle class="forma" r="${n.r}" style="${traco}"/>` + (n.n ? `<text class="val" y="5" text-anchor="middle" style="font-size:${n.n.length > 5 ? 13.5 : n.n.length > 3 ? 15 : 17}px">${n.n}</text>` : '');
-      rot = n.t.map((l, k) => `<text class="rot" y="${n.g === 'regra' || n.id === 't2' ? -(n.r + 10) - (n.t.length - 1 - k) * 18 : n.r + 21 + k * 18}" text-anchor="middle">${l}</text>`).join('');
+      rot = n.lado === 'e'
+        ? n.t.map((l, k) => `<text class="rot" x="${-(n.r + 10)}" y="${5 + (k - (n.t.length - 1) / 2) * 18}" text-anchor="end">${l}</text>`).join('')
+        : n.t.map((l, k) => `<text class="rot" y="${n.g === 'regra' || n.id === 't2' || n.acima ? -(n.r + 10) - (n.t.length - 1 - k) * 18 : n.r + 21 + k * 18}" text-anchor="middle">${l}</text>`).join('');
     }
     s += `<g class="no g-${n.g}" data-id="${n.id}" transform="translate(${n.x},${n.y})" tabindex="0" role="button" aria-label="${G[n.g].nome}: ${n.t.join(' ')}"><g class="corpo-no" style="--i:${i}">${forma}${rot}</g></g>`;
   });
-  svg.setAttribute('viewBox', '0 0 1340 730'); svg.innerHTML = s;
+  svg.setAttribute('viewBox', '0 0 1340 830'); svg.innerHTML = s;
 
   const nos = [...svg.querySelectorAll('.no')], ligs = [...svg.querySelectorAll('.lg')];
   const nome = n => n.t.join(' ').replace('- ', '-');
@@ -1542,7 +1553,7 @@ function mapa(){
   let sel = null, filtro = null;
   const ficha = $('#mapa-ficha');
   const fichaVazia = () => { ficha.innerHTML = `<div class="fe"><span class="grupo"><i style="background:var(--fogo)"></i>Como ler</span><h3>O projeto em um mapa</h3>
-    <p>${MAPA.nos.length} peças e ${MAPA.lig.length} ligações. No centro, as dez etapas em ordem.</p></div>
+    <p>${MAPA.nos.length} peças e ${MAPA.lig.length} ligações. No centro, as dez etapas do dataset; embaixo, as três do modelo, da direita para a esquerda.</p></div>
     <div class="fd"><h4>Como usar</h4><p>Clique numa peça para fixá-la e ir à parte do site que fala dela.</p></div>`; };
   const destacar = (ids, centro) => { svg.classList.toggle('foco', !!ids);
     nos.forEach(g => g.classList.toggle('on', !!ids && ids.has(g.dataset.id)));
@@ -1576,7 +1587,7 @@ function mapa(){
   filtros.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return;
     filtro = filtro === b.dataset.g ? null : b.dataset.g; sel = null;
     filtros.querySelectorAll('button').forEach(o => o.setAttribute('aria-pressed', o.dataset.g === filtro)); atualizar(); });
-  const LG = [['segue','sequência'],['alimenta','alimenta'],['regra','regra aplicada'],['revelou','revelou'],['corrigiu','corrigiu'],['gerou','gerou'],['depende','é necessário para']];
+  const LG = [['segue','sequência'],['alimenta','alimenta'],['regra','regra aplicada'],['revelou','revelou'],['corrigiu','corrigiu'],['testou','testou'],['gerou','gerou'],['depende','é necessário para']];
   $('#mapa-leg').innerHTML = LG.map(([t, r]) => `<span><svg class="mp" style="min-width:0" viewBox="0 0 30 8"><path class="lg t-${t}" style="opacity:1" d="M1,4 H29"/></svg>${r}</span>`).join('');
   $('#mapa-lista').innerHTML = Object.entries(G).map(([k, g]) => MAPA.nos.filter(n => n.g === k).map(n => `<li><b>${n.t.join(' ').replace('- ', '-')}</b> (${g.nome.toLowerCase()}): ${n.d}</li>`).join('')).join('');
   fichaVazia();
