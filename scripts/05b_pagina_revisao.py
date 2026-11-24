@@ -18,9 +18,9 @@ Modo "ambiente" (2ª revisão, lista do 05c): só o ambiente é obrigatório; fo
 Uso:  python scripts/05b_pagina_revisao.py                  # 1ª revisão (revisao.csv)
       python scripts/05b_pagina_revisao.py --modo ambiente  # 2ª revisão (revisao_ambiente.csv)
 """
-import argparse, csv, json
+import argparse, csv, json, re
 from collections import defaultdict
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 
 LIM_PADRAO = {"amb_conf_min": 0.45, "amb_margem_min": 0.15, "p_sim": 0.80, "p_nao": 0.20, "fumaca_revisar": 0.50}
 
@@ -586,7 +586,8 @@ def main():
     exportar_como = a.exportar_como or Path(base).name + "_preenchida.csv"
 
     origem = json.loads(Path(a.origem).read_text(encoding="utf-8"))
-    raiz = Path(origem["caminho_local"])
+    # caminho do Windows (ex.: C:\\Users\\...) funciona mesmo gerando a página em outro sistema
+    raiz = (PureWindowsPath if re.match(r"^[A-Za-z]:[\\/]", origem["caminho_local"]) else Path)(origem["caminho_local"])
     sug = {r["caminho_relativo"]: r for r in ler(a.sugestoes)}
     val = {r["caminho_relativo"]: r for r in ler_opcional(a.validacao)}
     pend = {r["caminho_relativo"]: r["motivo"] for r in ler_opcional(a.pendentes)}

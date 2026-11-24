@@ -1,0 +1,119 @@
+n,caminho_relativo,split,parte,estrato,peso,ambiente_ia,fogo_ia,fumaca_ia,sha256
+2,FOREST_FIRE_DATASET\FIRE\FIRE (2011).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,incerto,bc86d973443b3a025acaf4e1d5e9bc2485cd4478d521705b4f0e17974cfc8c68
+5,FOREST_FIRE_DATASET\NON_FIRE\01844.jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,512c2a3422e763b743f8ffb0d5899b5a1df149e04d6d36b9ea5e283bc1cf5218
+6,FOREST_FIRE_DATASET\NON_FIRE\05205.jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,5ed61c67047c59a17ae088769d6ca59001d3ddebbe53fc80d71f1108d1fdbf7c
+7,FOREST_FIRE_DATASET\NON_FIRE\07082.jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,6a3fbce1cab1d44ce4e60d79489c862e89a088650b492dd6f1a105db296d40f9
+16,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1147).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,d210328f62339771d8c4b52e028c346a60faa8f4fce0dd4c79e35a9ad5cc8ccc
+28,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1174).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,9db3c53387d0440078347a640fff6182e8ad5e8bb6fe48411764c60da4b2668a
+30,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1176).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,51112df0e5dca5d422d8612ae147f668ee1017b6f4673d43cd9d72c164758472
+34,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1182).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,966cdee750aa5f3f7eb9f1281c4d96436a312e867b38e3f418c255c37d4d7988
+36,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1187).jpg,validacao,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,ae4e11e565099da3ee7fd5b266e635176fe00ca922e1cf829e8b547bbc3563bb
+37,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1188).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,fd7b94f7f3e9171b7f8c2d85604c15a99ec063ada62009135f968bc0d8fffc14
+39,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1192).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,93b64f0d814a0a3df7048c9a2f5e8c9d80506e125757472e781007ab563055e8
+41,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1197).jpg,validacao,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,0623713ec6fcc12ca7858dd3b1bbe759b461a147f89a7a37a0558398fe9862dc
+45,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1208).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,f8b2ed83e40707d9d0fdd03cfbeb5b3220b62e7d330dd4f5fa133b9ec4587d35
+46,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1211).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,b9a3381a3cea92662e78b813b2f776bdc760a6fe2bc6809255bf59f940ee5075
+47,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1223).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,4f24989ac563436685afd8a82bac78a4d95c6ade5e5aaf5ab2cf39490b10756c
+51,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1252).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,e4ef102bf86898d6cf856083c080c0e14080b316c414b89d0fb58794d9345749
+52,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1253).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,27355bd5cea46741277356f2c99c02fee3e7b0e0794572625278d5a7e96e5f59
+57,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1262).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,39abe380f459c9477f24539c3b5cdf93273ccb166de5613784c1f82b7c301a32
+62,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1281).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,bbe44bcd00136fa2f614211534a90f42fca029e9f3abc4fb8449175eee917703
+63,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1282).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,128a99218acaf9ca7689b7017b656409d0921ce89ca75f4a9ce9745233ab6c2a
+64,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1285).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,9ddc04c7e6e68919fd61b88e9f47e1409fd763a42b961eb27cfa024e66ccbdb4
+68,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1296).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,3a696f5e97369c1a189c1c13f229ee3fa3fe54c65c391031db6c2b6499019bf5
+75,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1317).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,ba26564d498f89b129e63d77cd7400be06e0c7e467efb9e8010362579843fb37
+76,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1320).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,9ff1a7082926677f5680af7723ecf115ec0f48c001a0608bf2a3bee26ac713d3
+79,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (143).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,5e93fc432631e2e275db89c354c03171a9f7d93eb8046fbf9818f27e4df71149
+80,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (148).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,88eb59877c2528dfbd1f3d8f581461333d8a4670672a7cd6334d42325690556f
+82,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1569).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,78541d182122d9f5ba90203e4612c0fc6e88570076b6cec7fe6120dde572c253
+84,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (158).jpg,validacao,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,e576a7ef44546c2d49a3e7f9eaef3da81e9f8caed0bb4883921efc0c3e3a7bbe
+85,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (159).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,5f09edc3ac0029e040550ac5724eec17f3d87a06443ad0becbac6503d921f492
+86,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (160).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,9161ecd90da8eda4a5e366d1d66e39d54633b33a922d7fb6035e5db572c4def3
+87,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (164).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,688c37123c0667f2d8c2cdbb6a1d15a01d56dbea1d83462666a3c4fb1c6f5dc7
+88,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (170).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,4115de60c311dfdf1c832fa0ce4b3f052558431627a5b47add189eaf88277613
+91,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (178).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,5b84573159038f42472298aecae209409e8f2c53962c6b09a8d8720e2c77a291
+99,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (190).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,7c87c5c91f52e6df377ea69df494edee1c902f28dfe7b71590a3e9e0d5f2c519
+100,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (193).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,0ee7ad423155c57a9126749a056e0b16c1483d5eb21dad44ce1c15001dd60d36
+102,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2016).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,bff10d4f7ff0f352bc0a36893a040f1922bac5d1c30bf1f6ec35e39e1f388ccc
+108,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (280).jpg,treino,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,1b2c7164602c51e290e05a5ee4071ab4cb86b9cd29db40294b7559bb94b96988
+109,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (281).jpg,validacao,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,da015a7179d50038c5e69b1351f0c761b622c2ed6736406c7fb5d790b88cf19b
+115,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3004).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,0de5324cbf35d26ec6d5ed2630c1d2cffd9f050c80fe4da031f7d330afb35ded
+116,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (301).jpg,treino,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,5a81c5f190d7d86b4455f0ef07e32e59068ac2963bbc8cbf5e30989c33af76f0
+121,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3063).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,1ffb8d7ef6702b9c0df8c5b38bcbdd260fc542bf51fd67fbe79b629a799a9c1f
+122,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (307).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,0caf188a6a404bb5616fafb775ac3570de3d69b678bc0b30a99cc761d56ee408
+124,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (308).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,9e83dd718e855ba5eab5bb720856aaf44877df39571e7f0e71108429bb1f872e
+132,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3295).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,312047c95b77343721adea7281c03b46442c3c4e19bdb7c55d758e7d31d7b8a1
+133,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3296).jpg,validacao,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,90a63d105bf013b6db9eb43fe30d23b288eb211ffb02e380185b8518ad1e85a2
+141,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3515).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,53156406dd657e7e1a3215b877c191bfc60b49adf52796b4b940d03e8b77534d
+142,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3521).jpg,validacao,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,b8013df90aaf8e2d7439de04d11f90a5bbf15ad0bdeac73fa23ada2f0ccbf333
+147,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3575).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,b50c298c015391297064f6adfcf6d7312c780b252b0b3318e35dc3eedc4e569d
+157,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3860).jpg,validacao,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,a04041af2d71d963867d33a4d33b744aac7fcd180d0dbfb383923859668005cd
+159,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3942).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,2950e6830b9485f9fe4397ed3793388e60b147146bee36ca40868468ed955744
+171,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5053).jpg,treino,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,16da010d8da00420b9e57fc937f6f86102e11ea5b8c4cf463c38d72e4f2d078f
+179,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (527).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,51870ada6bb947441f56d6c7910be88ae803f4a25f9d7cf57fe5bdcd31c85997
+184,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (581).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,444c2f85e8dbc1246a2ba877a9408a96ec84ec1e84358be25fa03c34368873a7
+188,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (604).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,de95e7cdb9bbe273b953dc7c12b5abd207a365a56c38e8c16bd3ef61bc9672c4
+196,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (625).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,72cfd50df7e6fe8260e3bddb697de9493cb70ee847d4274cb6f1324520bac456
+199,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (634).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,c5ec70d497136f3b007a09d700852abd57fd6897310fd7e5f4c47dd36fe9ac3e
+200,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (643).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,cca1843e7fe35babac7689565f23b4b669d8bc7a3ea36283e16c00ae339683a4
+201,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (644).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,992a4f97b3709fc51c82b8d13a54dc351dda8a9e4cc526e7eb5140830907807c
+204,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (655).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,a01882d13728289fc7cc315750d9352454dcf345418db3fdfe51c70af348ef55
+208,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (664).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,9ebc30395d50a35ce3584265541d60ab686e309d43b33e92d636851ced82fab4
+209,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (665).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,cb3b90071d5f6fd9edac08854c8387eb10ec32d30c4f9ca45169667f6e0e257f
+210,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (666).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,3c4fbfca6bf7fafac5356547f9b9e64b6cec5a27fb9817420af2379b185cefe3
+213,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (672).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,395ccafedd70653c2c5a0d5a3995dbac5c77e01091dc5a1fc547bbb66d40792f
+214,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (674).jpg,validacao,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,8bea56d502170796c3033841bf1b82ae5ab9e5828b5ef3b86ddcfb8fdd7dd0b5
+220,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (685).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,839605edfb464e7acce47d78a39a5baba28e0d2afa16bd7afe57b4c3f37c2a41
+222,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (688).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,68e39f1cb6b3a15b445f1ab68034bb0d7bfe264932e201ca234a15fab0f51b64
+224,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (696).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,3f4658397c0efaa6f8971d236ba6b83dcdc0b41c5c44f78622db2a4278826761
+229,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (708).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,8b41753bdd547fb816e0b9d97dcdbb880c76cb9af9700e4043953fa4bb039f43
+232,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (719).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,38b8657e2063c126bed43b1881895a2ebaee1b88734838e4724d031f48ed27f6
+233,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (720).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,2347b4598e00396e0c854b37bb29277f21b5cdd0032629cdc433bda47ba3c500
+234,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (723).jpg,validacao,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,4154d01434a5928ca249956e8873ce7b5956826cc395b0d37886dbd640c2aa0a
+238,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (739).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,92a2b9499450caf99034c7804b3aee6f02a28cc09892be2ebcb17008450fa4ba
+242,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (748).jpg,validacao,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,b5a9b03ea838e09175582897567458ab661aa788a41c295f72aff2431d0b8fd9
+243,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (752).jpg,validacao,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,20858362eecf038efcea87b818d67db41fe8a2f6af3484058834879a669289f7
+245,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (755).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,fc9949ec8a81c7183498bf488e59a662c50409dca17d9ca74d7fa25080afde06
+249,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (769).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,8ec48661747a35fc1e1d720096bcac1682304bd5e72247cae7eb390449fbe9a5
+256,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (784).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,b4cfe782da6f973bd3bab0d3bc19f425df344fde06e2efe928f2dcae825c5ab2
+257,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (786).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,6d176fb5ceb6472c9c80cba9c251c66ca0986f477cff8bbc68a942e8476301d8
+262,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (799).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,85b2efed32a9038a6e6e0c6ef7f39e12ec3c5852a726ed8b63d6b66d7e1de20a
+269,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (812).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,2a4a7597ffbc7413782c3008907f4b3386ca85f1ca764f6202cb1fb3222f07ca
+273,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (825).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,f2dd8f1dd4be8b92d81f2affa2898d0379355fc481473b09e169683459d4e2f1
+275,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (827).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,1f6c4619a0f72581bfb491e77533bcbc46dd6c3e8412fb608d377255f3551a77
+278,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (834).jpg,validacao,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,9c0f5656ee10c4b90d0bc058cf527252070f587d9d54b58c0dc0cdb50889081f
+281,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (843).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,2fb0e95e631e4a9f0adfa53ec44ffedbd719cf7f58b2a46de4b40d7303d75d42
+283,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (846).jpg,validacao,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,4b822477360ede4cd0315b1d109360d1bbf5416237ae572607a21827379cb3f7
+284,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (852).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,5d194d5c62641a7c0ed6a55206981567fbad8c679ffd9438c132a85a797c224c
+285,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (854).jpg,treino,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,75b6d590690dd9cab8212b7ac13c934d8880a413d9c4e0f037555cbd0affef01
+297,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (96).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,4064de9d15f27b2b1b27ee49857434afc9418e7b1ba3581bf1c634e13899fe00
+301,FOREST_FIRE_DATASET\FIRE\03057.jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,2dad1f28a8e76fc2e88bde6531bfd83505fea7f7e87f562920cc9234d62638e6
+306,FOREST_FIRE_DATASET\FIRE\05172.jpg,treino,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,dfc4336863b517894a7392cb0f9abcadfc74a051313cbc741d1000d3bdd0a768
+313,FOREST_FIRE_DATASET\FIRE\08349.jpg,teste,teste_completo,cidade|nao,1,cidade,nao,sim,754d1317d04964f4a87533d991514caad83c27a3ed2bbb8ec29d5455463e4b91
+314,FOREST_FIRE_DATASET\FIRE\FIRE (103).jpg,treino,sorteio_treino_validacao,outros|sim,1.0000,outros,sim,sim,afa6ad9833b53ebc49ad718ea2e4a1622b21ac80c28b406359e1aedf834f7409
+315,FOREST_FIRE_DATASET\FIRE\FIRE (1322).jpg,treino,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,sim,8e092469ae67c9e1f9f8b5866676f017021e2e0dc09de4835b7c16ea83fc7942
+316,FOREST_FIRE_DATASET\FIRE\FIRE (1885).jpg,validacao,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,sim,1b23a9a810db3acdddcc140883a02fe2d9de691aaa8833098f822e0aee40b112
+317,FOREST_FIRE_DATASET\FIRE\FIRE (357).jpg,treino,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,5ff8afa38f947e5175d7878c9c27ccadba287b0b9d0459546d105408f9ca53c5
+318,FOREST_FIRE_DATASET\FIRE\FIRE (94).jpg,treino,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,sim,902a07a6800aef489f251c5cd96a556de351c54a9dfc4920bca4c617cab77c52
+320,FOREST_FIRE_DATASET\NON_FIRE\00423.jpg,treino,sorteio_treino_validacao,cidade|nao,7.0000,cidade,nao,nao,49b3c7d288b790fd57f93ce0635f2a808e6ea74e9b1888d0c720336128ac93bf
+324,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3433).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,cc306d1cf2b6b4812d40c95f4bcb76845924ef24b6085539e7ec36b444f0f2d9
+326,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (44).jpg,teste,teste_completo,casa|nao,1,casa,nao,nao,2f4b2d44929e367030c5ded84b5a4db31c929076ed14a7d84d310777b907470c
+333,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4868).jpg,treino,sorteio_treino_validacao,cidade|nao,7.0000,cidade,nao,nao,316f9d96c07cd0f842b6243224d73fef3209f4fcff6d2486619686e602a1d0ff
+335,FOREST_FIRE_DATASET\NON_FIRE\06641.jpg,teste,teste_completo,cidade|nao,1,cidade,nao,nao,c2ce4189715f4c984f60ec918a5df31cddf4bf91c112487fd48361803b68cda6
+336,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (71).jpg,teste,teste_completo,outros|nao,1,outros,nao,sim,d6fd11a5256b76670fe8aba1824c5c357223801aaaaee247c063f3e743b2df57
+345,FOREST_FIRE_DATASET\NON_FIRE\02531.jpg,treino,sorteio_treino_validacao,casa|nao,4.0000,casa,nao,nao,523843e76c13354cbd1c4f0bbcb8f9fae703d5e18b0c8c98c5796ea6829613a1
+347,FOREST_FIRE_DATASET\NON_FIRE\02176.jpg,treino,sorteio_treino_validacao,predios|nao,4.0000,predios,nao,nao,108fb1dfc965d219067d8b41abe062c8f3edb9124d5bb5f44b402023df1c139f
+350,FOREST_FIRE_DATASET\NON_FIRE\06126.jpg,treino,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,601bf14bcb57a4fc5deffbaa89248742f0709c268bd337e016becfbed1b970c0
+351,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1916).jpg,validacao,sorteio_treino_validacao,outros|nao,5.7143,outros,nao,nao,e0cd8ec58f26dea700b47e383a4c1fd01ce6e6a7aa9e9ee2fe9c3796c8d7867c
+358,FOREST_FIRE_DATASET\NON_FIRE\02225.jpg,teste,teste_completo,predios|nao,1,predios,nao,nao,0df00602f4e5eb3b25d6af9b7b020c5f75c8ae77a34c6298f5bca90f048fbb5e
+360,FOREST_FIRE_DATASET\FIRE\FIRE (64).JPG,teste,teste_completo,floresta|nao,1,floresta,nao,nao,f0e44f7c65def41c59e3b65f7235b78b73956acf08d3c613d16bd9fc59357ad3
+363,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1035).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,58fe484cb9d7c583ced7b98140b8066dbaf3db9954f88a3b542650c9f9d5c5ec
+369,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1238).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,9eb752257c554af78de0cdef885631ce2b5e24ef23abeeddaa2de5a705583193
+374,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (191).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,6cc70e1f83f40ec1759df55053615ddbad089b5e193b3cbe6deeac74dabf8ed0
+376,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (271).jpg,teste,teste_completo,outros|nao,1,outros,nao,nao,9c2545d9655ae6d6a141b862ca0caf04d628e403979176966eefa1077edb0d1b
+384,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (39).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,4ad1439d0a79b2ce08c57e9648ffc52d500fe014a878446cba3fff052da7725d
+386,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4142).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,bba878d8962f2693cc5d36f0289646666286746c3e947d5d6e57af5d22570918
+401,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (724).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,5577c319d01b6b362a569741986a1d8fee9608743a3d9d5e6217a751f84ea01d
+403,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (753).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,0c1b56479b1523571d8fefa84f30187dfa0765626042c74e14549a827c0190bd
+404,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (767).jpg,teste,teste_completo,floresta|nao,1,floresta,nao,nao,e3392c3416931d3c036a728f8e01856088e0e96fbf225a92e4f7b592e136467f
+407,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (798).jpg,treino,sorteio_treino_validacao,floresta|nao,5.8293,floresta,nao,nao,96ae804f22b19243e1b789aaf169e06bbaa15026b1023494597fab22d0403646

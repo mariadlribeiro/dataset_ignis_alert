@@ -1,0 +1,19 @@
+Etapa 10e gerada em 2026-11-24T20:37:11+00:00 | semente 42
+imagens novas com rótulo da IA: 400 | na amostra: 118
+  teste (todas): 58 | treino e validação sorteadas: 60 de 342
+
+amostra por parte e estrato (peso = imagens do estrato / sorteadas):
+  sorteio_treino_validacao   casa|nao            1   peso 4.00
+  sorteio_treino_validacao   cidade|nao          2   peso 7.00
+  sorteio_treino_validacao   floresta|nao       41   peso 5.83
+  sorteio_treino_validacao   outros|nao         14   peso 5.71
+  sorteio_treino_validacao   outros|sim          1   peso 1.00
+  sorteio_treino_validacao   predios|nao         1   peso 4.00
+  teste_completo             casa|nao            1   peso 1.00
+  teste_completo             cidade|nao          2   peso 1.00
+  teste_completo             floresta|nao       40   peso 1.00
+  teste_completo             outros|nao         14   peso 1.00
+  teste_completo             predios|nao         1   peso 1.00
+
+revisoras: revisora (revisão única)
+todas as linhas são cegas; o rótulo da IA fica só em amostra.csv.
