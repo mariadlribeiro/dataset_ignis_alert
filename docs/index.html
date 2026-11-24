@@ -691,7 +691,7 @@ footer p{margin:0 0 6px}
       </video>
       <p class="video-erro">O vídeo não foi encontrado. O arquivo <b>&nbsp;retrospectiva.mp4&nbsp;</b> precisa estar na mesma pasta desta página.</p>
      </div>
-     <p class="video-nota">2 minutos, com legendas. Pule para uma parte:</p>
+     <p class="video-nota">2 min 12 s, com legendas. Pule para uma parte:</p>
     </div>
     <ol class="capitulos" id="capitulos" aria-label="Capítulos do vídeo"></ol>
   </div>
@@ -1744,7 +1744,7 @@ function materiais(){
 }
 
 /* Vídeo da retrospectiva: capítulos (segundo em que cada parte começa). */
-const CAPITULOS = [[0,'Abertura'], [9,'Busca e coleta'], [21,'Inventário e organização'], [33,'Revisão e classificação'], [47,'Preparação do dataset'], [63,'Equilíbrio e nova fonte'], [87,'Detalhamento das imagens'], [101,'Encerramento']];
+const CAPITULOS = [[0,'O problema'], [7,'Abertura'], [16,'Busca e coleta'], [28,'Inventário e organização'], [40,'Revisão e classificação'], [54,'Preparação do dataset'], [70,'Equilíbrio e nova fonte'], [94,'Detalhamento das imagens'], [108,'Encerramento'], [117,'Resultado do modelo']];
 function video(){
   const v = $('#filme'), lista = $('#capitulos'), mmss = s => Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
   lista.innerHTML = CAPITULOS.map(([t, n], i) => `<li><button type="button" data-t="${t}"><time>${mmss(t)}</time>${n}</button></li>`).join('');
