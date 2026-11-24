@@ -1,0 +1,67 @@
+n,caminho_relativo,split,parte,estrato,peso,ambiente_ia,fogo_ia,fumaca_ia,sha256
+8,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1011).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,aae0d4f5588668c2e2f2964448d56783b991f2e714a68b03a8b17e3d07f33fa5
+9,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1012).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,4f43cf02720460f386915c55302207d8040c241aeba7a5551cb3e588b49c5fab
+10,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1018).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,4f4319e06c15d63975940438ab2013249ddc3a28dd803adb1a8068e6b568b0e3
+12,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1136).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,2ac1e6afce97e524158eca25589767bd108a8c2c2db891b32ec5b038620ca7df
+14,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1144).jpg,validacao,outros_restantes,outros|nao,1,outros,nao,nao,b4df968a661f159cba1de037137f2ac19859756f9aa792e22677fc0aad3f1664
+15,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1146).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,eb4f4b2ea3f1d50d9cce93b38d417e39105c6ce63fc123158d56b23fea12a6f1
+18,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1154).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,546357fd2eb9f3b0625758a30eac82c11237861fc7add18aaaf8ef398fbbc25f
+20,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1156).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,7dbcfca554dc118300a711ad74927860374047f2ae16fe720129e9c70009c5d7
+26,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1171).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,542b81e79be42dcbd96f59a2ed1cb3e9d83640c18af0127be0195def9aed908f
+32,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1178).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,08c201c927d6eb45611d4e2bd8c681d73eacf0e6b53f8a2e491910e05759e04c
+33,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1180).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,ac09b16f2e31f995daaae4f7afed4a0f4f558f897052d60c4728db76f7d385d7
+35,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1186).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,9a90ab8c8fdc37944d7a45a38bdaabbc32202e4f40d6b3fef8da9ad82f0990d1
+43,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1201).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,56a1f668acc6739198c2d90cabc8f378a22cd56776cce9800d753daf79af337e
+44,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1203).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,4cf7069ccb83913231faface0c00a4eed967bbdda6a46bdc7b9eb75c5c2af3bf
+48,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1240).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,1e0bb2f9676dd6a1b6ad34528be9887b2c51e6ab819eb8c9dc36b9695b40c165
+50,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1251).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,207465c2e036f36774d606075687c7fa1feebed8121cf8e871211485e2682cfd
+53,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1255).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,4e21539ed69257acf99414b62438d894e105c70f2939decb9df1f147172532bf
+59,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1267).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,afc522e6f2b9ee7dba6930c930eeeee6d2ec4fce18cc3c4eaf242a261118b147
+60,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1268).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,75f33a5c6e0a31abf76ebffa9be9a6b5f1b555f4c2daf61670e31e4517bd40ff
+69,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1297).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,57926c004810a94c10357b212bc28b77d37834f18cc57d04bee98e130ae944aa
+110,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (282).jpg,validacao,outros_restantes,outros|nao,1,outros,nao,nao,d7215e8303df8765663be6d41ad33c624f3b36c2d80df1f2222fd4f7e844aee1
+111,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (284).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,7b4fca50c13d8e409657de283ca4b3d90fa93d6a39713100bdc95d506a8d1f2b
+118,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (302).jpg,validacao,outros_restantes,outros|nao,1,outros,nao,nao,dd6e7c6b907ac86b87ff33deea6ca268d8949643019c12dbc3bf0b9a87198ba5
+123,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3075).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,153cd214eac387be9001eac8a1674d2f6d498440e6f21289f6e2bcfa92dbd7ff
+125,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (309).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,bb5226cdea8408b93345e7caafbea4281cd58c3cf52fe07e68bd5a9de488a3df
+139,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3500).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,46b9f37068d8a9b3ace9a496c41a1058ffd06022dbbd8108db4c60406a3de61d
+149,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3590).jpg,validacao,outros_restantes,outros|nao,1,outros,nao,nao,065936f04d744b1f7d9c7ca472bc3db9e33ef1036f431bfb04b446a43b73c7b2
+150,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3635).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,c1edf08ce731156a7d984fec99214a42023142a412fa132cc811331d095333d3
+151,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3637).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,473270bf2c0dc0c4592c0930113595865cb89c3840dc3387795f737193fb8e4b
+152,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3654).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,9623daabd87243ea827ce39f549a3cd59e2dd3ec64970a658ffec0fb2945b7e8
+160,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3960).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,c1858bdd77aa81827ca69b8c72e41556e7643d145736e5c836ac14f1c12e4eec
+161,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3981).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,a7e32b53969d1a115a997a22df6d34871d38809d159b51200fc3dff8b315426b
+169,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4934).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,78e0e17e76dc7ea55074be7bd63e2dd559ac6f2d91045951408f1ddb9b1e2a0d
+172,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5057).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,944e1d23c73cab4674634ef1712e0b3eb1b375e73d09e2fc7eb6e055e2557abb
+178,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5178).jpg,validacao,outros_restantes,outros|nao,1,outros,nao,nao,10dbed8d35ef433dde0c48bf81c2652a097fc4c190823745a583710cbb5d7cd5
+181,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (561).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,de8e9dc88b4b909a1d2740dcb0aa5bc628a026fe7aacf41887042f983d4a9589
+183,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (568).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,4b7a0bc3f70b3b391a8ed68af4f9197cd718735aaeca08f6d0612b588c924720
+187,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5855).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,6c86a55d05bf7f29fe0f1030b8954f28d6c60a58f1b98d2ebcf2f3782dfabb87
+295,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (914).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,e78021758949623fa0a851e610a0ff43620802400f883425cb91bba9e4f69c7c
+296,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (952).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,60e4c8d210efc5b618ff85e0ab9d230e5144c12fefa2cf10b816c39f70f32170
+298,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (987).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,a5614f6174cf26abf2d8c22765ecd4b4ce886ef2347a69e8aeef27276d1c989f
+299,FOREST_FIRE_DATASET\FIRE\01659.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,a2bc169ddfe276b8c4a4a400fed4492fa9c797078c3bc5001eafd0a8fe6436e7
+300,FOREST_FIRE_DATASET\FIRE\01723.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,dfd6268c8fcc86831f0cf89ed97921596500244e17344d499101ea56ae6a639b
+302,FOREST_FIRE_DATASET\FIRE\03729.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,fd1553537a1ebad124299c2ec3a91d9ff751c16a5957feef2629e5cdc33aded4
+304,FOREST_FIRE_DATASET\FIRE\04847.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,29379efcdaa831da0346426445a49400aaee4f51e7dc6dd45fdc34e380711b04
+305,FOREST_FIRE_DATASET\FIRE\04965.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,3114f9a533397bff50ee14b90c1221c5137ac84610d7f566d545af21d17f5e7a
+308,FOREST_FIRE_DATASET\FIRE\06021.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,8ed431a7ecb1f76b7420baf04b583f110e1add869d97c608fa4e87e0358388c7
+309,FOREST_FIRE_DATASET\FIRE\06897.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,960cc13ff4bdd6d80310fa4f073969505c56e2dd1ebb4edc522eb313558faeb2
+310,FOREST_FIRE_DATASET\FIRE\06928.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,69321dc80a200e431f62dc5f487ecc6d93a2171320427fdcf9edb69fc6e4c7e6
+311,FOREST_FIRE_DATASET\FIRE\07762.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,6d00b11a7eed40bd8c29f66ab54acccd80c11e3829e46a0eda3f72ca74eae914
+322,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4673).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,fc922e922ada094f587ef54f5b822bd5f220fe6010d02cb438fbb232827f35ac
+323,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3541).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,fab5f17ab8d762891e3674c91934f83cad34faecd78227aade83042d1cc5774b
+327,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3457).jpg,validacao,outros_restantes,outros|nao,1,outros,nao,incerto,04e8b35bc4e3c8c11a5990dae6ac9416f1f3c2333151fa7ec9bdcc1c725ae680
+330,FOREST_FIRE_DATASET\NON_FIRE\06869.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,821666392ae47024db47c51c1dfa7ec8ecd318b1cb56d91058e7cb7331349a29
+339,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (6).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,0ab3579616adec501210902c4a365ba94cb75f13c9ceec9d2fd614525721bac3
+340,FOREST_FIRE_DATASET\NON_FIRE\07409.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,811b9339d774545b4b8141e332c89b3e32cf7e0a16de10df5d4c41c6c8385658
+343,FOREST_FIRE_DATASET\NON_FIRE\07057.jpg,validacao,outros_restantes,outros|nao,1,outros,nao,nao,efd374b60fb819c7f86ba3f99887699c5786a3cd668aafd8b5771b5e0276d1c1
+346,FOREST_FIRE_DATASET\NON_FIRE\08844.jpg,validacao,outros_restantes,outros|nao,1,outros,nao,nao,0427713f03a5a86c4c0c0bbc2511627595b7ce9f86cfc663ee592f548ca6d5e9
+348,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3458).jpg,treino,outros_restantes,outros|nao,1,outros,nao,incerto,7ccc79c2b951031aadf4daf43b019c9215770e762a8655b7cc8c80af775bb918
+354,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3442).jpg,treino,outros_restantes,outros|nao,1,outros,nao,incerto,a900e0820eab1d17c943c09d310b2cfc5ac18583ae5b225afe8fd5e97eb14ace
+356,FOREST_FIRE_DATASET\NON_FIRE\01485.jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,11d2d5b10a0c7780596c5848f29cdf6f8f5cc24e7728a5df286af483ff1fc311
+362,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1020).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,8e85c23600ae24e2563cefb0667c3f9b678b7cc455d84633c1861d2c22efb055
+368,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1214).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,ecbf6ef91c84ce16450bd62a45656c4cbd29f96dbcf1a799cb05152de228cd4b
+377,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (316).jpg,validacao,outros_restantes,outros|nao,1,outros,nao,nao,726cdd20e08557b1cd88ac8776385040167dc5d6835bb6652e75e829280dcf3d
+382,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3520).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,c714292edd4bf0e764028a87ac0cd78f760ce132389fce9d34d6d64591629787
+388,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (603).jpg,treino,outros_restantes,outros|nao,1,outros,nao,nao,e1a1e0daf7fbd2519beee64486607cb8dd8af3c8d010f6dfd38c750b5a89d2ef

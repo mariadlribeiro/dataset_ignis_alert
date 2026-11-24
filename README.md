@@ -24,7 +24,7 @@ Cada grupo de duplicatas fica inteiro em uma só parte (treino, validação ou t
 | 7. Cópia | `07_organizar.py` | Cópia conferida por SHA para `data/dataset_organizado/` |
 | 8. Equilíbrio | `08_equilibrio.py` | Pesos do sampler por classe, estrato ou ambiente |
 | 9. Condições | `09a`–`09e` | Medidas de luz, tamanho, formato, nitidez, cor e moldura |
-| 10. Segunda fonte | `10a`–`10f` | Inventário, sugestões, seleção por diversidade, integração e revisão humana cega de uma amostra das 400 rotuladas por IA |
+| 10. Segunda fonte | `10a`–`10h` | Inventário, sugestões, seleção por diversidade, integração, revisão humana cega das rotuladas por IA e desempate |
 | 11. Exportar para o treino | `11_exportar_treino.py` | Cópia em `train/val/test` × `Fire/NoFire` com `split_manifest.csv` no formato do RD_Ignisalert |
 | 12. Treino e avaliação | `12_treinar.py` | ResNet18, DenseNet121 ou EfficientNet-B0; limiar calibrado na validação; teste usado uma vez e quebrado por condição |
 | 13. Teste de atalho | `13a`, `13b` | Imagens de floresta quadradas e pequenas da 2ª fonte, com e sem fogo, revisadas às cegas; mede se a rede usa o formato em vez da chama |
