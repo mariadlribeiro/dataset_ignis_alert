@@ -11,7 +11,7 @@ aplicar as decisões é um passo à parte, registrado em selecao_A/decisoes.csv.
 
 Uso:  python scripts/10g_pagina_desempate.py [--revisora revisora]
 """
-import argparse, csv, json, re
+import argparse, csv, json, os, re
 from pathlib import Path, PureWindowsPath
 
 NOME = "cristiancristancho_forest-fire-image-dataset"
@@ -128,7 +128,7 @@ def main():
     out, sel = Path(a.pasta), Path(a.selecao)
     origem = json.loads((sel / "origem.json").read_text(encoding="utf-8"))
     loc = origem["caminho_local"]
-    raiz = (PureWindowsPath if re.match(r"^[A-Za-z]:[\\/]", loc) else Path)(loc)
+    raiz = (PureWindowsPath if os.name != "nt" and re.match(r"^[A-Za-z]:[\\/]", loc) else Path)(loc)
     nota = {r["caminho_relativo"]: r.get("observacao_ia", "") for r in ler(sel / "revisao_floresta_A_ia.csv")}
     dados = []
     for r in ler(out / "divergencias.csv"):

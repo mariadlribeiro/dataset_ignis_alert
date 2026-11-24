@@ -1,0 +1,15 @@
+Desempate das 33 divergências da revisão humana (Etapa 10g), decidido em 24/11/2026. Nada aplicado ao dataset ainda.
+
+Rótulo final x revisão por IA, nas 118 imagens da amostra:
+  fogo      117 de 118 iguais à IA | muda 1 (nº 317, treino: 'nao' -> 'incerto') | teste: 0 mudanças
+  fumaça    113 de 118 iguais à IA | mudam 5 (teste: 1, nº 76 'nao' -> 'incerto')
+  ambiente   89 de 118 iguais à IA | mudam 29 (teste: 13)
+             outros -> floresta 21 | outros -> cidade 6 | floresta -> cidade 1 | predios -> cidade 1
+
+Resposta cega da revisora x rótulo final: ambiente 115/118, fogo 118/118, fumaça 116/118.
+
+Efeito em "floresta sem fogo" (base do equilíbrio 510 x 510):
+  na amostra: +19 e -1
+  teste (contagem exata, as 58 novas do teste estão na amostra): de 40 para 51 novas -> floresta no teste 76 com fogo x 87 sem fogo
+  estimativa para as 400 (com os pesos): cerca de +57 e -6
+Leitura: a revisão por IA usou "outros" para muitas fotos de floresta. Os rótulos de fogo se mantêm.
