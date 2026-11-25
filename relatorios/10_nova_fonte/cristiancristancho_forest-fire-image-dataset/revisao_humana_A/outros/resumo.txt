@@ -1,0 +1,13 @@
+Etapa 10h: revisão humana cega das 66 imagens "outros" da IA que estavam fora da amostra (25/11/2026).
+Fogo: 66 de 66 iguais à IA (todas sem fogo). Ambiente: só 14 de 66 ficaram "outros"; 50 são floresta e 2 cidade.
+
+Com a 10e, o desempate (10g) e a 10h, das 400 imagens novas: 184 têm rótulo humano e 216 seguem com o da IA
+(quase todas "floresta sem fogo", grupo em que a IA errou o ambiente em 1 de cerca de 80 na amostra).
+
+Floresta no dataset combinado (com fogo / sem fogo), ainda NÃO aplicado:
+  conjunto     antes         com os rótulos humanos
+  treino       357 / 357     357 / 404
+  validacao     77 / 77       77 / 87
+  teste         76 / 76       76 / 87
+  total        510 / 510     510 / 578
+O total de imagens com fogo e sem fogo não muda; muda só o ambiente de 68 imagens sem fogo.

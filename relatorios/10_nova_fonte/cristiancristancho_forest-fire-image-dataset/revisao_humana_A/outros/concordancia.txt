@@ -1,0 +1,15 @@
+Etapa 10f gerada em 2026-11-25T12:59:07+00:00
+imagens revisadas: 66 (outros_restantes: 66)
+
+== revisora: 66 de 66 imagens com resposta cega completa
+
+  campo      concorda c/ IA    IC 95% (Wilson)       kappa
+  ambiente    14 de 66    21,2%    13,1% a 32,5%         0,00
+  fogo        66 de 66   100,0%    94,5% a 100,0%  indefinido
+  fumaca      63 de 66    95,5%    87,5% a 98,4%         0,00
+
+  fogo diferente da IA: 0 na amostra | no teste: 0 de 0
+
+
+divergências para desempate: 52 imagens (divergencias.csv)
+kappa baixo com concordância alta é esperado quando quase tudo é de uma classe só.

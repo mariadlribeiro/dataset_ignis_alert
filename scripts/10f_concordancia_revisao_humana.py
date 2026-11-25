@@ -72,7 +72,7 @@ def main():
     if not resp: raise SystemExit("Nenhuma revisão exportada ainda. Exporte o CSV de cada página para " + str(pasta))
 
     L = [f"Etapa 10f gerada em {datetime.now(timezone.utc).isoformat(timespec='seconds')}",
-         f"amostra: {len(amostra)} imagens (todas as do teste + sorteio de treino e validação)", ""]
+         f"imagens revisadas: {len(amostra)} ({', '.join(f'{p}: {n}' for p, n in Counter(r['parte'] for r in amostra.values()).items())})", ""]
     for rev, d in resp.items():
         ch = [c for c in amostra if c in d]
         L += [f"== {rev}: {len(ch)} de {len(amostra)} imagens com resposta cega completa", "",
@@ -88,9 +88,11 @@ def main():
         est = sum(float(amostra[k]["peso"]) for k in muda)
         peso_tot = sum(float(amostra[k]["peso"]) for k in ch)
         p = est / peso_tot if peso_tot else float("nan"); lo, hi = wilson(len(muda), len(ch))
-        L += ["", f"  fogo diferente da IA: {len(muda)} na amostra | no teste: {len(muda_t)} de {len(teste)}",
-              f"  estimativa para as 400: {p * 400:.0f} rótulos de fogo mudariam ({pct(p)}; "
-              f"faixa aproximada {lo * 400:.0f} a {hi * 400:.0f}, sem peso)", ""]
+        L += ["", f"  fogo diferente da IA: {len(muda)} na amostra | no teste: {len(muda_t)} de {len(teste)}"]
+        if any(amostra[k]["parte"].startswith("sorteio") for k in ch):
+            L.append(f"  estimativa para as 400: {p * 400:.0f} rótulos de fogo mudariam ({pct(p)}; "
+                     f"faixa aproximada {lo * 400:.0f} a {hi * 400:.0f}, sem peso)")
+        L.append("")
         trocas = Counter((amostra[k]["fogo_ia"], d[k]["fogo"]) for k in muda)
         for (de, para), v in trocas.most_common():
             L.append(f"    IA '{de}' -> {rev} '{para}': {v}")

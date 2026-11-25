@@ -1,5 +1,5 @@
-Etapa 10f gerada em 2026-11-24T21:22:51+00:00
-amostra: 118 imagens (todas as do teste + sorteio de treino e validação)
+Etapa 10f gerada em 2026-11-25T12:59:07+00:00
+imagens revisadas: 118 (sorteio_treino_validacao: 60, teste_completo: 58)
 
 == revisora: 118 de 118 imagens com resposta cega completa
 
