@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Etapa 10i - APLICA os rótulos da revisão humana (10e, 10g, 10h) às imagens da 2ª fonte.
+Etapa 10i - APLICA os rótulos da revisão humana (10e, 10g, 10h, 10j) às imagens da 2ª fonte.
 
 Decisão de 25/11/2026: manter todas as imagens e corrigir os números (a floresta deixa de ser 510 = 510).
 
 Rótulo final de cada imagem revisada, nesta ordem de prioridade:
   1) desempate (revisao_humana_A/desempate_preenchido.csv);
-  2) resposta cega da revisora (revisao_humana_A/ e revisao_humana_A/outros/).
+  2) resposta cega da revisora (revisao_humana_A/, outros/ e restantes/).
 Aplica AMBIENTE e FUMAÇA. FOGO só muda quando o rótulo humano é 'sim' ou 'nao' e diferente do da IA (nenhum caso hoje);
 fogo 'incerto' NÃO é aplicado e fica listado em pendencias.csv para decisão humana. As imagens sem revisão humana
 continuam com o rótulo da IA (fonte_* = revisao_ia).
@@ -55,7 +55,9 @@ def sha256(p):
 
 def rotulos_humanos(hum):
     final = {}
-    for arq in [hum / "revisao_humana_revisora_preenchida.csv", hum / "outros/revisao_humana_revisora_preenchida.csv"]:
+    for arq in [hum / "revisao_humana_revisora_preenchida.csv", hum / "outros/revisao_humana_revisora_preenchida.csv",
+                hum / "restantes/revisao_humana_revisora_preenchida.csv"]:
+        if not arq.exists(): continue  # restantes/ (10j) só existe depois da revisão
         for r in ler(arq):
             if all(r.get(f"{c}_cego") for c in ("ambiente", "fogo", "fumaca")):
                 final[r["caminho_relativo"]] = {c: r[f"{c}_cego"] for c in ("ambiente", "fogo", "fumaca")} | {"origem": "cega"}

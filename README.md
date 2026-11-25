@@ -26,11 +26,12 @@ Revisão humana da 2ª fonte (25/11/2026): 184 das 400 imagens novas passaram po
 | 7. Cópia | `07_organizar.py` | Cópia conferida por SHA para `data/dataset_organizado/` |
 | 8. Equilíbrio | `08_equilibrio.py` | Pesos do sampler por classe, estrato ou ambiente |
 | 9. Condições | `09a`–`09e` | Medidas de luz, tamanho, formato, nitidez, cor e moldura |
-| 10. Segunda fonte | `10a`–`10i` | Inventário, sugestões, seleção por diversidade, integração, revisão humana cega das rotuladas por IA, desempate e aplicação dos rótulos humanos |
+| 10. Segunda fonte | `10a`–`10j` | Inventário, sugestões, seleção por diversidade, integração, revisão humana cega das rotuladas por IA, desempate, aplicação dos rótulos humanos e revisão das 216 que ainda têm só o rótulo da IA (`10j`) |
 | 11. Exportar para o treino | `11_exportar_treino.py` | Cópia em `train/val/test` × `Fire/NoFire` com `split_manifest.csv` no formato do RD_Ignisalert |
 | 12. Treino e avaliação | `12_treinar.py` | ResNet18, DenseNet121 ou EfficientNet-B0; limiar calibrado na validação; teste usado uma vez e quebrado por condição |
 | 13. Teste de atalho | `13a`, `13b` | Imagens de floresta quadradas e pequenas da 2ª fonte, com e sem fogo, revisadas às cegas; mede se a rede usa o formato em vez da chama |
 | 14. Negativos difíceis | `14a`, `14b` | Cenas sem fogo que parecem fogo ou fumaça (pôr do sol, neblina, nuvens, outono, luzes à noite, reflexos), da 2ª fonte e fora do dataset, revisadas às cegas; mede a taxa de falso alarme só nelas |
+| 15. Robustez | `15a`–`15d` | Quase-duplicatas por conteúdo (CLIP/DINOv2) entre splits e fontes; linha de base só com cor; teste em tons de cinza; Grad-CAM (onde a rede olha) |
 
 Achado principal (etapa 9): igualar a quantidade não igualou as condições. Imagens sem fogo são mais
 quadradas e menores; imagens com fogo são mais escuras. Isso é risco de atalho para o modelo e está
@@ -38,6 +39,8 @@ documentado no site, com as medidas propostas para o treino.
 
 O que ficou de fora de cada etapa não é apagado: vai para um CSV com o motivo (por exemplo
 `relatorios/10_nova_fonte/.../fora.csv`).
+
+Ficha técnica do dataset (origem, rótulos, usos indicados, vieses e limites): [`DATASHEET.md`](DATASHEET.md).
 
 ## Uso
 ```bash
