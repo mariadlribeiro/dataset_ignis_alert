@@ -1,0 +1,4 @@
+rede,limiar,fa_teste_principal,fa_controle,fa_dificeis,alarmes_dificeis,imagens_dificeis,fa_por_do_sol,n_por_do_sol,fa_neblina,n_neblina,fa_nuvens,n_nuvens,fa_outono,n_outono,fa_luzes_noite,n_luzes_noite,fa_reflexo_brilho,n_reflexo_brilho
+resnet18,0.5853,0.0,0.0089,0.0938,12,128,0.1481,27,0.0833,12,0.0588,34,0.0,5,0.119,42,0.0,8
+efficientnet_b0,0.2274,0.0105,0.0089,0.1094,14,128,0.2222,27,0.1667,12,0.0294,34,0.2,5,0.0952,42,0.0,8
+densenet121,0.1695,0.0105,0.0,0.0859,11,128,0.1481,27,0.0833,12,0.0588,34,0.2,5,0.0714,42,0.0,8

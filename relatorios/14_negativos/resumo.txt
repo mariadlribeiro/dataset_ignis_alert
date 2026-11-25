@@ -1,0 +1,15 @@
+Etapa 14a gerada em 2026-11-25T18:19:46+00:00 | SOMENTE LEITURA | semente 42
+modelo: openai/clip-vit-base-patch16
+candidatas fora do dataset, da opção A e do teste de atalho: 8180 | quase iguais ao dataset: 197 | avaliadas: 7983
+
+  tipo sugerido pelo CLIP     imagens com esse tipo  escolhidas
+  Pôr ou nascer do sol                         2106          40
+  Neblina ou névoa                              511          40
+  Nuvens                                       1708          40
+  Folhagem de outono                            161          40
+  Luzes à noite                                1125          40
+  Reflexo ou brilho de sol                     2372          40
+  total                                        7983         240
+
+Revisão: abra relatorios/14_negativos/revisao_negativos.html, marque cena, fogo e fumaça de cada imagem e
+exporte revisao_negativos_preenchida.csv para relatorios/14_negativos/. Depois rode a Etapa 14b.
