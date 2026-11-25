@@ -16,3 +16,6 @@ relatorios/10_nova_fonte/**/folhas*/
 relatorios/10_nova_fonte/**/*.html
 relatorios/10_nova_fonte/**/amostras.png
 relatorios/10_nova_fonte/**/duvidas_fogo.jpg
+
+# Etapa 14: página de revisão (gerada pelo script, com o caminho local das imagens)
+relatorios/14_negativos/*.html

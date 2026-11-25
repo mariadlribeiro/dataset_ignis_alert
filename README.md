@@ -30,6 +30,7 @@ Revisão humana da 2ª fonte (25/11/2026): 184 das 400 imagens novas passaram po
 | 11. Exportar para o treino | `11_exportar_treino.py` | Cópia em `train/val/test` × `Fire/NoFire` com `split_manifest.csv` no formato do RD_Ignisalert |
 | 12. Treino e avaliação | `12_treinar.py` | ResNet18, DenseNet121 ou EfficientNet-B0; limiar calibrado na validação; teste usado uma vez e quebrado por condição |
 | 13. Teste de atalho | `13a`, `13b` | Imagens de floresta quadradas e pequenas da 2ª fonte, com e sem fogo, revisadas às cegas; mede se a rede usa o formato em vez da chama |
+| 14. Negativos difíceis | `14a`, `14b` | Cenas sem fogo que parecem fogo ou fumaça (pôr do sol, neblina, nuvens, outono, luzes à noite, reflexos), da 2ª fonte e fora do dataset, revisadas às cegas; mede a taxa de falso alarme só nelas |
 
 Achado principal (etapa 9): igualar a quantidade não igualou as condições. Imagens sem fogo são mais
 quadradas e menores; imagens com fogo são mais escuras. Isso é risco de atalho para o modelo e está
