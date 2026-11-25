@@ -13,6 +13,8 @@ Hoje o dataset tem **1.388 imagens**: as da fonte 1 (`fire-dataset`, 999 arquivo
 escolhidas entre os 11.034 arquivos da fonte 2 (`forest-fire-image-dataset`). Fogo = chamas visíveis; fumaça sozinha não conta como fogo.
 Cada grupo de duplicatas fica inteiro em uma só parte (treino, validação ou teste).
 
+Revisão humana da 2ª fonte (25/11/2026): 184 das 400 imagens novas passaram por revisão humana cega. O fogo bateu com a revisão por IA em todas, exceto uma marcada como incerta (`pendencias.csv`), e nenhum rótulo de fogo do teste mudou. O ambiente estava errado em 81 delas, quase sempre "outros" no lugar de floresta. Com a correção, a floresta tem **511 imagens com fogo e 579 sem fogo** (antes: 510 e 510). Detalhes em `relatorios/10_nova_fonte/rotulos_humanos_A/resumo.txt`.
+
 | Etapa | Script(s) | O que faz |
 |---|---|---|
 | 1. Origem | `01_origem.py` | Inventário e manifesto SHA-256 dos originais |
@@ -24,7 +26,7 @@ Cada grupo de duplicatas fica inteiro em uma só parte (treino, validação ou t
 | 7. Cópia | `07_organizar.py` | Cópia conferida por SHA para `data/dataset_organizado/` |
 | 8. Equilíbrio | `08_equilibrio.py` | Pesos do sampler por classe, estrato ou ambiente |
 | 9. Condições | `09a`–`09e` | Medidas de luz, tamanho, formato, nitidez, cor e moldura |
-| 10. Segunda fonte | `10a`–`10h` | Inventário, sugestões, seleção por diversidade, integração, revisão humana cega das rotuladas por IA e desempate |
+| 10. Segunda fonte | `10a`–`10i` | Inventário, sugestões, seleção por diversidade, integração, revisão humana cega das rotuladas por IA, desempate e aplicação dos rótulos humanos |
 | 11. Exportar para o treino | `11_exportar_treino.py` | Cópia em `train/val/test` × `Fire/NoFire` com `split_manifest.csv` no formato do RD_Ignisalert |
 | 12. Treino e avaliação | `12_treinar.py` | ResNet18, DenseNet121 ou EfficientNet-B0; limiar calibrado na validação; teste usado uma vez e quebrado por condição |
 | 13. Teste de atalho | `13a`, `13b` | Imagens de floresta quadradas e pequenas da 2ª fonte, com e sem fogo, revisadas às cegas; mede se a rede usa o formato em vez da chama |
