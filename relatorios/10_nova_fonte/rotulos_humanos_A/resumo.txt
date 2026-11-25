@@ -23,3 +23,17 @@ Dataset combinado DEPOIS:
 
 Para levar ao disco: python scripts/10i_aplicar_rotulos_humanos.py --mover
 Depois: rodar de novo a Etapa 11 (estratos.csv com os ambientes novos).
+
+Decisões das pendências aplicadas em 2026-11-25T15:13:11+00:00:
+  FOREST_FIRE_DATASET\FIRE\FIRE (357).jpg (treino): ambiente floresta -> outros, fogo nao, fumaça incerto
+
+Dataset combinado DEPOIS das decisões:
+  ambiente          treino     validacao         teste         total
+  floresta      358/404        77/87         76/87        511/578   
+  predios        57/3          13/1          13/1          83/5     
+  cidade         43/20          9/3           9/4          61/27    
+  casa           38/3           9/1           8/1          55/5     
+  outros         29/16          6/4           6/2          41/22    
+  TOTAL incluídas: 1388 | com fogo 751 | sem fogo 637
+
+Para levar ao disco: python scripts/10i_aplicar_rotulos_humanos.py --mover

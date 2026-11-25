@@ -11,6 +11,9 @@ Aplica AMBIENTE e FUMAÇA. FOGO só muda quando o rótulo humano é 'sim' ou 'na
 fogo 'incerto' NÃO é aplicado e fica listado em pendencias.csv para decisão humana. As imagens sem revisão humana
 continuam com o rótulo da IA (fonte_* = revisao_ia).
 
+Pendências: decisões humanas sobre os casos de pendencias.csv vão em rotulos_humanos_A/decisoes_pendencias.csv
+(caminho_original, ambiente, fogo, fumaca, motivo) e são aplicadas na próxima execução.
+
 Dois modos:
   python scripts/10i_aplicar_rotulos_humanos.py
       atualiza relatorios/10_nova_fonte/inventario_combinado.csv (ambiente, fumaça, fontes e destino) e grava
@@ -112,7 +115,7 @@ def main():
     for r in inv:
         if not r["dataset"].startswith("cristiancristancho") or r["caminho_original"] not in fin: continue
         f = fin[r["caminho_original"]]
-        if r["fonte_ambiente"] == "revisao_humana":   # já aplicado antes
+        if r["fonte_ambiente"] in ("revisao_humana", "decisao_humana"):   # já aplicado antes
             continue
         velho = dict(r)
         r["ambiente"], r["fumaca"] = f["ambiente"], f["fumaca"]
@@ -127,11 +130,44 @@ def main():
                     "ambiente_ia": velho["ambiente"], "ambiente_final": r["ambiente"], "fogo_ia": velho["fogo"], "fogo_final": r["fogo"],
                     "fumaca_ia": velho["fumaca"], "fumaca_final": r["fumaca"],
                     "destino_antigo": velho["destino"], "destino_novo": r["destino"]})
-    if not mud:
-        print("Nada a aplicar: o inventário combinado já tem os rótulos humanos."); return
+    # decisões das pendências (decisoes_pendencias.csv): valem por cima de tudo e podem ser aplicadas depois
+    dec_path = out / "decisoes_pendencias.csv"
+    decs = {d["caminho_original"]: d for d in ler(dec_path)} if dec_path.exists() else {}
+    novas_dec = []
+    for r in inv:
+        d = decs.get(r["caminho_original"])
+        if not d or not r["dataset"].startswith("cristiancristancho"): continue
+        if all(r[c] == d[c] for c in ("ambiente", "fogo", "fumaca")) and r["fonte_ambiente"] == "decisao_humana": continue
+        velho = dict(r)
+        for c in ("ambiente", "fogo", "fumaca"): r[c] = d[c]; r[f"fonte_{c}"] = "decisao_humana"
+        r["destino"] = f"{a.destino}/{r['ambiente']}/{'com_fogo' if r['fogo'] == 'sim' else 'sem_fogo'}/{r['nome_novo']}"
+        novas_dec.append({"caminho_original": r["caminho_original"], "split": r["split"], "sha256": r["sha256"], "origem": "decisao_pendencia",
+                          "ambiente_ia": velho["ambiente"], "ambiente_final": r["ambiente"], "fogo_ia": velho["fogo"], "fogo_final": r["fogo"],
+                          "fumaca_ia": velho["fumaca"], "fumaca_final": r["fumaca"],
+                          "destino_antigo": velho["destino"], "destino_novo": r["destino"]})
+    for p_ in pend:
+        if p_["caminho_original"] in decs: p_["situacao"] = "decidido: " + decs[p_["caminho_original"]]["motivo"]
+    if not mud and not novas_dec:
+        print("Nada a aplicar: o inventário combinado já tem os rótulos humanos e as decisões."); return
     gravar(comb_path, inv, cols)
+    if mud:
+        gravar(out / "pendencias.csv", pend, ["caminho_original", "split", "campo", "rotulo_ia", "rotulo_humano", "situacao"])
+    else:   # rodada só com decisões novas: acrescenta ao que já foi aplicado
+        mud = ler(out / "mudancas.csv")
+        pend = ler(out / "pendencias.csv")
+        for p_ in pend:
+            if p_["caminho_original"] in decs: p_["situacao"] = "decidido: " + decs[p_["caminho_original"]]["motivo"]
+        gravar(out / "pendencias.csv", pend, ["caminho_original", "split", "campo", "rotulo_ia", "rotulo_humano", "situacao"])
+        gravar(out / "mudancas.csv", mud + novas_dec, list(mud[0].keys()))
+        txt = ["", f"Decisões das pendências aplicadas em {datetime.now(timezone.utc).isoformat(timespec='seconds')}:"]
+        txt += [f"  {d['caminho_original']} ({d['split']}): ambiente {d['ambiente_ia']} -> {d['ambiente_final']}, "
+                f"fogo {d['fogo_final']}, fumaça {d['fumaca_final']}" for d in novas_dec]
+        txt += ["", "Dataset combinado DEPOIS das decisões:"] + tabela(inv) + \
+               ["", "Para levar ao disco: python scripts/10i_aplicar_rotulos_humanos.py --mover"]
+        with open(out / "resumo.txt", "a", encoding="utf-8") as f: f.write("\n".join(txt) + "\n")
+        print("\n".join(txt)); return
+    mud = mud + novas_dec
     gravar(out / "mudancas.csv", mud, list(mud[0].keys()))
-    gravar(out / "pendencias.csv", pend, ["caminho_original", "split", "campo", "rotulo_ia", "rotulo_humano", "situacao"])
     n_amb = sum(m["ambiente_ia"] != m["ambiente_final"] for m in mud)
     n_fum = sum(m["fumaca_ia"] != m["fumaca_final"] for m in mud)
     n_fogo = sum(m["fogo_ia"] != m["fogo_final"] for m in mud)

@@ -13,7 +13,7 @@ Hoje o dataset tem **1.388 imagens**: as da fonte 1 (`fire-dataset`, 999 arquivo
 escolhidas entre os 11.034 arquivos da fonte 2 (`forest-fire-image-dataset`). Fogo = chamas visíveis; fumaça sozinha não conta como fogo.
 Cada grupo de duplicatas fica inteiro em uma só parte (treino, validação ou teste).
 
-Revisão humana da 2ª fonte (25/11/2026): 184 das 400 imagens novas passaram por revisão humana cega. O fogo bateu com a revisão por IA em todas, exceto uma marcada como incerta (`pendencias.csv`), e nenhum rótulo de fogo do teste mudou. O ambiente estava errado em 81 delas, quase sempre "outros" no lugar de floresta. Com a correção, a floresta tem **511 imagens com fogo e 579 sem fogo** (antes: 510 e 510). Detalhes em `relatorios/10_nova_fonte/rotulos_humanos_A/resumo.txt`.
+Revisão humana da 2ª fonte (25/11/2026): 184 das 400 imagens novas passaram por revisão humana cega. O fogo bateu com a revisão por IA em todas, exceto uma marcada como incerta, que ficou em "outros" e sem fogo (`decisoes_pendencias.csv`); nenhum rótulo de fogo do teste mudou. O ambiente estava errado em 81 delas, quase sempre "outros" no lugar de floresta. Com a correção, a floresta tem **511 imagens com fogo e 578 sem fogo** (antes: 510 e 510). Detalhes em `relatorios/10_nova_fonte/rotulos_humanos_A/resumo.txt`.
 
 | Etapa | Script(s) | O que faz |
 |---|---|---|

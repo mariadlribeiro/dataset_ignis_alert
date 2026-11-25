@@ -679,7 +679,7 @@ footer p{margin:0 0 6px}
    <p class="tese">Um detector de incêndios aprende com fotos. Se as fotos têm erro, o alarme também terá.</p>
    <ul class="chaves">
     <li><b class="num" data-alvo="1388">1.388</b><span>imagens organizadas, de duas fontes</span></li>
-    <li><b class="num"><span data-alvo="511">511</span> / <span data-alvo="579">579</span></b><span>floresta com e sem fogo</span></li>
+    <li><b class="num"><span data-alvo="511">511</span> / <span data-alvo="578">578</span></b><span>floresta com e sem fogo</span></li>
     <li><b class="num" data-alvo="148">148</b><span>cópias e quase cópias encontradas</span></li>
     <li><b class="num">0</b><span>cenas repetidas entre treino e teste</span></li>
    </ul>
@@ -962,7 +962,7 @@ footer p{margin:0 0 6px}
   <div class="corpo">
    <div class="placar-c" id="placar-c"><i style="background:var(--semfogo)" data-w="76.9">10</i><i style="background:#b9871b" data-w="23.1">3</i></div>
    <p class="placar-leg"><span><i style="background:var(--semfogo)"></i>entregue <b>10</b></span><span><i style="background:#b9871b"></i>parcial <b>3</b></span></p>
-   <ul class="comb"><li><span class="st parcial">parcial</span><b>Revisar 100% das imagens</b><span class="e">216 das 400 da 2ª fonte seguem com o rótulo da IA.</span></li><li><span class="st parcial">parcial</span><b>Ter fotos sem fogo do mesmo ambiente</b><span class="e">Só na floresta: 511 e 579.</span></li><li><span class="st parcial">parcial</span><b>Mais de mil imagens por ambiente</b><span class="e">Só a floresta passa de mil.</span></li></ul>
+   <ul class="comb"><li><span class="st parcial">parcial</span><b>Revisar 100% das imagens</b><span class="e">216 das 400 da 2ª fonte seguem com o rótulo da IA.</span></li><li><span class="st parcial">parcial</span><b>Ter fotos sem fogo do mesmo ambiente</b><span class="e">Só na floresta: 511 e 578.</span></li><li><span class="st parcial">parcial</span><b>Mais de mil imagens por ambiente</b><span class="e">Só a floresta passa de mil.</span></li></ul>
    <details class="mais"><summary>Os 10 pontos entregues <span>do dataset único ao benchmark no LEAS</span></summary><div class="dentro">
    <ul class="comb"><li><span class="st ok">entregue</span><b>Usar um dataset só, sem misturar três</b><span class="e">Uma fonte auditada; a segunda, conferida contra ela.</span></li><li><span class="st ok">entregue</span><b>Separar com fogo e sem fogo, por ambiente</b><span class="e">Cinco ambientes.</span></li><li><span class="st ok">entregue</span><b>Repositório só com o dataset e a validação</b><span class="e">Scripts 01 a 13, o benchmark e um CSV por decisão.</span></li><li><span class="st ok">entregue</span><b>Explicar como as duplicatas são achadas</b><span class="e">SHA-256 e dHash, com o limiar testado acima.</span></li><li><span class="st ok">entregue</span><b>Tirar as imagens fora de contexto</b><span class="e">21 ficaram de fora, cada uma com o motivo.</span></li><li><span class="st ok">entregue</span><b>Avaliar a variação de resolução</b><span class="e">Medida nas 1.388; revelou um atalho.</span></li><li><span class="st ok">entregue</span><b>Mostrar exemplos de erros da IA</b><span class="e">Quatro casos reais na seção Resultados.</span></li><li><span class="st ok">entregue</span><b>Treinar e comparar as três redes</b><span class="e">Mesmo protocolo; F2 de 97,8% a 99,1%.</span></li><li><span class="st ok">entregue</span><b>Site e vídeo do projeto</b><span class="e">Esta página e a retrospectiva no topo.</span></li><li><span class="st ok">entregue</span><b>Benchmark parametrizável no LEAS</b><span class="e">Seis campanhas, escolhidas por arquivo; <a href="https://github.com/mariadlribeiro/dataset_ignis_alert/tree/main/benchmark">pasta benchmark/</a>.</span></li></ul>
    </div></details>
@@ -1069,7 +1069,7 @@ const MARCOS = [
   texto:'Cada imagem do treino ganhou um peso de sorteio, sem criar nem apagar imagens. O diagnóstico mostrou o que o peso não resolve: havia só 2 imagens urbanas sem fogo.',
   etiquetas:['Etapa 8']},
  {data:'12–13 nov.', estado:'feito', titulo:'Segunda fonte: floresta empatada',
-  texto:'Um segundo dataset do Kaggle, com 11.034 arquivos, trazia 1.115 imagens que o projeto já tinha. Das 8.890 candidatas, 410 foram escolhidas pela diversidade e revisadas, e 400 entraram. A revisão humana depois corrigiu o ambiente de 81 delas: a floresta ficou com 511 com fogo e 579 sem fogo.',
+  texto:'Um segundo dataset do Kaggle, com 11.034 arquivos, trazia 1.115 imagens que o projeto já tinha. Das 8.890 candidatas, 410 foram escolhidas pela diversidade e revisadas, e 400 entraram. A revisão humana depois corrigiu o ambiente de 81 delas: a floresta ficou com 511 com fogo e 578 sem fogo.',
   detalhe:'Limitação registrada: a revisão dessas 400 imagens foi feita por IA, sem conferência humana independente.', etiquetas:['Etapa 10','400 imagens']},
  {data:'13 nov.', estado:'feito', titulo:'Condições das imagens',
   texto:'Um script mediu luz, tamanho, formato, nitidez e cores das 1.388 imagens. As medidas mostraram um risco de atalho: 49% das imagens sem fogo são quadradas, contra 1% das com fogo.',
@@ -1490,7 +1490,7 @@ const MAPA = {
     {id:'a7', g:'achado', x:874, y:500, r:27, n:'2:1', t:['Floresta','desigual'], h:'#equilibrio', d:'A floresta tinha 510 imagens com fogo e 231 sem fogo. O peso ajusta o sorteio, mas não cria exemplos.'},
     {id:'a6', g:'achado', x:1026, y:590, r:27, lado:'e', n:'49%', t:['Atalho de','formato e luz'], h:'#equilibrio', d:'49% das imagens sem fogo são quadradas, contra 1% das com fogo. O modelo pode acertar pelo formato, sem olhar a chama.'},
     {id:'p3', g:'produto', x:1250, y:170, r:30, n:'32', t:['Medidas das','imagens'], h:'#equilibrio', d:'Mais de 30 medidas automáticas por imagem, para as 1.388 imagens do dataset.'},
-    {id:'p1', g:'produto', x:1250, y:340, r:38, n:'1.388', t:['Dataset v2'], h:'#topo', d:'1.388 imagens de duas fontes, com floresta em 511 com fogo e 579 sem fogo depois da revisão humana.'},
+    {id:'p1', g:'produto', x:1250, y:340, r:38, n:'1.388', t:['Dataset v2'], h:'#topo', d:'1.388 imagens de duas fontes, com floresta em 511 com fogo e 578 sem fogo depois da revisão humana.'},
     {id:'p2', g:'produto', x:1150, y:560, r:30, acima:true, n:'971', t:['Pesos de','treino'], h:'#equilibrio', d:'Um peso para cada uma das 971 imagens do treino. Validação e teste ficam sem peso.'},
     {id:'t2', g:'afazer', x:980, y:84, r:24, t:['Revisão humana','que falta'], h:'#limites', d:'Conferir as 400 imagens da segunda fonte, revisadas por IA, e responder as 14 perguntas de condições.'},
     {id:'e11', g:'etapa', x:1250, y:730, t:['11 Exportar'], h:'#resultados', d:'Copia o dataset para treino, validação e teste, com fogo e sem fogo, e um manifesto da divisão no formato do treino.'},
@@ -1597,8 +1597,8 @@ function mapa(){
 
 /* ---------- equilíbrio por ambiente (antes e depois) ---------- */
 const EQ = [
-  {amb:'Floresta', a:[510,231], d:[511,579]}, {amb:'Prédios', a:[83,1], d:[83,5]}, {amb:'Cidade', a:[61,1], d:[61,27]},
-  {amb:'Casa', a:[55,0], d:[55,5]}, {amb:'Outros', a:[41,5], d:[41,21]}
+  {amb:'Floresta', a:[510,231], d:[511,578]}, {amb:'Prédios', a:[83,1], d:[83,5]}, {amb:'Cidade', a:[61,1], d:[61,27]},
+  {amb:'Casa', a:[55,0], d:[55,5]}, {amb:'Outros', a:[41,5], d:[41,22]}
 ];
 function grafEquilibrio(){
   const el = $('#graf-eq');
@@ -1606,7 +1606,7 @@ function grafEquilibrio(){
     <div class="b f"><i></i><span></span></div><div class="b s"><i></i><span></span></div></div></div>`).join('');
   const linhas = [...el.children];
   const por = k => { linhas.forEach((l, i) => { const v = EQ[i][k]; l.querySelectorAll('.b').forEach((b, j) => {
-      b.firstElementChild.style.width = (v[j] / 579 * 78) + '%'; b.lastElementChild.innerHTML = `<b>${v[j]}</b> ${j ? 'sem fogo' : 'com fogo'}`; }); });
+      b.firstElementChild.style.width = (v[j] / 578 * 78) + '%'; b.lastElementChild.innerHTML = `<b>${v[j]}</b> ${j ? 'sem fogo' : 'com fogo'}`; }); });
     document.querySelectorAll('#eq-alt button').forEach(b => b.setAttribute('aria-pressed', b.dataset.k === k));
     const tot = EQ.reduce((s, e) => [s[0] + e[k][0], s[1] + e[k][1]], [0, 0]);
     $('#eq-nota').textContent = k === 'a' ? `Antes: ${tot[0]} com fogo e ${tot[1]} sem fogo, com uma fonte só. Havia 2 imagens urbanas sem fogo.`
@@ -1644,7 +1644,7 @@ const TRAJETO = [
   {d:'28 out.', t:'Pipeline reprodutível', x:'Scripts numerados, um CSV por decisão.', atual:true},
   {d:'3 nov.', t:'Revisão e auditoria cega', x:'Auditoria cega: 98,5% no fogo, 65% no ambiente.', atual:true},
   {d:'13 nov.', t:'Dataset v2', x:'1.388 imagens; floresta 510 e 510.', atual:true},
-  {d:'25 nov.', t:'Revisão humana da 2ª fonte', x:'A IA errou o ambiente de 81 fotos; o fogo do teste não mudou. Floresta 511 e 579.', atual:true}
+  {d:'25 nov.', t:'Revisão humana da 2ª fonte', x:'A IA errou o ambiente de 81 fotos; o fogo do teste não mudou. Floresta 511 e 578.', atual:true}
 ];
 function trajeto(){
   $('#trajeto').innerHTML = TRAJETO.map(m => `<li class="${m.rumo ? 'rumo' : ''} ${m.atual ? 'atual' : ''}"><time>${m.d}</time><b>${m.t}</b></li>`).join('');

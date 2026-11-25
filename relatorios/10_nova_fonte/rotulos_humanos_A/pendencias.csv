@@ -1,2 +1,2 @@
 caminho_original,split,campo,rotulo_ia,rotulo_humano,situacao
-FOREST_FIRE_DATASET\FIRE\FIRE (357).jpg,treino,fogo,nao,incerto,mantido o da IA até decisão
+FOREST_FIRE_DATASET\FIRE\FIRE (357).jpg,treino,fogo,nao,incerto,"decidido: fogo incerto na revisão humana: fica em outros, sem fogo, fora da contagem da floresta (decisão de 25/11/2026)"
