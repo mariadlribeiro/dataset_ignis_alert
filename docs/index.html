@@ -641,6 +641,13 @@ footer p{margin:0 0 6px}
 .at-teste{background:var(--apagado)} .at-novo{background:var(--fogo);box-shadow:0 0 0 3px var(--folha)}
 .at-val{font-size:14px;color:var(--mudo);text-align:right;padding-left:12px;font-variant-numeric:tabular-nums}
 .at-val b{color:var(--tinta)}
+.neg-cenas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:18px 0 0}
+.neg-cena{border:1px solid var(--linha);border-radius:10px;padding:10px 12px}
+.neg-cena b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.neg-cena span{font-size:13px;color:var(--mudo)}
+.neg-cena i{display:block;height:6px;border-radius:3px;background:var(--linha);margin:8px 0 6px;overflow:hidden}
+.neg-cena i em{display:block;height:100%;background:var(--fogo)}
+.neg-cena.pouco{opacity:.72}
 .nota-erros{font-size:14.5px;color:var(--mudo);max-width:var(--texto);margin:12px 0 0}
 @media (max-width:640px){
   .at-eixo{display:none}
@@ -879,6 +886,15 @@ footer p{margin:0 0 6px}
     <figcaption>No treino, toda foto quadrada e pequena era sem fogo. Se a rede tivesse aprendido "quadrada = sem fogo", o recall despencaria nessas fotos. A maior queda foi de 2,5 pontos: não há sinal de atalho. Rótulos deste teste: revisão cega por IA, conferida por amostra; são casos claros, não difíceis.</figcaption>
     <details class="tabela-alt"><summary>Ver em tabela</summary><table id="tab-atalho"></table></details>
    </figure>
+   <figure class="fig-atalho" id="negativos">
+    <h3>Negativos difíceis: quantos alarmes falsos em cenas que parecem fogo?</h3>
+    <p class="sub">Taxa de falso alarme no teste principal <b class="lg-teste">●</b> e em 128 fotos sem fogo de pôr do sol, nuvens, neblina, outono, luzes e reflexos <b class="lg-novo">●</b>; a faixa clara é o intervalo de 95%</p>
+    <div class="atalho" id="neg-redes"></div>
+    <p class="sub" style="margin:18px 0 0">Por tipo de cena, na EfficientNet-B0 (a rede do aplicativo): alarmes / fotos</p>
+    <div class="neg-cenas" id="neg-cenas"></div>
+    <figcaption>Fotos da segunda fonte fora do dataset, escolhidas pelo CLIP e revisadas às cegas por uma pessoa. Nas 112 cenas comuns da mesma fonte, o falso alarme ficou perto de 1%, como no teste principal; nas cenas difíceis, perto de 10%, nas três redes. O pôr do sol é o ponto fraco. Com 5 a 12 fotos, outono, neblina e reflexo são só indicação.</figcaption>
+    <details class="tabela-alt"><summary>Ver em tabela</summary><table id="tab-neg"></table></details>
+   </figure>
    <h3 class="sub-titulo">Onde as redes erraram</h3>
    <div class="erros">
     <figure class="erro"><img src="img/m-fire562.jpg" alt="Coluna enorme de fumaça sobre eucaliptos, com chamas pequenas junto ao chão" loading="lazy" style="object-position:50% 85%"><figcaption>
@@ -907,6 +923,7 @@ footer p{margin:0 0 6px}
       <li><b>Limiar calibrado</b> só na validação, antes de olhar o teste.</li>
       <li><b>Teste medido uma vez</b>, com matriz de confusão e catálogo de erros.</li>
       <li><b>Teste de atalho</b> com 297 fotos de outra fonte e outro formato, sem treinar de novo.</li>
+      <li><b>Negativos difíceis</b>: 240 fotos sem fogo de fora do dataset, revisadas às cegas; o falso alarme é medido só nelas.</li>
      </ol>
      <p class="sub" style="margin:14px 0 0">Matriz de confusão do teste: <b id="m-rede">EfficientNet-B0</b></p><div class="matriz" aria-label="Matriz de confusão do teste da EfficientNet-B0: 111 fogos achados, 1 fogo perdido, 1 alarme falso e 94 acertos sem fogo, em 207 imagens">
       <div class="cab"></div><div class="cab">previu fogo</div><div class="cab">previu sem fogo</div>
@@ -985,7 +1002,7 @@ footer p{margin:0 0 6px}
   <div class="corpo">
    <h3 class="sub-titulo" style="margin-top:0">Quem decidiu se há fogo em cada imagem</h3>
    <div class="quem-barra" id="quem-barra"></div>
-   <ul class="limites"><li><div class="n">400</div><h3>Revisadas por IA</h3><p>As fotos da segunda fonte ainda não tiveram conferência humana.</p><p class="resolve"><b>Resolve:</b> auditoria cega de 52 fotos por uma pessoa.</p></li><li><div class="n">591</div><h3>Fogo rotulado pelo CLIP</h3><p>Acertou 65 de 66 na auditoria, mas só onde estava seguro.</p><p class="resolve"><b>Resolve:</b> revisar uma amostra sorteada.</p></li><li class="medio"><div class="n">297</div><h3>Atalho de formato: testado</h3><p>Nas fotos quadradas e pequenas, as redes acharam de 95,3% a 100% do fogo.</p><p class="resolve"><b>Falta:</b> casos difíceis, como chama pequena sob fumaça, neblina e folhas de outono.</p></li><li class="medio"><div class="n">28</div><h3>Pouca cidade sem fogo</h3><p>O teste quase não mede alarme falso fora da floresta.</p><p class="resolve"><b>Resolve:</b> uma fonte de cenas urbanas comuns.</p></li><li class="medio"><div class="n">14</div><h3>Condições sem resposta</h3><p>Ponto de vista, distância e hora do dia pedem revisão humana.</p><p class="resolve"><b>Resolve:</b> revisão dividida entre as autoras.</p></li><li class="medio"><div class="n">1</div><h3>Licença a confirmar</h3><p>Por isso as fotos da segunda fonte não aparecem aqui.</p><p class="resolve"><b>Resolve:</b> conferir a página do Kaggle.</p></li></ul>
+   <ul class="limites"><li class="medio"><div class="n">216</div><h3>Ainda com rótulo da IA</h3><p>184 das 400 fotos da segunda fonte tiveram revisão humana cega: o fogo bateu em 183, o ambiente errou em 81.</p><p class="resolve"><b>Falta:</b> revisar as 216 restantes, quase todas floresta sem fogo.</p></li><li><div class="n">22%</div><h3>Alarme falso no pôr do sol</h3><p>A EfficientNet-B0 deu alarme em 6 de 27 fotos de pôr do sol sem fogo; nas cenas difíceis, cerca de 10%.</p><p class="resolve"><b>Resolve:</b> pôr do sol e luzes à noite no treino, como negativos.</p></li><li><div class="n">591</div><h3>Fogo rotulado pelo CLIP</h3><p>Acertou 65 de 66 na auditoria, mas só onde estava seguro.</p><p class="resolve"><b>Resolve:</b> revisar uma amostra sorteada.</p></li><li class="medio"><div class="n">297</div><h3>Atalho de formato: testado</h3><p>Nas fotos quadradas e pequenas, as redes acharam de 95,3% a 100% do fogo.</p><p class="resolve"><b>Falta:</b> chama pequena sob fumaça; os negativos difíceis já foram medidos.</p></li><li class="medio"><div class="n">37</div><h3>Pouca cidade sem fogo</h3><p>O teste quase não mede alarme falso fora da floresta.</p><p class="resolve"><b>Resolve:</b> uma fonte de cenas urbanas comuns.</p></li><li class="medio"><div class="n">14</div><h3>Condições sem resposta</h3><p>Ponto de vista, distância e hora do dia pedem revisão humana.</p><p class="resolve"><b>Resolve:</b> revisão dividida entre as autoras.</p></li><li class="medio"><div class="n">1</div><h3>Licença a confirmar</h3><p>Por isso as fotos da segunda fonte não aparecem aqui.</p><p class="resolve"><b>Resolve:</b> conferir a página do Kaggle.</p></li></ul>
   </div>
  </div>
 </section>
@@ -1077,15 +1094,31 @@ const MARCOS = [
  {data:'18–19 nov.', estado:'feito', titulo:'Treino das três redes',
   texto:'ResNet18, DenseNet121 e EfficientNet-B0 treinadas com o mesmo protocolo, na CPU. No teste, usado uma vez, DenseNet121 e EfficientNet-B0 empataram: F2 de 99,1%, com 1 fogo perdido e 1 alarme falso cada.',
   etiquetas:['Etapa 12','207 imagens de teste']},
- {data:'19 nov.', estado:'agora', titulo:'Teste de atalho',
+ {data:'19 nov.', estado:'feito', titulo:'Teste de atalho',
   texto:'297 fotos novas da segunda fonte, quadradas e pequenas, com e sem fogo. Nenhuma rede perdeu muito fogo nesse formato; a DenseNet121 acertou todas.',
   detalhe:'Os rótulos deste teste foram dados por IA, às cegas, e conferidos por amostra. São casos claros.', etiquetas:['Etapa 13','297 imagens']},
  {data:'19 nov.', estado:'feito', titulo:'Rede escolhida: EfficientNet-B0',
   texto:'Mesmo F2 da DenseNet121 (99,1%), com treino 2 a 3 vezes mais rápido e resposta mais leve no celular. A DenseNet121 fica como referência de robustez.',
   etiquetas:['Decisão das autoras']},
+ {data:'24–25 nov.', estado:'feito', titulo:'Revisão humana da 2ª fonte',
+  texto:'184 das 400 fotos rotuladas por IA foram revisadas às cegas por uma pessoa. O fogo bateu em 183; nenhum rótulo de fogo do teste mudou. O ambiente estava errado em 81: a floresta passou a 511 com fogo e 578 sem fogo.',
+  etiquetas:['Etapas 10e a 10i','184 imagens']},
+ {data:'25 nov.', estado:'agora', titulo:'Negativos difíceis',
+  texto:'Em 128 fotos sem fogo que parecem fogo ou fumaça, as redes deram de 8,6% a 10,9% de alarme falso, contra cerca de 1% no teste principal. O pôr do sol engana mais: 6 em 27 na EfficientNet-B0.',
+  etiquetas:['Etapa 14','240 imagens']},
  {data:'a seguir', estado:'depois', titulo:'Levar a EfficientNet-B0 ao aplicativo',
-  texto:'Exportar o modelo para o aplicativo, ver com Grad-CAM onde a rede olha e testar casos difíceis: chama pequena, neblina e folhas de outono.'}
+  texto:'Exportar o modelo para o aplicativo, ver com Grad-CAM onde a rede olha e reforçar o treino com pôr do sol e luzes à noite.'}
 ];
+
+/* Etapa 14b: falso alarme (alarmes, imagens) no teste principal, no controle e nos negativos difíceis */
+const NEGATIVOS = {
+  redes: [
+    {nome:'ResNet18', teste:[0,95], controle:[1,112], dificeis:[12,128], ic:[0.054,0.157]},
+    {nome:'DenseNet121', teste:[1,95], controle:[0,112], dificeis:[11,128], ic:[0.049,0.147]},
+    {nome:'EfficientNet-B0', teste:[1,95], controle:[1,112], dificeis:[14,128], ic:[0.066,0.175]},
+  ],
+  cenas: [['Pôr ou nascer do sol',6,27],['Neblina ou névoa',2,12],['Folhagem de outono',1,5],['Luzes à noite',4,42],['Nuvens',1,34],['Reflexo ou brilho de sol',0,8]],
+};
 
 /* RESULTADOS: preencha depois do teste (valores de 0 a 1; deixe null enquanto não houver). */
 const RESULTADOS = {
@@ -1272,6 +1305,19 @@ function resultados(){
       <span class="at-val">${pct(r.recall)} → <b>${pct(r.atalho)}</b></span></div>`).join('');
   $('#tab-atalho').innerHTML = '<tr><th>Rede</th><th>Recall no teste</th><th>Recall no teste de atalho</th></tr>' +
     RESULTADOS.redes.map(r => `<tr><td>${r.nome}</td><td>${pct(r.recall)}</td><td>${pct(r.atalho)}</td></tr>`).join('');
+  // negativos difíceis: falso alarme no teste principal x nas cenas difíceis, eixo de 0% a 20%
+  const fr = ([k, n]) => k / n, xn = v => (Math.min(v, 0.2) / 0.2 * 100).toFixed(2) + '%';
+  const pc = v => (100 * v).toFixed(1).replace('.', ',') + '%';
+  $('#neg-redes').innerHTML = `<div class="at-eixo" aria-hidden="true"><span style="left:0">0%</span><span style="left:50%">10%</span><span style="left:100%">20%</span></div>` +
+    NEGATIVOS.redes.map(r => { const a = fr(r.teste), b = fr(r.dificeis); return `<div class="at-linha"><span class="at-nome">${r.nome}</span><div class="at-trilho">
+      <i class="at-liga" style="left:${xn(r.ic[0])};width:calc(${xn(r.ic[1])} - ${xn(r.ic[0])})" title="Intervalo de 95%: ${pc(r.ic[0])} a ${pc(r.ic[1])}"></i>
+      <b class="at-p at-teste" style="left:${xn(a)}" title="Teste principal: ${r.teste[0]} de ${r.teste[1]}"></b>
+      <b class="at-p at-novo" style="left:${xn(b)}" title="Negativos difíceis: ${r.dificeis[0]} de ${r.dificeis[1]}"></b></div>
+      <span class="at-val">${pc(a)} → <b>${pc(b)}</b></span></div>`; }).join('');
+  $('#neg-cenas').innerHTML = NEGATIVOS.cenas.map(([t, k, n]) => `<div class="neg-cena${n < 15 ? ' pouco' : ''}"><b>${k}/${n}</b>
+    <i><em style="width:${(100 * k / n).toFixed(1)}%"></em></i><span>${t}${n < 15 ? ' · poucas fotos' : ''}</span></div>`).join('');
+  $('#tab-neg').innerHTML = '<tr><th>Rede</th><th>Teste principal</th><th>Cena comum</th><th>Negativos difíceis</th><th>IC 95%</th></tr>' +
+    NEGATIVOS.redes.map(r => `<tr><td>${r.nome}</td><td>${r.teste[0]}/${r.teste[1]}</td><td>${r.controle[0]}/${r.controle[1]}</td><td>${r.dificeis[0]}/${r.dificeis[1]} (${pc(fr(r.dificeis))})</td><td>${pc(r.ic[0])} a ${pc(r.ic[1])}</td></tr>`).join('');
 }
 
 /* =========================================================================
