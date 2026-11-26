@@ -1,0 +1,7 @@
+Etapa 16 (exportação v1.0) | 2026-11-26T02:45:59+00:00
+destino: C:\Users\maria\Documentos\GitHub\dataset_ignis_alert\data\publico\ignis_alert_v1.0
+  imagens: 1388 | metadados removidos sem recodificar: 488 | borradas: 0 | já limpas: 900
+  conferência de metadados nas cópias: OK, nenhuma tem EXIF, GPS, XMP ou texto
+  manifesto: split_manifest_publico.csv (SHA-256 do treino e da cópia pública)
+
+Para marcar a versão no git:  git add relatorios/16_privacidade && git commit -m "Dataset v1.0" && git tag -a v1.0 -m "Dataset v1.0" && git push --follow-tags

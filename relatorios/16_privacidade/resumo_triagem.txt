@@ -1,0 +1,10 @@
+Etapa 16 (triagem) | 2026-11-26T02:31:14+00:00
+1388 imagens de data/treino_ignis
+
+Metadados encontrados (saem todos na exportação):
+  com EXIF: 229 | com GPS: 20 | com XMP: 169 | com texto embutido: 194
+  com orientação diferente de 1: 2 (o treino leu os pixels sem girar; a cópia pública mantém os mesmos pixels)
+  aparelhos distintos: 62 (ex.: OLYMPUS IMAGING CORP.   StylusTough-8010, Canon Canon IXY DIGITAL 50, Apple iPhone)
+
+Candidatas a rosto ou placa (nota do CLIP ≥ 0.25): 151  -> abra marcar.html
+  O CLIP só escolhe as candidatas; quem marca o que borrar é uma pessoa.
