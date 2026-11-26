@@ -245,7 +245,9 @@ def exportar(a):
     (destino / "VERSAO.txt").write_text(
         f"Ignis Alert dataset {a.versao}\nGerado em {datetime.now(timezone.utc).isoformat(timespec='seconds')} pela Etapa 16.\n"
         f"Imagens: {len(saida)} | só metadados removidos: {cont['metadados']} | borradas: {cont['borrada']} | sem mudança: {cont['nenhuma']}\n"
-        "Fontes: phylake1337/fire-dataset (CC0) e cristiancristancho/forest-fire-image-dataset (licença a confirmar; ver DATASHEET.md).\n",
+        "Fontes e licenças: phylake1337/fire-dataset (CC0, domínio público) e cristiancristancho/forest-fire-image-dataset (GPL 2;\n"
+        "as imagens desta fonte, nomes forest-fire-image-dataset__*, seguem a GPL 2 e podem ser redistribuídas com este aviso).\n"
+        "Ver DATASHEET.md.\n",
         encoding="utf-8")
     res = [f"Etapa 16 (exportação {a.versao}) | {datetime.now(timezone.utc).isoformat(timespec='seconds')}",
            f"destino: {destino}",

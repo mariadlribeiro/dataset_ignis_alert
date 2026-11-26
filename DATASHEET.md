@@ -20,10 +20,11 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
 | **total** | **751** | **637** | **1.388** |
 
 - **Fontes:**
-  - `phylake1337/fire-dataset` v1 (Kaggle, CC0): 988 imagens incluídas de 999 arquivos;
+  - `phylake1337/fire-dataset` v1 (Kaggle, CC0: domínio público; publicado por Ahmed Saied): 988 imagens incluídas de 999 arquivos;
   - `cristiancristancho/forest-fire-image-dataset` v2 (Kaggle): 400 imagens, escolhidas por diversidade entre 11.034
-    arquivos (Etapa 10c). A licença desta fonte ainda precisa ser conferida na página do Kaggle, porque o download
-    não trouxe arquivo de licença.
+    arquivos (Etapa 10c). Licença **GPL 2**, conferida nos metadados do Kaggle em 26/11/2026 (publicado por Cristian
+    Cristancho); o download não trazia arquivo de licença. A GPL 2 permite usar, modificar e redistribuir, desde que
+    as cópias sigam a mesma licença e o aviso venha junto. Por isso a cópia pública leva um aviso por fonte.
 - **Ambiente** (com fogo / sem fogo):
   - floresta 511/579;
   - prédios 83/5;
@@ -124,7 +125,6 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
     Etapa 10j;
   - rode `10i_aplicar_rotulos_humanos.py --mover` e depois a Etapa 11. A divisão treino/validação/teste não muda.
 - **Pendências:**
-  - conferir a licença da 2ª fonte;
   - conferir os pares de quase-duplicatas da Etapa 15a. O CLIP apontou 53 pares entre splits com semelhança ≥ 0,97,
     nenhum com dHash próximo; falta uma pessoa dizer se algum é a mesma cena;
   - revisar uma amostra das 591 imagens da fonte 1 rotuladas pela pasta de origem.
