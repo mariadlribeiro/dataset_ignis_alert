@@ -1,0 +1,6 @@
+classificador,acuracia,recall_fogo,especificidade,auc_roc,vp,vn,fp,fn
+só pixels cor de chama,0.8116,1.0,0.5895,0.9449,112,56,39,0
+histograma de cor (logística),0.913,0.9821,0.8316,0.9837,110,79,16,2
+resnet18 (Etapa 12),0.9855,0.9732,1.0,0.999,109,95,0,3
+efficientnet_b0 (Etapa 12),0.9903,0.9911,0.9895,0.9999,111,94,1,1
+densenet121 (Etapa 12),0.9903,0.9911,0.9895,0.9972,111,94,1,1

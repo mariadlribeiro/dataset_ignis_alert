@@ -1,0 +1,18 @@
+Etapa 15a | 2026-11-26T02:56:44+00:00 | openai/clip-vit-base-patch16 | cosseno ≥ 0.95
+1388 imagens | 1286 pares acima do limiar
+
+  ENTRE SPLITS (possível vazamento, revisar): 572
+    treino × teste: 306
+    treino × validação: 207
+    validação × teste: 59
+  mesmo split, grupos diferentes (redundância): 632
+  já no mesmo grupo da Etapa 3 (confirma o dHash): 82
+  pares novos entre as duas fontes: 0
+
+Imagem de teste x a mais parecida do treino (cosseno):
+  mediana 0.916 | 90% abaixo de 0.961 | máximo 0.990
+  testes com vizinho no treino ≥ 0.95: 46 de 207
+
+Leitura: cada par ENTRE SPLITS confirmado como mesma cena deve ir para o mesmo grupo (e o mesmo split) e o
+teste deve ser medido de novo sem ele. Zero pares confirmados = o teste não tem vazamento por cena repetida.
+Anote a decisão na coluna mesma_cena de pares.csv (sim/nao).

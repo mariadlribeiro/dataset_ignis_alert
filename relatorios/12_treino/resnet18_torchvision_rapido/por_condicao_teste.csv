@@ -1,0 +1,15 @@
+condicao,valor,imagens,com_fogo,sem_fogo,recall_fogo,especificidade,falsos_negativos,falsos_positivos,aviso
+ambiente,casa,3,3,0,1.0,,0,0,poucas imagens (<20): ler com cuidado
+ambiente,cidade,1,1,0,1.0,,0,0,poucas imagens (<20): ler com cuidado
+ambiente,floresta,27,15,12,0.9333,1.0,1,0,
+ambiente,outros,7,0,7,,1.0,0,0,poucas imagens (<20): ler com cuidado
+ambiente,predios,2,2,0,1.0,,0,0,poucas imagens (<20): ler com cuidado
+fonte,fire-dataset,26,21,5,0.9524,1.0,1,0,
+fonte,forest-fire-image-dataset,14,0,14,,1.0,0,0,poucas imagens (<20): ler com cuidado
+formato,nao_quadrada,27,21,6,0.9524,1.0,1,0,
+formato,quadrada,13,0,13,,1.0,0,0,poucas imagens (<20): ler com cuidado
+iluminacao,clara,15,4,11,0.75,1.0,1,0,poucas imagens (<20): ler com cuidado
+iluminacao,escura,14,12,2,1.0,1.0,0,0,poucas imagens (<20): ler com cuidado
+iluminacao,media,11,5,6,1.0,1.0,0,0,poucas imagens (<20): ler com cuidado
+tamanho,300 px ou mais,29,21,8,0.9524,1.0,1,0,
+tamanho,pequena (<300 px),11,0,11,,1.0,0,0,poucas imagens (<20): ler com cuidado

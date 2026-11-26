@@ -1,0 +1,34 @@
+mapa,path,grupo,prob_fogo,alarme,calor_em_cor_de_chama
+mapas/000.jpg,test/Fire/fire-dataset__fire.562.jpg,fogo perdido,0.1977,,0.0
+mapas/001.jpg,test/NoFire/fire-dataset__non_fire.51.jpg,falso alarme,0.3042,sim,0.003
+mapas/002.jpg,test/Fire/fire-dataset__fire.628.jpg,acerto com fogo,0.9997,sim,0.36
+mapas/003.jpg,test/Fire/fire-dataset__fire.174.jpg,acerto com fogo,0.9995,sim,0.706
+mapas/004.jpg,test/Fire/fire-dataset__fire.121.jpg,acerto com fogo,0.9995,sim,0.597
+mapas/005.jpg,test/Fire/fire-dataset__fire.687.jpg,acerto com fogo,0.9972,sim,0.859
+mapas/006.jpg,test/Fire/fire-dataset__fire.292.jpg,acerto com fogo,0.9987,sim,0.704
+mapas/007.jpg,test/Fire/fire-dataset__fire.274.jpg,acerto com fogo,0.9276,sim,0.789
+mapas/008.jpg,test/Fire/fire-dataset__fire.265.jpg,acerto com fogo,0.9934,sim,0.12
+mapas/009.jpg,test/Fire/fire-dataset__fire.203.jpg,acerto com fogo,0.9788,sim,0.682
+mapas/010.jpg,test/NoFire/fire-dataset__non_fire.171.jpg,acerto sem fogo,0.0004,,0.0
+mapas/011.jpg,test/NoFire/forest-fire-image-dataset__NON_FIRE_06641.jpg,acerto sem fogo,0.0238,,0.0
+mapas/012.jpg,test/NoFire/forest-fire-image-dataset__NON_FIRE_672.jpg,acerto sem fogo,0.001,,0.0
+mapas/013.jpg,test/NoFire/fire-dataset__non_fire.168.jpg,acerto sem fogo,0.0152,,0.0
+mapas/014.jpg,test/NoFire/forest-fire-image-dataset__NON_FIRE_784.jpg,acerto sem fogo,0.0551,,0.0
+mapas/015.jpg,test/NoFire/forest-fire-image-dataset__NON_FIRE_2016.jpg,acerto sem fogo,0.0007,,0.0
+mapas/016.jpg,test/NoFire/fire-dataset__non_fire.124.jpg,acerto sem fogo,0.0071,,0.0
+mapas/017.jpg,test/NoFire/fire-dataset__non_fire.121.jpg,acerto sem fogo,0.0539,,0.146
+mapas/018.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (27).jpg,negativo difícil: por_do_sol,0.3215,sim,0.6
+mapas/019.jpg,FOREST_FIRE_DATASET\FIRE\FIRE (1860).jpg,negativo difícil: outono,0.3987,sim,0.447
+mapas/020.jpg,FOREST_FIRE_DATASET\FIRE\FIRE (1889).jpg,negativo difícil: por_do_sol,0.6774,sim,0.766
+mapas/021.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3313).jpg,negativo difícil: por_do_sol,0.5977,sim,0.821
+mapas/022.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (1352).jpg,negativo difícil: luzes_noite,0.8323,sim,0.0
+mapas/023.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (65).jpg,negativo difícil: por_do_sol,0.7846,sim,0.434
+mapas/024.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3006).jpg,negativo difícil: nenhuma,0.2775,sim,0.0
+mapas/025.jpg,FOREST_FIRE_DATASET\FIRE\FIRE (2029).jpg,negativo difícil: por_do_sol,0.3491,sim,0.855
+mapas/026.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3350).jpg,negativo difícil: luzes_noite,0.5863,sim,0.174
+mapas/027.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3768).jpg,negativo difícil: neblina,0.2355,sim,0.0
+mapas/028.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (2851).jpg,negativo difícil: nuvens,0.3483,sim,0.0
+mapas/029.jpg,FOREST_FIRE_DATASET\FIRE\FIRE (102).jpg,negativo difícil: neblina,0.9809,sim,0.089
+mapas/030.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4249).jpg,negativo difícil: luzes_noite,0.274,sim,0.031
+mapas/031.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5774).jpg,negativo difícil: luzes_noite,0.2309,sim,0.009
+mapas/032.jpg,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5231).jpg,negativo difícil: por_do_sol,0.4346,sim,0.428

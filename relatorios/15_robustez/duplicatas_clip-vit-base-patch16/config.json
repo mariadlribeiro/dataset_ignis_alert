@@ -1,0 +1,5 @@
+{
+  "modelo": "openai/clip-vit-base-patch16",
+  "limiar": 0.95,
+  "imagens": 1388
+}

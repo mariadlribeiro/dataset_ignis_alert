@@ -1,0 +1,11 @@
+n,caminho_relativo,split,diverge_em,ambiente_ia,fogo_ia,fumaca_ia,ambiente_revisora,fogo_revisora,fumaca_revisora,decisao_final
+3,FOREST_FIRE_DATASET\FIRE\FIRE (2049).jpg,validacao,fumaca,floresta,nao,incerto,floresta,nao,nao,
+145,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (3568).jpg,validacao,fumaca,floresta,nao,sim,floresta,nao,nao,
+166,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4156).jpg,treino,ambiente,floresta,nao,nao,cidade,nao,nao,
+287,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (879).jpg,treino,fumaca,floresta,nao,incerto,floresta,nao,nao,
+312,FOREST_FIRE_DATASET\FIRE\07988.jpg,treino,ambiente,predios,nao,nao,cidade,nao,nao,
+321,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (5730).jpg,treino,ambiente,casa,nao,nao,floresta,nao,nao,
+332,FOREST_FIRE_DATASET\NON_FIRE\07787.jpg,validacao,ambiente,casa,nao,nao,predios,nao,nao,
+334,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (94).jpg,treino,ambiente,casa,nao,nao,outros,nao,nao,
+338,FOREST_FIRE_DATASET\NON_FIRE\04642.jpg,treino,fumaca,cidade,nao,sim,cidade,nao,nao,
+355,FOREST_FIRE_DATASET\NON_FIRE\NON_FIRE (4861).jpg,treino,ambiente,cidade,nao,nao,floresta,nao,nao,

@@ -1,0 +1,10 @@
+Etapa 14c (seleção) | 2026-11-26T02:04:56+00:00 | openai/clip-vit-base-patch16
+pastas: extra1 = C:\Users\maria\Pictures\negativos; fonte2 = C:\Users\maria\.cache\kagglehub\datasets\cristiancristancho\forest-fire-image-dataset\versions\2
+imagens: 10082 | quase iguais ao dataset: 1389 | avaliadas: 8693
+
+  tipo sugerido pelo CLIP                              com o tipo das pastas extra  escolhidas
+  Chama controlada (lareira, vela, fogão, churrasco)         4797                0          40
+  Faróis ou lanternas à noite                                3896                0          40
+
+Revisão: abra revisao_rodada2.html, marque cena, fogo e fumaça e exporte revisao_rodada2_preenchida.csv
+para relatorios/14_negativos/rodada2/. Depois: ... 14c_negativos_lareira_farois.py avaliar --revisao <csv>

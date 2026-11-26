@@ -1,4 +1,4 @@
-Etapa 10e gerada em 2026-11-24T20:37:11+00:00 | semente 42
+Etapa 10e gerada em 2026-11-24T21:07:34+00:00 | semente 42
 imagens novas com rótulo da IA: 400 | na amostra: 118
   teste (todas): 58 | treino e validação sorteadas: 60 de 342
 

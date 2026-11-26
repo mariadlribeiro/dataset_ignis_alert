@@ -1,0 +1,15 @@
+Etapa 15c | 2026-11-26T02:48:42+00:00 | teste em tons de cinza (207 imagens de test)
+
+  rede             versão     acurácia  recall fogo  especific.  VP/VN/FP/FN
+  resnet18         colorida      98,6%        97,3%      100,0%  109/95/0/3
+  resnet18         cinza         47,8%         3,6%      100,0%  4/95/0/108
+                   em cinza: 105 decisões mudam | fogo que deixa de ser visto: 105 | novos alarmes falsos: 0
+  efficientnet_b0  colorida      99,0%        99,1%       98,9%  111/94/1/1
+  efficientnet_b0  cinza         59,4%        25,0%      100,0%  28/95/0/84
+                   em cinza: 84 decisões mudam | fogo que deixa de ser visto: 83 | novos alarmes falsos: 0
+  densenet121      colorida      99,0%        99,1%       98,9%  111/94/1/1
+  densenet121      cinza         58,9%        24,1%      100,0%  27/95/0/85
+                   em cinza: 85 decisões mudam | fogo que deixa de ser visto: 84 | novos alarmes falsos: 0
+
+Leitura: a queda do recall em cinza mede quanto a rede depende da cor. Queda grande + falso alarme no pôr do
+sol (14b) = a rede usa 'laranja' como atalho; o próximo treino deve trazer mais cenas laranja sem fogo.

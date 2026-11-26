@@ -1,0 +1,17 @@
+Etapa 15d | 2026-11-26T02:49:51+00:00 | Grad-CAM efficientnet_b0 (limiar 0.2274)
+
+  grupo                              imagens   calor médio em cor de chama
+  acerto com fogo                          8                           60%
+  acerto sem fogo                          8                            2%
+  falso alarme                             1                            0%
+  fogo perdido                             1                            0%
+  negativo difícil: luzes_noite            4                            5%
+  negativo difícil: neblina                2                            4%
+  negativo difícil: nenhuma                1                            0%
+  negativo difícil: nuvens                 1                            0%
+  negativo difícil: outono                 1                           45%
+  negativo difícil: por_do_sol             6                           65%
+
+Leitura: nos acertos com fogo o calor deve cair na chama. Num falso alarme com calor alto em cor de chama,
+a rede reagiu a algo laranja (sol, luz, folhas); com calor baixo, a pista foi outra (fumaça, textura).
+As figuras estão em grade_*.jpg (original à esquerda, mapa à direita).

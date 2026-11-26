@@ -1,0 +1,4 @@
+rede,limiar,alarme_farois,n_farois,alarme_lareira_apagada,n_lareira_apagada,alarme_outra_sem_fogo,n_outra_sem_fogo,alarme_chama_controlada,n_chama_controlada
+resnet18,0.5853,0.0526,19,,0,0.0526,57,0.25,4
+efficientnet_b0,0.2274,0.1579,19,,0,0.0702,57,0.75,4
+densenet121,0.1695,0.1053,19,,0,0.0702,57,0.5,4

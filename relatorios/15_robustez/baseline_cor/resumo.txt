@@ -1,0 +1,15 @@
+Etapa 15b | 2026-11-26T02:48:31+00:00 | linha de base só com cor
+treino 971 | validação 210 | teste 207 (o mesmo manifesto da Etapa 12)
+limiar calibrado na validação (F2): histograma 0.244 | pixels de chama 0.0013
+
+  classificador                     acurácia  recall fogo  especific.     AUC  VP/VN/FP/FN
+  só pixels cor de chama               81,2%       100,0%       58,9%   0.945  112/56/39/0
+  histograma de cor (logística)        91,3%        98,2%       83,2%   0.984  110/79/16/2
+  resnet18 (Etapa 12)                  98,6%        97,3%      100,0%   0.999  109/95/0/3
+  efficientnet_b0 (Etapa 12)           99,0%        99,1%       98,9%   1.000  111/94/1/1
+  densenet121 (Etapa 12)               99,0%        99,1%       98,9%   0.997  111/94/1/1
+
+Distância entre a melhor rede e a base de cor: 7,7 pontos de acurácia.
+
+Leitura: quanto menor a distância, mais o teste se resolve pela cor e menos os 99% mostram que a rede
+"vê" o fogo. Nesse caso, os negativos difíceis (Etapa 14b) e o teste em cinza (15c) são a medida principal.

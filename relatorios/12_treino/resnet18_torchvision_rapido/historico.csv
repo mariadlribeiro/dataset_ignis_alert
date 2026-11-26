@@ -1,0 +1,2 @@
+epoca,perda_treino,acuracia_treino,perda_val,f2_val,recall_val,especificidade_val,segundos
+1,0.5908,0.7,0.4669,0.922,1.0,0.2143,8.1
