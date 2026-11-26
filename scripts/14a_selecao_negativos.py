@@ -13,8 +13,8 @@ Este script monta um conjunto EXTERNO, só para avaliação (nunca para treino):
     fogo, fumaça e cena comum; cada imagem vai para o tipo de maior nota;
   * em cada tipo, entre as --pool de maior nota, ficam as --por-tipo mais diferentes entre si (k-centros da 10c).
 O CLIP só ESCOLHE candidatas. Quem decide o tipo da cena e se há fogo é a revisão humana, às cegas: a página não
-mostra o tipo sugerido, a nota nem a pasta. Lareira, vela e churrasco não entram: pelo critério do projeto,
-chama visível é fogo.
+mostra o tipo sugerido, a nota nem a pasta. Lareira, vela e churrasco não entram aqui: pelo critério do projeto,
+chama visível é fogo. Eles e os faróis estão na 2ª rodada (Etapa 14c).
 
 Entradas: relatorios/10_nova_fonte/<nome>/sugestoes.csv, selecao_A/revisao.csv, relatorios/13_atalho/revisao.csv
           e reserva.csv, data/treino_ignis/split_manifest.csv

@@ -52,7 +52,7 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
   | revisão por IA | 216 | fonte 2: rotulada por IA, ainda sem revisão humana (Etapa 10j) |
   | cópia exata / decisão humana | 4 | herdou o rótulo da cópia, ou foi decidida no desempate |
 
-- **Como foi a revisão humana:**
+- **Como foi a revisão humana** (critérios completos em `GUIA_ROTULAGEM.md`):
   - foi às cegas: a página não mostra o rótulo da IA nas imagens de auditoria;
   - a ordem foi embaralhada com semente fixa;
   - houve uma revisora só, por divisão de tarefas da dupla;
@@ -88,7 +88,24 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
   - o formato da imagem já esteve ligado à classe, e isso foi verificado na Etapa 13 (teste de atalho);
   - a Etapa 15 mede quanto a cor sozinha explica os acertos.
 
-## 6. Distribuição e manutenção
+## 6. Privacidade
+- **Cópia pública:** a Etapa 16 monta a cópia para distribuir.
+  - Remove EXIF (GPS, aparelho, data), XMP, IPTC e textos embutidos sem recodificar: os pixels continuam idênticos
+    aos do treino.
+  - Borra rostos reconhecíveis e placas legíveis. O CLIP aponta as candidatas, e uma pessoa marca cada retângulo.
+- **Fotos tiradas pela equipe** (Etapa 14c) são só para avaliação: não entram no dataset nem no git.
+
+## 7. Versões
+| versão | data | o que é |
+|---|---|---|
+| v1.0 | 26/11/2026 | 1.388 imagens, rótulos e divisão depois da Etapa 10i. Manifesto do treino: SHA-256 `2be202c4…0873`. Tag `v1.0` no git |
+
+- **Regra das versões:** mudou um rótulo ou um split, nova versão menor (v1.1). Entrou ou saiu uma fonte, nova
+  versão maior (v2.0).
+- **Próxima versão:** a v1.1 incorpora a revisão das 216 imagens (10j) e os pares de quase-duplicatas confirmados
+  (15a).
+
+## 8. Distribuição e manutenção
 - **Onde fica:**
   - os scripts, inventários e relatórios ficam no GitHub (`mariadlribeiro/dataset_ignis_alert`);
   - as imagens não estão no git: são baixadas do Kaggle e reorganizadas pelos scripts.
@@ -102,4 +119,5 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
 - **Pendências:**
   - revisar as 216 imagens que ainda têm só o rótulo da IA (10j);
   - conferir a licença da 2ª fonte;
-  - conferir os pares de quase-duplicatas da Etapa 15a.
+  - conferir os pares de quase-duplicatas da Etapa 15a;
+  - gerar a cópia pública v1.0 (Etapa 16) depois da marcação de rostos e placas.

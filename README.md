@@ -30,8 +30,9 @@ Revisão humana da 2ª fonte (25/11/2026): 184 das 400 imagens novas passaram po
 | 11. Exportar para o treino | `11_exportar_treino.py` | Cópia em `train/val/test` × `Fire/NoFire` com `split_manifest.csv` no formato do RD_Ignisalert |
 | 12. Treino e avaliação | `12_treinar.py` | ResNet18, DenseNet121 ou EfficientNet-B0; limiar calibrado na validação; teste usado uma vez e quebrado por condição |
 | 13. Teste de atalho | `13a`, `13b` | Imagens de floresta quadradas e pequenas da 2ª fonte, com e sem fogo, revisadas às cegas; mede se a rede usa o formato em vez da chama |
-| 14. Negativos difíceis | `14a`, `14b` | Cenas sem fogo que parecem fogo ou fumaça (pôr do sol, neblina, nuvens, outono, luzes à noite, reflexos), da 2ª fonte e fora do dataset, revisadas às cegas; mede a taxa de falso alarme só nelas |
+| 14. Negativos difíceis | `14a`–`14c` | Cenas sem fogo que parecem fogo ou fumaça (pôr do sol, neblina, nuvens, outono, luzes à noite, reflexos), da 2ª fonte e fora do dataset, revisadas às cegas; mede a taxa de falso alarme só nelas. `14c`: 2ª rodada com faróis e chama controlada (lareira, vela, fogão), aceitando fotos da equipe |
 | 15. Robustez | `15a`–`15d` | Quase-duplicatas por conteúdo (CLIP/DINOv2) entre splits e fontes; linha de base só com cor; teste em tons de cinza; Grad-CAM (onde a rede olha) |
+| 16. Privacidade e versão | `16` | Remove EXIF/GPS sem recodificar, borra rostos e placas marcados por uma pessoa e gera a cópia pública versionada com manifesto |
 
 Achado principal (etapa 9): igualar a quantidade não igualou as condições. Imagens sem fogo são mais
 quadradas e menores; imagens com fogo são mais escuras. Isso é risco de atalho para o modelo e está
@@ -40,7 +41,7 @@ documentado no site, com as medidas propostas para o treino.
 O que ficou de fora de cada etapa não é apagado: vai para um CSV com o motivo (por exemplo
 `relatorios/10_nova_fonte/.../fora.csv`).
 
-Ficha técnica do dataset (origem, rótulos, usos indicados, vieses e limites): [`DATASHEET.md`](DATASHEET.md).
+Ficha técnica do dataset (origem, rótulos, usos indicados, vieses e limites): [`DATASHEET.md`](DATASHEET.md). Critérios de toda revisão humana (fogo × pôr do sol, fumaça × neblina × nuvem, quando usar "incerto"): [`GUIA_ROTULAGEM.md`](GUIA_ROTULAGEM.md). Versões marcadas com tags do git (`v1.0`).
 
 ## Uso
 ```bash

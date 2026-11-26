@@ -23,3 +23,5 @@ relatorios/14_negativos/*.html
 # Etapa 15: páginas e figuras geradas (apontam para as imagens locais; refeitas pelos scripts)
 relatorios/15_robustez/**/*.html
 relatorios/15_robustez/**/mapas/
+relatorios/14_negativos/rodada2/*.html
+relatorios/16_privacidade/*.html

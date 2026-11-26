@@ -789,7 +789,7 @@ footer p{margin:0 0 6px}
  <div class="envolve">
   <div class="sec-cab">
    <h2>Método</h2>
-   <p class="intro">Treze etapas, cada uma um script que pode ser refeito: dez montam o dataset e três treinam e testam as redes. A máquina sugere, uma pessoa decide, e cada decisão vira um CSV.</p>
+   <p class="intro">Treze etapas, cada uma um script que pode ser refeito. A máquina sugere, uma pessoa decide, e cada decisão vira um CSV.</p>
   </div>
   <div class="corpo">
    <div class="regras-chips"><span><i></i>Originais nunca são alterados</span><span><i></i>Fumaça não é fogo</span><span><i></i>O modelo sugere, a pessoa decide</span></div>
@@ -813,7 +813,7 @@ footer p{margin:0 0 6px}
     <aside class="mapa-ficha" id="mapa-ficha" aria-live="polite"></aside>
    </div>
    <details class="mapa-lista"><summary>Ver o mapa em lista</summary><ul id="mapa-lista"></ul></details>
-   <h3 class="sub-titulo" id="duplicatas">Como achamos as repetidas</h3>
+   <details class="mais" id="duplicatas"><summary>Como achamos as 148 repetidas <span>SHA-256 e dHash, com o limiar para testar</span></summary><div class="dentro">
    <p class="sub-intro">O SHA-256 só acha cópias exatas. O dHash resume a forma da imagem em 64 marcas: fotos parecidas diferem em poucas.</p>
    <div class="dup">
     <div class="dup-topo">
@@ -839,6 +839,7 @@ footer p{margin:0 0 6px}
      </div>
     </div>
    </div>
+   </div></details>
    <details class="mais"><summary>A segunda fonte, de 11.034 arquivos a 400 imagens <span>funil da seleção</span></summary><div class="dentro">
    <div class="funil" id="funil"></div>
    </div></details>
@@ -872,27 +873,27 @@ footer p{margin:0 0 6px}
  <div class="envolve">
   <div class="sec-cab">
    <h2>Resultados</h2>
-   <p class="intro">As três redes treinadas com este dataset, o teste que mostra se elas olham a chama, e o que a curadoria mediu antes.</p>
+   <p class="intro">99% no teste. Nas cenas que parecem fogo, o alarme falso sobe para 10%.</p>
   </div>
   <div class="corpo">
    <h3 class="sub-titulo" style="margin-top:0">As três redes no teste</h3>
    <p class="aviso-res"><i aria-hidden="true"></i><span id="res-status"></span></p>
    <div class="redes" id="redes"></div>
-   <p class="leitura-res">A escolha é pelo F2, que pesa mais o incêndio perdido. DenseNet121 e EfficientNet-B0 empataram, com 2 erros em 207. <b>A EfficientNet-B0 vai para o aplicativo</b> por ser cerca de 3 vezes mais rápida no computador (35 ms contra 97 ms por imagem).</p>
+   <p class="leitura-res">DenseNet121 e EfficientNet-B0 empataram no F2 (2 erros em 207). <b>A EfficientNet-B0 vai para o aplicativo</b>: 35 ms por imagem, contra 97 ms.</p>
    <figure class="fig-atalho">
     <h3>O teste de atalho: a rede olha a chama ou o formato?</h3>
     <p class="sub">Recall de fogo no teste principal <b class="lg-teste">●</b> e em 297 fotos quadradas e pequenas da segunda fonte <b class="lg-novo">●</b></p>
     <div class="atalho" id="atalho"></div>
-    <figcaption>No treino, toda foto quadrada e pequena era sem fogo. Se a rede tivesse aprendido "quadrada = sem fogo", o recall despencaria nessas fotos. A maior queda foi de 2,5 pontos: não há sinal de atalho. Rótulos deste teste: revisão cega por IA, conferida por amostra; são casos claros, não difíceis.</figcaption>
+    <figcaption>No treino, toda foto quadrada e pequena era sem fogo. A maior queda foi de 2,5 pontos: a rede não aprendeu "quadrada = sem fogo".</figcaption>
     <details class="tabela-alt"><summary>Ver em tabela</summary><table id="tab-atalho"></table></details>
    </figure>
    <figure class="fig-atalho" id="negativos">
     <h3>Negativos difíceis: quantos alarmes falsos em cenas que parecem fogo?</h3>
-    <p class="sub">Taxa de falso alarme no teste principal <b class="lg-teste">●</b> e em 128 fotos sem fogo de pôr do sol, nuvens, neblina, outono, luzes e reflexos <b class="lg-novo">●</b>; a faixa clara é o intervalo de 95%</p>
+    <p class="sub">Alarme falso no teste principal <b class="lg-teste">●</b> e em 128 cenas sem fogo que parecem fogo <b class="lg-novo">●</b>; faixa clara: intervalo de 95%</p>
     <div class="atalho" id="neg-redes"></div>
     <p class="sub" style="margin:18px 0 0">Por tipo de cena, na EfficientNet-B0 (a rede do aplicativo): alarmes / fotos</p>
     <div class="neg-cenas" id="neg-cenas"></div>
-    <figcaption>Fotos da segunda fonte fora do dataset, escolhidas pelo CLIP e revisadas às cegas por uma pessoa. Nas 112 cenas comuns da mesma fonte, o falso alarme ficou perto de 1%, como no teste principal; nas cenas difíceis, perto de 10%, nas três redes. O pôr do sol é o ponto fraco. Com 5 a 12 fotos, outono, neblina e reflexo são só indicação.</figcaption>
+    <figcaption>Fotos fora do dataset, revisadas às cegas. Em cenas comuns, o alarme falso fica perto de 1%; nas difíceis, perto de 10%. O pôr do sol é o ponto fraco.</figcaption>
     <details class="tabela-alt"><summary>Ver em tabela</summary><table id="tab-neg"></table></details>
    </figure>
    <h3 class="sub-titulo">Onde as redes erraram</h3>
@@ -907,7 +908,7 @@ footer p{margin:0 0 6px}
      <div class="disse"><span>Rótulo <b class="chip c-fogo">com fogo</b></span><span>ResNet18 <b class="chip c-sem">53% de fogo</b></span></div>
      <b>fire.135.</b> Fogo evidente, mas a probabilidade ficou logo abaixo do limiar de 58,5%. Erro de limiar, não de visão.</figcaption></figure>
    </div>
-   <p class="nota-erros">O alarme falso da DenseNet121 foi uma copa de outono da segunda fonte, sem foto aqui até a licença ser confirmada.</p>
+   
    <details class="mais"><summary>Como foi medido <span>protocolo, referência do CLIP e matriz de confusão</span></summary><div class="dentro">
    <div class="res-baixo">
     <div class="base">
@@ -933,7 +934,16 @@ footer p{margin:0 0 6px}
     </div>
    </div>
    </div></details>
-   <h3 class="sub-titulo">O que a curadoria mediu</h3>
+   <h3 class="sub-titulo">O que a curadoria mudou</h3>
+   <div class="figuras">
+    <figure id="equilibrio">
+     <div class="eq-topo"><div><h3>Equilíbrio por ambiente</h3><p class="sub" style="margin-bottom:0">Imagens com fogo e sem fogo em cada ambiente</p></div>
+      <div class="eq-alt" id="eq-alt" role="group" aria-label="Momento do dataset"><button type="button" data-k="a" aria-pressed="true">Antes</button><button type="button" data-k="d" aria-pressed="false">Depois</button></div></div>
+     <div class="barras-h" id="graf-eq"></div>
+     <figcaption id="eq-nota" aria-live="polite"></figcaption>
+    </figure>
+   </div>
+   <details class="mais"><summary>O que a curadoria mediu antes do treino <span>acerto do CLIP, divisão e risco de atalho</span></summary><div class="dentro">
    <div class="figuras">
     <figure id="fig-auditoria">
      <h3>Onde o modelo acerta o ambiente</h3>
@@ -949,12 +959,6 @@ footer p{margin:0 0 6px}
      <figcaption>Divisão por grupo de duplicatas; 53 pares parecidos conferidos à mão.</figcaption>
      <details class="tabela-alt"><summary>Ver em tabela</summary><table id="tab-divisao"></table></details>
     </figure>
-    <figure id="equilibrio">
-     <div class="eq-topo"><div><h3>Equilíbrio por ambiente</h3><p class="sub" style="margin-bottom:0">Imagens com fogo e sem fogo em cada ambiente</p></div>
-      <div class="eq-alt" id="eq-alt" role="group" aria-label="Momento do dataset"><button type="button" data-k="a" aria-pressed="true">Antes</button><button type="button" data-k="d" aria-pressed="false">Depois</button></div></div>
-     <div class="barras-h" id="graf-eq"></div>
-     <figcaption id="eq-nota" aria-live="polite"></figcaption>
-    </figure>
     <figure id="fig-condicoes">
      <h3>Igualar a quantidade não igualou as condições</h3>
      <p class="sub">Parte de cada classe com a característica, nas 1.388 imagens</p>
@@ -963,6 +967,7 @@ footer p{margin:0 0 6px}
      <figcaption>Pequena: menor lado abaixo de 300 px. Escura: brilho médio abaixo de 70, de 0 a 255.</figcaption>
     </figure>
    </div>
+   </div></details>
    <details class="mais" id="erros-ia"><summary>Onde o CLIP errou ao sugerir rótulos <span>quatro casos reais</span></summary><div class="dentro">
    <div class="erros" id="erros"></div>
    </div></details>
@@ -974,7 +979,7 @@ footer p{margin:0 0 6px}
  <div class="envolve">
   <div class="sec-cab">
    <h2>O combinado e o entregue</h2>
-   <p class="intro">O que ficou combinado nas apresentações de setembro e outubro, e onde cada ponto está hoje.</p>
+   <p class="intro">O que combinamos em setembro e outubro, e onde cada ponto está.</p>
   </div>
   <div class="corpo">
    <div class="placar-c" id="placar-c"><i style="background:var(--semfogo)" data-w="76.9">10</i><i style="background:#b9871b" data-w="23.1">3</i></div>
@@ -1002,7 +1007,7 @@ footer p{margin:0 0 6px}
   <div class="corpo">
    <h3 class="sub-titulo" style="margin-top:0">Quem decidiu se há fogo em cada imagem</h3>
    <div class="quem-barra" id="quem-barra"></div>
-   <ul class="limites"><li class="medio"><div class="n">216</div><h3>Ainda com rótulo da IA</h3><p>184 das 400 fotos da segunda fonte tiveram revisão humana cega: o fogo bateu em 183, o ambiente errou em 81.</p><p class="resolve"><b>Falta:</b> revisar as 216 restantes, quase todas floresta sem fogo.</p></li><li><div class="n">22%</div><h3>Alarme falso no pôr do sol</h3><p>A EfficientNet-B0 deu alarme em 6 de 27 fotos de pôr do sol sem fogo; nas cenas difíceis, cerca de 10%.</p><p class="resolve"><b>Resolve:</b> pôr do sol e luzes à noite no treino, como negativos.</p></li><li><div class="n">591</div><h3>Fogo rotulado pelo CLIP</h3><p>Acertou 65 de 66 na auditoria, mas só onde estava seguro.</p><p class="resolve"><b>Resolve:</b> revisar uma amostra sorteada.</p></li><li class="medio"><div class="n">297</div><h3>Atalho de formato: testado</h3><p>Nas fotos quadradas e pequenas, as redes acharam de 95,3% a 100% do fogo.</p><p class="resolve"><b>Falta:</b> chama pequena sob fumaça; os negativos difíceis já foram medidos.</p></li><li class="medio"><div class="n">37</div><h3>Pouca cidade sem fogo</h3><p>O teste quase não mede alarme falso fora da floresta.</p><p class="resolve"><b>Resolve:</b> uma fonte de cenas urbanas comuns.</p></li><li class="medio"><div class="n">14</div><h3>Condições sem resposta</h3><p>Ponto de vista, distância e hora do dia pedem revisão humana.</p><p class="resolve"><b>Resolve:</b> revisão dividida entre as autoras.</p></li><li class="medio"><div class="n">1</div><h3>Licença a confirmar</h3><p>Por isso as fotos da segunda fonte não aparecem aqui.</p><p class="resolve"><b>Resolve:</b> conferir a página do Kaggle.</p></li></ul>
+   <ul class="limites"><li><div class="n">22%</div><h3>Alarme falso no pôr do sol</h3><p>6 de 27 fotos de pôr do sol sem fogo deram alarme na EfficientNet-B0.</p><p class="resolve"><b>Resolve:</b> pôr do sol e luzes à noite no treino, como negativos.</p></li><li class="medio"><div class="n">216</div><h3>Ainda com rótulo da IA</h3><p>Na amostra revisada, o fogo bateu em 183 de 184; o ambiente errou em 81.</p><p class="resolve"><b>Falta:</b> revisar as 216 restantes (Etapa 10j).</p></li><li><div class="n">591</div><h3>Fogo rotulado pelo CLIP</h3><p>Acertou 65 de 66 na auditoria, mas só onde estava seguro.</p><p class="resolve"><b>Resolve:</b> revisar uma amostra sorteada.</p></li><li class="medio"><div class="n">37</div><h3>Pouca cena urbana sem fogo</h3><p>O teste quase não mede alarme falso fora da floresta.</p><p class="resolve"><b>Resolve:</b> uma fonte de cenas urbanas comuns.</p></li><li class="medio"><div class="n">1</div><h3>Licença a confirmar</h3><p>Por isso as fotos da segunda fonte não aparecem aqui.</p><p class="resolve"><b>Resolve:</b> conferir a página do Kaggle.</p></li></ul>
   </div>
  </div>
 </section>
@@ -1125,9 +1130,9 @@ const RESULTADOS = {
   status: 'Treinadas em 18 e 19 de nov. de 2026. Teste de 207 imagens, usado uma única vez',
   escolhida: 'EfficientNet-B0',   // escolhida pelas autoras em 19 nov.: mesmo F2 da DenseNet121, mais leve
   redes: [
-    {nome:'ResNet18', sub:'residual, 18 camadas · ~30 min de treino', recall:0.973, f2:0.978, precisao:1.000, espec:1.000, atalho:0.953, fn:3, fp:0},
-    {nome:'DenseNet121', sub:'conexões densas, 121 camadas · ~70 min', recall:0.991, f2:0.991, precisao:0.991, espec:0.989, atalho:1.000, fn:1, fp:1, nota:'a única sem perda no teste de atalho'},
-    {nome:'EfficientNet-B0', sub:'escala composta, a mais leve · 29 min', recall:0.991, f2:0.991, precisao:0.991, espec:0.989, atalho:0.966, fn:1, fp:1, nota:'mesmo F2 da DenseNet, treino 2 a 3 vezes mais rápido'}
+    {nome:'ResNet18', sub:'18 camadas · 30 min de treino', recall:0.973, f2:0.978, precisao:1.000, espec:1.000, atalho:0.953, fn:3, fp:0},
+    {nome:'DenseNet121', sub:'121 camadas · 70 min', recall:0.991, f2:0.991, precisao:0.991, espec:0.989, atalho:1.000, fn:1, fp:1, nota:'a única sem perda no teste de atalho'},
+    {nome:'EfficientNet-B0', sub:'a mais leve · 29 min', recall:0.991, f2:0.991, precisao:0.991, espec:0.989, atalho:0.966, fn:1, fp:1, nota:'mesmo acerto, 3 vezes mais rápida'}
   ],
   matriz: {rede:'EfficientNet-B0', vp:111, fn:1, fp:1, vn:94}
 };
@@ -1287,7 +1292,7 @@ grafAuditoria(); grafDivisao(); grafAnos(); relevo(); diagramas(); resultados();
 function resultados(){
   const pct = v => v == null ? '—' : (v * 100).toFixed(1).replace('.', ',') + '%';
   $('#res-status').textContent = RESULTADOS.status;
-  const M = [['Recall (fogo)', 'recall'], ['F2 (fogo)', 'f2'], ['Precisão (fogo)', 'precisao'], ['Especificidade', 'espec']];
+  const M = [['Acha o fogo (recall)', 'recall'], ['Sem alarme falso (especificidade)', 'espec']];
   $('#redes').innerHTML = RESULTADOS.redes.map(r => `<div class="rede ${RESULTADOS.escolhida === r.nome ? 'escolhida' : ''}">
     ${RESULTADOS.escolhida === r.nome ? '<p class="selo-esc">Escolhida para o aplicativo</p>' : ''}<h3>${r.nome}</h3><p class="sub">${r.sub}</p>
     <dl>${M.map(([rot, k]) => `<dt>${rot}</dt><dd>${pct(r[k])}</dd>`).join('')}
@@ -1777,7 +1782,10 @@ function limites(){
 /* Materiais. Apresentações: mude publica para true depois de compartilhar o link publicamente. */
 const REPO = 'https://github.com/mariadlribeiro/dataset_ignis_alert';
 const MATERIAIS = [
-  {t:'Código e relatórios', s:'Os scripts de 01 a 10 e um CSV por decisão', h:REPO},
+  {t:'Código e relatórios', s:'Os scripts de 01 a 16 e um CSV por decisão', h:REPO},
+  {t:'Ficha do dataset (datasheet)', s:'Origem, rótulos, usos, vieses e versões', h:REPO + '/blob/main/DATASHEET.md'},
+  {t:'Guia de rotulagem', s:'Fogo × pôr do sol, fumaça × neblina × nuvem, quando usar incerto', h:REPO + '/blob/main/GUIA_ROTULAGEM.md'},
+  {t:'Versão v1.0', s:'Tag do git com os rótulos e a divisão de 26/11/2026', h:REPO + '/releases/tag/v1.0'},
   {t:'Inventário das 1.399 imagens', s:'Rótulo, fonte do rótulo, conjunto e destino', h:REPO + '/blob/main/relatorios/10_nova_fonte/inventario_combinado.csv'},
   {t:'Medidas das imagens', s:'Luz, tamanho, formato, nitidez e cores', h:REPO + '/blob/main/relatorios/09_condicoes/combinado_1388/medidas_auto.csv'},
   {t:'Pesos de treino', s:'Um peso por imagem do treino', h:REPO + '/blob/main/relatorios/08_equilibrio/pesos_treino.csv'},
@@ -1874,6 +1882,12 @@ video(); mapa(); grafEquilibrio(); grafCondicoes(); trajeto(); funil(); duplicat
   topo.onclick = () => scrollTo({top:0, behavior: calmo ? 'auto' : 'smooth'});
 })();
 
+
+// um link para algo dentro de um bloco recolhido abre o bloco antes de rolar
+function abrirAlvo(h){ const el = h && h.length > 1 && document.getElementById(decodeURIComponent(h.slice(1))); if (!el) return;
+  for (let d = el; d; d = d.parentElement) if (d.tagName === 'DETAILS') d.open = true; }
+document.addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if (a) abrirAlvo(a.getAttribute('href')); }, true);
+window.addEventListener('hashchange', () => abrirAlvo(location.hash)); abrirAlvo(location.hash);
 </script>
 </body>
 </html>
