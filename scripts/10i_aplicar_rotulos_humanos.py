@@ -175,7 +175,8 @@ def main():
     n_fogo = sum(m["fogo_ia"] != m["fogo_final"] for m in mud)
     n_mov = sum(m["destino_antigo"] != m["destino_novo"] for m in mud)
     txt = [f"Etapa 10i gerada em {datetime.now(timezone.utc).isoformat(timespec='seconds')}",
-           f"imagens da 2ª fonte com rótulo humano aplicado: {len(mud)} de 400 (as outras seguem com o da IA)",
+           f"rótulo humano aplicado nesta rodada: {len(mud)} imagens da 2ª fonte | com rótulo humano no total: "
+           f"{sum(1 for r in inv if r.get('dataset', '').startswith('cristian') and r.get('fonte_fogo') in ('revisao_humana', 'decisao_humana'))} de 400",
            f"  mudou o ambiente: {n_amb} | a fumaça: {n_fum} | o fogo: {n_fogo} | mudam de pasta: {n_mov}",
            f"  pendências (fogo 'incerto', mantido o da IA): {len(pend)} (pendencias.csv)", "",
            "Dataset combinado ANTES (com fogo / sem fogo):"] + tabela(antes) + \
