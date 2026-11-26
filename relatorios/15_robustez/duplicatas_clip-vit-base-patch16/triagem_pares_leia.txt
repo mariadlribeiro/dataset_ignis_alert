@@ -1,6 +1,15 @@
-Triagem dos 53 pares entre conjuntos com cosseno CLIP >= 0,97 (Etapa 15a), feita em 26/11/2026 olhando miniaturas lado a lado
-(folhas em data/folhas_pares/, fora do git). É uma PRÉ-TRIAGEM: a coluna confirmado_pela_revisora fica para a revisão humana.
+Etapa 15a: os 53 pares entre conjuntos com cosseno CLIP >= 0,97.
 
-mesma_cena (6): 1, 2, 7, 10, 18, 28 | provavel (3): 21, 22, 24 | mesmo_incendio_outra_foto (5): 5, 6, 44, 45, 46 | so_parecidas: os outros 39.
-Imagens de teste em pares mesma_cena/provavel: fire.530, fire.68, fire.377, fire.292, fire.585, non_fire.6 (6).
-Sem elas, no teste: EfficientNet-B0 199/201, DenseNet121 199/201, ResNet18 198/201 (calculado de predicoes_teste.csv).
+1) Pré-triagem (Claude, miniaturas, 26/11/2026): 6 mesma cena, 3 prováveis, 5 mesmo incêndio, 39 só parecidas.
+2) Revisão humana cega (revisora, página confirmar_pares.html, ordem embaralhada, 26/11/2026) - É A DECISÃO QUE VALE:
+   sim, mesma cena: 4 (pares 1, 10, 18, 28) | mesmo incêndio, outra foto: 30 | não: 19.
+   Concordância com a pré-triagem: 25 de 53; das 9 'mesma cena/provável' da pré-triagem, a revisora confirmou 4,
+   chamou 4 de mesmo incêndio e 1 de não.
+
+Efeito no teste (de predicoes_teste.csv, sem retreinar):
+   sem as 4 imagens de teste em pares 'sim' (fire.292, fire.377, fire.530, fire.585):
+     EfficientNet-B0 201/203 (99,0%) | DenseNet121 201/203 (99,0%) | ResNet18 200/203 (98,5%)
+   sem as 11 imagens de teste em pares 'sim' ou 'mesmo incêndio' (critério mais rígido):
+     EfficientNet-B0 194/196 (99,0%) | DenseNet121 194/196 (99,0%) | ResNet18 193/196 (98,5%)
+Leitura: as cenas repetidas não inflaram o resultado. Na v1.2, os 4 pares 'sim' vão para o mesmo conjunto;
+os 30 'mesmo incêndio' indicam que a fonte 1 tem séries de fotos do mesmo evento, que um split por evento resolveria.

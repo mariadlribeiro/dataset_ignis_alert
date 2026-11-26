@@ -38,12 +38,11 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
 - **Cópias:**
   - as cópias exatas (SHA-256) e as quase cópias (dHash) foram agrupadas na Etapa 3;
   - cada grupo fica inteiro em um único split (`group_key` no manifesto; o treino recusa grupos divididos);
-  - a Etapa 15a procura também a mesma cena com outro recorte, usando a semelhança de conteúdo pelo CLIP. Dos 53
-    pares entre conjuntos com semelhança ≥ 0,97, a triagem achou 6 da mesma cena com segurança (1, 2, 7, 10, 18, 28)
-    e 3 prováveis (21, 22, 24), todos da fonte 1; outros 5 são do mesmo incêndio, em outra foto. A divisão da v1.1
-    ainda não junta esses pares (ver `triagem_pares.csv`);
-  - **efeito no teste:** 6 imagens de teste têm cena repetida no treino ou na validação. Sem elas, a EfficientNet-B0
-    acerta 199 de 201 (99,0%), o mesmo valor; seus 2 erros não estão entre elas.
+  - a Etapa 15a procura também a mesma cena com outro recorte, pela semelhança de conteúdo do CLIP. Dos 53 pares
+    entre conjuntos com semelhança ≥ 0,97, a revisão humana cega confirmou **4 da mesma cena** (pares 1, 10, 18, 28)
+    e **30 do mesmo incêndio em outra foto**, todos da fonte 1 (`triagem_pares.csv`). A divisão da v1.1 ainda não os junta;
+  - **efeito no teste:** sem as 4 imagens de teste dos pares "mesma cena", a EfficientNet-B0 acerta 201 de 203 (99,0%);
+    sem as 11 dos pares "mesma cena" ou "mesmo incêndio", 194 de 196 (99,0%). Seus 2 erros não estão entre elas.
 - **Dados pessoais:** não há rótulos de pessoas. As fotos são públicas. Algumas mostram casas e ruas, mas nenhuma
   identifica alguém pelo nome.
 
@@ -116,7 +115,7 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
 
 - **Regra das versões:** mudou um rótulo ou um split, nova versão menor (v1.1). Entrou ou saiu uma fonte, nova
   versão maior (v2.0).
-- **Próxima versão:** a v1.2 põe no mesmo split os 9 pares de cena repetida da Etapa 15a, depois de confirmados.
+- **Próxima versão:** a v1.2 põe no mesmo split os 4 pares de mesma cena da Etapa 15a; dividir a fonte 1 por evento resolveria também os 30 de mesmo incêndio.
 
 ## 8. Distribuição e manutenção
 - **Onde fica:**
@@ -130,5 +129,5 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
     Etapa 10j;
   - rode `10i_aplicar_rotulos_humanos.py --mover` e depois a Etapa 11. A divisão treino/validação/teste não muda.
 - **Pendências:**
-  - confirmar a triagem dos pares da Etapa 15a e, na v1.2, pôr cada par confirmado no mesmo split;
+  - na v1.2, pôr os 4 pares de mesma cena (Etapa 15a) no mesmo split;
   - revisar uma amostra das 591 imagens da fonte 1 rotuladas pela pasta de origem.
