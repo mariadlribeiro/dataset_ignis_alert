@@ -38,7 +38,12 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
 - **Cópias:**
   - as cópias exatas (SHA-256) e as quase cópias (dHash) foram agrupadas na Etapa 3;
   - cada grupo fica inteiro em um único split (`group_key` no manifesto; o treino recusa grupos divididos);
-  - a Etapa 15a procura também a mesma cena com outro recorte, usando a semelhança de conteúdo pelo CLIP.
+  - a Etapa 15a procura também a mesma cena com outro recorte, usando a semelhança de conteúdo pelo CLIP. Dos 53
+    pares entre conjuntos com semelhança ≥ 0,97, a triagem achou 6 da mesma cena com segurança (1, 2, 7, 10, 18, 28)
+    e 3 prováveis (21, 22, 24), todos da fonte 1; outros 5 são do mesmo incêndio, em outra foto. A divisão da v1.1
+    ainda não junta esses pares (ver `triagem_pares.csv`);
+  - **efeito no teste:** 6 imagens de teste têm cena repetida no treino ou na validação. Sem elas, a EfficientNet-B0
+    acerta 199 de 201 (99,0%), o mesmo valor; seus 2 erros não estão entre elas.
 - **Dados pessoais:** não há rótulos de pessoas. As fotos são públicas. Algumas mostram casas e ruas, mas nenhuma
   identifica alguém pelo nome.
 
@@ -111,7 +116,7 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
 
 - **Regra das versões:** mudou um rótulo ou um split, nova versão menor (v1.1). Entrou ou saiu uma fonte, nova
   versão maior (v2.0).
-- **Próxima versão:** a v1.2 incorpora os pares de quase-duplicatas confirmados na Etapa 15a, se houver.
+- **Próxima versão:** a v1.2 põe no mesmo split os 9 pares de cena repetida da Etapa 15a, depois de confirmados.
 
 ## 8. Distribuição e manutenção
 - **Onde fica:**
@@ -125,6 +130,5 @@ Modelo "Datasheets for Datasets" (Gebru et al., 2021), resumido. Os números sae
     Etapa 10j;
   - rode `10i_aplicar_rotulos_humanos.py --mover` e depois a Etapa 11. A divisão treino/validação/teste não muda.
 - **Pendências:**
-  - conferir os pares de quase-duplicatas da Etapa 15a. O CLIP apontou 53 pares entre splits com semelhança ≥ 0,97,
-    nenhum com dHash próximo; falta uma pessoa dizer se algum é a mesma cena;
+  - confirmar a triagem dos pares da Etapa 15a e, na v1.2, pôr cada par confirmado no mesmo split;
   - revisar uma amostra das 591 imagens da fonte 1 rotuladas pela pasta de origem.

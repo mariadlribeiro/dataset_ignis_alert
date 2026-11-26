@@ -1,0 +1,6 @@
+Triagem dos 53 pares entre conjuntos com cosseno CLIP >= 0,97 (Etapa 15a), feita em 26/11/2026 olhando miniaturas lado a lado
+(folhas em data/folhas_pares/, fora do git). É uma PRÉ-TRIAGEM: a coluna confirmado_pela_revisora fica para a revisão humana.
+
+mesma_cena (6): 1, 2, 7, 10, 18, 28 | provavel (3): 21, 22, 24 | mesmo_incendio_outra_foto (5): 5, 6, 44, 45, 46 | so_parecidas: os outros 39.
+Imagens de teste em pares mesma_cena/provavel: fire.530, fire.68, fire.377, fire.292, fire.585, non_fire.6 (6).
+Sem elas, no teste: EfficientNet-B0 199/201, DenseNet121 199/201, ResNet18 198/201 (calculado de predicoes_teste.csv).

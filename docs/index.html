@@ -688,7 +688,7 @@ footer p{margin:0 0 6px}
     <li><b class="num" data-alvo="1388">1.388</b><span>imagens organizadas, de duas fontes</span></li>
     <li><b class="num"><span data-alvo="511">511</span> / <span data-alvo="579">579</span></b><span>floresta com e sem fogo</span></li>
     <li><b class="num" data-alvo="148">148</b><span>cópias e quase cópias encontradas</span></li>
-    <li><b class="num">0</b><span>cenas repetidas entre treino e teste</span></li>
+    <li><b class="num">9</b><span>pares de cena repetida entre os conjuntos, achados pelo CLIP; sem eles, o teste segue em 99,0%</span></li>
    </ul>
   </div>
   <div class="hero-video">
@@ -964,10 +964,10 @@ footer p{margin:0 0 6px}
      <details class="tabela-alt"><summary>Ver em tabela</summary><table id="tab-auditoria"></table></details>
     </figure>
     <figure id="fig-divisao">
-     <h3>Divisão final, sem cenas repetidas entre os conjuntos</h3>
+     <h3>Divisão final por grupo de duplicatas</h3>
      <p class="sub">Imagens por conjunto, com e sem fogo (1.388 imagens; 11 ficaram fora da divisão)</p>
      <div id="graf-divisao"></div>
-     <figcaption>Divisão por grupo de duplicatas; 53 pares parecidos conferidos à mão.</figcaption>
+     <figcaption>Divisão por grupo de duplicatas (SHA-256 e dHash). Depois, o CLIP achou 9 pares da mesma cena com outro recorte entre os conjuntos, 6 deles com imagem no teste; sem essas 6, a EfficientNet-B0 acerta 199 de 201 (99,0%).</figcaption>
      <details class="tabela-alt"><summary>Ver em tabela</summary><table id="tab-divisao"></table></details>
     </figure>
     <figure id="fig-condicoes">
