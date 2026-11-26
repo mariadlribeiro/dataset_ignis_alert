@@ -209,6 +209,9 @@ def exportar(a):
         shutil.rmtree(destino)
     caixas = {}
     if a.marcacoes:
+        if not Path(a.marcacoes).is_file():
+            sys.exit(f"[PARADO] Não achei {a.marcacoes}. Exporte o CSV em marcar.html e salve com esse nome nessa pasta "
+                     "(ou copie dos Downloads: copy $HOME\\Downloads\\*marcacoes*.csv relatorios\\16_privacidade\\marcacoes.csv).")
         for r in csv.DictReader(open(a.marcacoes, encoding="utf-8-sig")):
             if r.get("x0"): caixas.setdefault(r["path"], []).append(tuple(int(float(r[k])) for k in ("x0", "y0", "x1", "y1")))
         print(f"Marcações: {sum(map(len, caixas.values()))} retângulos em {len(caixas)} imagens.")
